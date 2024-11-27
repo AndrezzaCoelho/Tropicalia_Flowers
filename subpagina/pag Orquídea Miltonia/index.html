@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orquídea Miltonia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<button id="backToTop" title="Voltar" class="animated-button">
+    <span>Voltar</span> 
+</button>
+
+<body>
+    <header class="horizontal-menu">
+        <h1>
+            <a >
+                <img src="c:\Users\andre\Pictures\pngtree-watercolor-flower-arrangement-for-wedding-decoration-png-image_12857847.png" alt="Logo" class="logo" style="height: 30px;">
+            </a>
+            Tropicália Flowers
+        </h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+        <ul class="menu-carrinho" id="carrinho"> 
+            <li><a href="carrinho"><i class="fas fa-shopping-cart"></i> </a></li>
+        </ul>     
+
+
+
+        </html>
+    </header>
+     <nav>
+        <!-- Menu Hambúrguer -->
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="menu-opcoes" id="menu">
+            <li><a href="#perfil"><i class="fas fa-user"></i> Perfil</a></li>
+            <li><a href="#promocoes"><i class="fas fa-tags"></i> Promoções</a></li>
+            <li><a href="#idioma"><i class="fas fa-globe"></i> Idioma</a></li>
+            <li><a href="#acessibilidade"><i class="fas fa-universal-access"></i> acessibilidade</a></li>
+        </ul>
+    </nav>
+    
+
+    <div class="container">
+        <h1>Orquídea Miltonia</h1>
+        <div class="product-details">
+            <img src="c:\Users\andre\Pictures\Orquídea Miltonia123.webp" alt="Orquídea Miltonia" class="product-image"> <!-- Caminho corrigido -->
+            <div class="info">
+                <p class="description">A Orquídea Miltonia, ou "Orquídea do Exército", é conhecida por suas grandes flores coloridas e vibrantes, como roxo, amarelo e branco. Para florescer bem, necessita de ambientes com boa iluminação, umidade e temperaturas amenas.</p>
+                <p class="price">Preço: R$69,99</p>
+            </div>
+
+
+            <div class="quantity">
+                <button id="remove-item" aria-label="Remover item">-</button>
+                <input type="number" id="item-quantity" value="1" min="1" aria-label="Quantidade do item">
+                <button id="add-item" aria-label="Adicionar item">+</button>
+            </div>
+
+            <div class="button-container">
+                <button id="add-to-cart">Adicionar ao carrinho</button>
+                <button id="continue-shopping" onclick="continuarComprando()">Continuar comprando</button>
+            </div>
+
+            <div class="color-selection">
+                <label for="flower-color">Escolha a cor da flor:</label>
+                <select id="flower-color" aria-label="Escolher a cor da flor">
+                    <option value="rosa">Rosa</option>
+                    <option value="roxa">Roxa</option>
+                    <option value="vermelha">Vermelha</option>
+                    <option value="branca">Branca</option>
+                    <option value="laranja">Laranja</option>
+                </select>
+            </div>
+
+            <div class="freight-container">
+                <input type="text" id="cep" placeholder="Digite seu CEP" aria-label="Campo para digitar o CEP">
+                <button id="calculate-freight">Calcular Frete</button>
+            </div>
+
+            <script src="script.js"></script>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a> 
+    </footer>
+
+</body>
+</html>

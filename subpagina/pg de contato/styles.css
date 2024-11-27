@@ -1,0 +1,74 @@
+/* Estilo Global */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #ffcc00;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #d32f2f;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus, textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    height: 100px; /* Altura inicial do textarea */
+}
+
+.search-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff3385;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.search-btn:hover {
+    background-color: white;
+    color: #ff3385;
+}

@@ -1,0 +1,344 @@
+/* Estilo Global */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Legibilidade e consistência */
+    margin: 0; /* Remove espaço ao redor da página */
+    padding: 0; /* Remove espaço interno */
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    color: #333; /* Cor do texto para boa legibilidade */
+}
+
+.title {
+    font-family: 'Pacifico', cursive; /* Usando a fonte Pacifico */
+    font-size: 4rem; /* Tamanho da fonte do título */
+    color: #d32f2f; /* Uma cor vibrante que remete ao tropical */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombreado para dar profundidade */
+    letter-spacing: 2px; /* Aumentar o espaçamento entre letras para um estilo mais aberto */
+    text-align: center; /* Centralizar o texto */
+}
+
+
+/* Cabeçalho */
+.header {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Espaçamento ao redor do cabeçalho */
+}
+
+/* Título da Página */
+.header h1 {
+    margin: 0; /* Remove espaço externo do título */
+    font-size: 2.5em; /* Tamanho do título */
+}
+
+/* Slogan */
+.header .slogan {
+    text-align: left; /* Alinha o slogan à esquerda */
+    position: absolute; /* Para poder posicioná-lo no canto esquerdo */
+    left: 20px; /* Distância do lado esquerdo da página */
+    top: 20px; /* Distância do topo da página */
+}
+
+/* Contêiner para ícones e barra de busca */
+.container {
+    display: flex; /* Usando flexbox para disposição dos elementos */
+    justify-content: center; /* Centraliza a barra de pesquisa */
+    align-items: center; /* Centralização vertical */
+    margin-top: 20px; /* Margem superior para espaçamento entre título e barra de pesquisa */
+}
+
+
+
+
+
+
+
+/* Barra de Pesquisa */
+.search-bar {
+    width: 900px; /* Largura da barra de pesquisa */
+    padding: 10px; /* Preenchimento interno */
+    border: 2px solid #ccc; /* Borda */
+    border-radius: 4px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: border-color 0.3s; /* Transição suave na alteração de cor da borda */
+    margin-top: 20px; /* Adiciona espaço entre a logo e a barra de pesquisa */
+}
+
+/* Logo */
+.logo {
+    width: 140px; /* Ajusta a largura conforme necessário */
+    height: 140px; /* Mantém a altura igual à largura para um formato circular */
+    border-radius: 80%; /* Faz com que as bordas fiquem completamente arredondadas */
+    justify-content: center; /* Para centralizar o conteúdo horizontalmente */
+    align-items: center; /* Para centralizar o conteúdo verticalmente */
+}
+
+.search-bar:focus {
+    border-color: #ffcc00; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+/* Botões dos Ícones */
+.icons {
+    display: flex; /* Exibe como flex-container */
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.iconBtn {
+    font-size: 30px; /* Tamanho do ícone */
+    color: #ff6699; /* Cor do ícone */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: transform 0.2s, color 0.2s; /* Transições suaves */
+}
+
+.iconBtn:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+    color: #ffcc00; /* Cor muda quando hover */
+}
+
+/* Botão de Pesquisa */
+.search-btn {
+    padding: 10px 15px; /* Preenchimento do botão */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Cantos arredondados */
+    background-color: #ff6699; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de ponteiro ao passar por cima */
+    transition: background-color 0.3s; /* Transição suave na cor de fundo */
+}
+
+.search-btn:hover {
+    background-color: white; /* Cor de fundo ao passar o mouse */
+}
+
+/* Navegação */
+.navbar {
+    list-style-type: none; /* Remove estilo de lista */
+    padding: 0; /* Remove preenchimento */
+}
+
+.navBtn img {
+    width: 30px; /* Tamanho do ícone */
+    height: 30px; /* Tamanho do ícone */
+    vertical-align: middle; /* Alinhar verticalmente */
+    margin-right: 5px; /* Espaço entre imagem e texto */
+}
+
+.backBtn {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #333; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    display: flex; /* Flex para ícone e texto alinharem */
+    align-items: center; /* Alinha verticalmente o ícone e o texto */
+}
+
+/*  Estilo do cabeçalho */
+header {
+    background: linear-gradient(to right, #ffcc00, #ff99cc); /* Usabilidade: feedback visual */
+    text-align: center; 
+    padding: 30px 0; /* Aumenta o espaçamento interno para uma aparência mais arejada */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave ao cabeçalho */
+    border-bottom: 5px solid #ff6699; /* Adiciona uma borda inferior chamativa */
+    border-radius: 10px; /* Arredondamento para um visual mais suave */
+}
+
+/*  Título principal tropicalia flowers */
+h1 {
+    margin: 0; /* Remove espaço ao redor do título */
+    color: #ff6699; /* Cor chamativa para o título */
+    font-family: 'Arial', sans-serif; /* Define uma fonte limpa e moderna */
+    font-size: 2.5em; /* Aumenta o tamanho da fonte do título */
+    letter-spacing: 1px; /* Aumenta o espaçamento entre letras para melhor legibilidade */
+}
+
+/* Estilo do botão */
+button {
+    background-color: #ff6699; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove bordas padrão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Muda o cursor quando passa sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    border-radius: 5px; /* Cantos arredondados */
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    display: flex; /* Alinhamento flexível */
+    justify-content: center; /* Centraliza itens na barra */
+    list-style-type: none; /* Remove marcadores de lista */
+    padding: 15px 0; /* Espaçamento interno */
+    background-color: #ffffff; /* Fundo da barra de navegação */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    border-radius: 8px; /* Cantos arredondados */
+}
+
+/*  Estilo dos itens na barra de navegação */
+.navbar li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+/*  Estilo dos botões de navegação */
+.navBtn {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #333; /* Cor do texto */
+    font-weight: 600; /* Negrito para destaque */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+/*  Efeito de hover nos botões de navegação */
+.navBtn:hover {
+    background-color: #ffd000; /* Mudança de cor ao passar o mouse (heurística: feedback visual) */
+    color: #ffffff; /* Mudança da cor do texto ao passar o mouse */
+}
+
+/* Efeito de foco nos botões de navegação */
+.navBtn:focus {
+    outline: none; /* Remove contorno padrão */
+    box-shadow: 0 0 0 2px rgba(255, 247, 0, 0.914); /* Contorno sutil ao focar (heurística: acessibilidade) */
+}
+
+head
+    style
+        body {
+            color: yellow; /* Muda a cor do texto para amarelo */
+        }
+
+/* Efeito ao passar o mouse sobre os links */
+nav a:hover {
+    background-color: #ff3385be; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+/* Container Principal */
+.container {
+    width: 80%; /* Largura total do container */
+    max-width: 800px; /* Largura máxima do container */
+    margin: 100px auto; /* Margem automática para centralização e margem superior de 100px */
+    border: 2px solid #ffcc00; /* Borda em amarelo */
+    padding: 20px; /* Espaçamento interno do container */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: white; /* Cor de fundo do container (azul claro) */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Usando Flexbox para layout interno */
+    flex-direction: column; /* Alinhando os filhos em coluna */
+    align-items: center; /* Centralizando os filhos dentro do container */
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+
+/* Estilização do Título */
+h1 {
+    color: #333; /* Cor do título (preto) */
+}
+
+/* Estilo da Imagem do Produto */
+.product-details img {
+    max-width: 100%; /* Limita a largura máxima da imagem ao tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 100px; /* Bordas arredondadas para a imagem */
+}
+
+/* Descrição do Produto */
+.description {
+    font-size: 1.1em; /* Tamanho da fonte da descrição */
+    margin: 15px 0; /* Margem superior e inferior da descrição */
+}
+
+/* Preço do Produto */
+.price {
+    font-size: 1.1em; /* Tamanho da fonte do preço */
+    color: #333; /* Cor do preço (preto) */
+}
+
+/* Contador de Quantidade */
+.quantity {
+    display: flex; /* Usando Flexbox para alinhar os elementos */
+    align-items: center; /* Alinhando verticalmente ao centro */
+    justify-content: center; /* Centralizando horizontalmente */
+    margin: 5px 0; /* Margem ao redor do contador */
+}
+
+.quantity input {
+    width: 100px; /* Largura do campo de entrada */
+    text-align: center; /* Centraliza o texto dentro do campo */
+    margin: 0 10px; /* Margem lateral para espaçamento */
+}
+
+/* Container dos Botões */
+.button-container {
+    display: flex;              /* Usa Flexbox */
+    justify-content: center;    /* Centraliza horizontalmente */
+    margin: 10px 0;  
+    padding: 10px 15px;
+    background-color: #ff3385be;
+    cursor: pointer; /* Muda o cursor para pointer ao passar o mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave para a cor de fundo e a escala */
+    gap: 10px; /* Adiciona espaço entre os botões */
+}
+
+/* Efeito hover */
+.button-container:hover {
+    background-color: #ff2c77; /* Novas cor quando o cursor estiver sobre o botão */
+    transform: scale(1.05);     /* Aumenta ligeiramente o tamanho do botão */
+}
+
+/* Efeito ao clicar (active) */
+.button-container:active {
+    transform: scale(0.95);      /* Diminui o tamanho do botão ao clicar */
+    background-color: #e82a6c;   /* Muda a cor de fundo quando o botão é clicado */
+}
+
+/* Efeito de foco */
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(229, 206, 71, 0.951);
+}
+
+/* Estilo dos botões de quantidade */
+.quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity button {
+    width: 30px;    /*  tamanho  */
+    height: 30px;   /*  tamanho  */
+    font-size: 16px;  /*  tamanho de fonte menor */
+    margin: 0 5px;  /* Espaçamento entre os botões de quantidade */
+}
+
+
+/* Estilo do campo de CEP e calcular frete */
+.freight-container {
+    margin-top: 20px;
+}
+
+#cep {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+}
+
+#calculate-freight {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #ff3385be;
+    cursor: pointer; /* Muda o cursor para pointer ao passar o mouse */
+    transition: background-color 0.3s;
+}
+
+#calculate-freight:hover {
+    background-color: #ed95bba1;
+}
+

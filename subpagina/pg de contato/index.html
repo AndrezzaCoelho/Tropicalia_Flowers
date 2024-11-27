@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <div class="top-container">
+        <a href="javascript:void(0);" id="backButton" class="backBtn" title="Voltar">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+    </div>
+    <title>Contato - Tropicália Flowers</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Tropicália Flowers</h1>
+        <h2>Entre em Contato Conosco</h2>
+    </header>
+    <div class="container">
+        <form id="contactForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="search-btn">Enviar</button>
+        </form>
+        <div id="confirmationMessage" style="display: none; margin-top: 15px; color: #28a745;">
+            Sua mensagem foi enviada com sucesso!
+        </div>
+
+        <div class="contact-info" style="margin-top: 30px;">
+            <h3>Informações de Contato</h3>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5599999999999" target="_blank">(+55) 81 99999-9999</a></p>
+            <p><strong>Telefone:</strong> <a href="tel:+5599999999999">(+55) 81 99999-9999</a></p>
+            <p><strong>Email:</strong> <a href="mailto:contato@tropicaliaflowers.com">contato@tropicaliaflowers.com</a></p>
+            <p><strong>Redes Sociais:</strong></p>
+            <ul>
+                <li><a href="https://www.facebook.com/tropicaliaflowers" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/tropicaliaflowers" target="_blank">Instagram</a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

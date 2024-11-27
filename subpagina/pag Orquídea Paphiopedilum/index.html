@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orquídea Paphiopedilum</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="icons">
+        <a href="#" class="iconBtn" title="Ajuda"><i class="fas fa-question-circle"></i></a>
+        <a href="#" class="iconBtn" title="Contato"><i class="fas fa-address-book"></i></a>
+        <a href="#" class="iconBtn" title="Perfil"><i class="fas fa-user"></i></a>
+    </div>
+
+    <div class="top-container">
+        <a href="javascript:void(0);" id="backButton" class="backBtn" title="Voltar">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+    </div>
+
+    <header>
+            <img src="c:\Users\andre\Downloads\Logotipo Loja Moda Feminina Flor (1).png" alt="Logo" class="logo"> <!-- Substitua 'sua-logo.png' pelo caminho correto da sua imagem -->
+        </div> 
+        <h1 class="title">Tropicália Flowers</h1>
+
+        <div class="search-container">
+            <input type="text" placeholder="Pesquisar..." class="search-bar">
+            <button class="search-btn" aria-label="Pesquisar">
+                <i class="fas fa-heart"></i>
+            </button>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="navbar">
+            <li><a class="navBtn" href="#"><img src="c:\Users\andre\Pictures\Início.png" alt="Início"> Início</a></li>
+            <li><a class="navBtn" href="#"><img src="c:\Users\andre\Pictures\download.jpg" alt="Arranjos"> Arranjos</a></li>
+            <li><a class="navBtn" href="#"><img src="c:\Users\andre\Pictures\Flores tropicais.png" alt="Flores"> Flores</a></li>
+            <li><a class="navBtn" href="#"><img src="c:\Users\andre\Pictures\Buquês.jpg" alt="Buquês"> Buquês</a></li>
+            <li><a class="navBtn" href="#"><img src="c:\Users\andre\Pictures\ArranjoJardimdoAmor.jpg" alt="Cestas e Kits"> Cestas e Kits</a></li>
+            <li><a class="navBtn" href="#"><img src="c:\Users\andre\Pictures\images (1).jpg" alt="Ocasiões"> Ocasiões</a></li>
+        </ul>
+    </nav>
+
+    <body>
+        <div class="container">
+            <h1>Orquídea Paphiopedilum</h1>
+            <div class="product-details">
+                <img src="c:\Users\andre\Pictures\Orquídea Paphiopedilum123.webp" alt="Orquídea Paphiopedilum" class="product-image"> <!-- Caminho corrigido -->
+                <div class="info">
+                    <p class="description">A Orquídea Paphiopedilum, famosa por suas flores em forma de sapatinho e folhagem exuberante, é uma planta de baixa manutenção que se adapta bem a ambientes internos, adicionando beleza e elegância à decoração.</p>
+                    <p class="price">Preço: R$79,99</p>
+                </div>
+
+            <div class="quantity">
+                <button id="remove-item" aria-label="Remover item">-</button>
+                <input type="number" id="item-quantity" value="1" min="1" aria-label="Quantidade do item">
+                <button id="add-item" aria-label="Adicionar item">+</button>
+            </div>
+
+            <div class="button-container">
+                <button id="add-to-cart">Adicionar ao carrinho</button>
+                <button id="continue-shopping" onclick="continuarComprando()">Continuar comprando</button>
+            </div>
+
+            <div class="color-selection">
+                <label for="flower-color">Escolha a cor da flor:</label>
+                <select id="flower-color" aria-label="Escolher a cor da flor">
+                    <option value="rosa">Rosa</option>
+                    <option value="roxa">Roxa</option>
+                    <option value="vermelha">Vermelha</option>
+                    <option value="branca">Branca</option>
+                    <option value="laranja">Laranja</option>
+                </select>
+            </div>
+
+            <div class="freight-container">
+                <input type="text" id="cep" placeholder="Digite seu CEP" aria-label="Campo para digitar o CEP">
+                <button id="calculate-freight">Calcular Frete</button>
+            </div>
+
+            <script src="script.js"></script>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a> 
+    </footer>
+
+</body>
+</html>

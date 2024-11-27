@@ -1,0 +1,170 @@
+
+/* Estiliza o h1 */
+h1 {
+    font-family: 'Arial', sans-serif; /* Define a fonte */
+    font-size: 2em; /* Tamanho da fonte */
+    color: hsl(341, 72%, 92%)
+    
+    ; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+/* Estiliza o link dentro do h1 */
+h1 a {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Herda a cor do h1 */
+    display: flex; /* Exibe como flexível para alinhamento */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Estiliza a imagem do logo */
+.logo {
+    margin-right: 10px; /* Espaço à direita da imagem */
+    height: 30px; /* Mantém a altura da imagem */
+    width: auto; /* Largura automática para manter proporção */
+}
+
+/* Adiciona efeito ao link ao passar o mouse */
+h1 a:hover {
+    color: #ff6699; /* Cor do texto ao passar o mouse */
+    transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+
+/* Estilizando o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Estilizando o cabeçalho */
+.header {
+    background-color: #ff6699; /* Verde Tropical */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* Ajustando a altura do logo */
+}
+
+/* Estilizando a barra de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    border: 1px solid #ccc; /* Adiciona uma borda ao redor da barra de pesquisa */
+    border-radius: 25px; /* Faz a barra de pesquisa mais arredondada */
+    overflow: hidden; /* Garante que os bordas arredondadas sejam seguidas */
+    background-color: #f9f9f9; /* Cor de fundo da barra de pesquisa */
+}
+
+#searchInput {
+    padding: 10px; /* Aumenta o padding para mais conforto */
+    border: none; /* Remove borda interna */
+    outline: none; /* Remove contorno ao focus */
+    flex: 1; /* Faz o input ocupar todo o espaço disponível */
+    font-size: 16px; /* Tamanho de fonte maior */
+}
+
+#searchButton {
+    background-color: #ff6699; /* Cor de fundo para o botão (azul) */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Mostra indicador de ponteiro ao passar o mouse */
+    padding: 10px 15px; /* Aumenta o padding do botão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+#searchButton:hover {
+    background-color: #ff6699; /* Cor do botão ao passar o mouse (azul mais escuro) */
+}
+
+
+/* Estilizando o conteúdo principal */
+.main-content {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Estilizando formulários */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 1px solid #ff6699;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #ff6699;
+}
+
+/* Estilizando os rótulos e inputs */
+label {
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #ff6699;
+}
+
+/* Estilizando o botão de cadastro */
+button[type="submit"] {
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff6699; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilizando o rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
