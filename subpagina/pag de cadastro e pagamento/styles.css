@@ -160,11 +160,32 @@ button[type="submit"]:hover {
 }
 
 /* Estilizando o rodapé */
-footer {
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px;
     text-align: center;
-    padding: 10px;
-    background-color: #f1f1f1;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
 }

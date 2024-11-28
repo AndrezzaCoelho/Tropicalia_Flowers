@@ -64,3 +64,29 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = 'none'; // Esconde todas as janelas modais ao carregar
     });
 });
+
+closeModalButton.addEventListener('click', () => {
+    paymentModal.style.display = 'none';
+});
+
+// Fecha o modal ao clicar fora do conteúdo
+window.addEventListener('click', (event) => {
+    if (event.target === paymentModal) {
+        paymentModal.style.display = 'none';
+    }
+});
+
+function fecharJanela(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Exemplo de como abrir a janela (adicione onde for necessário)
+function abrirJanela(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.style.display = "block";
+    }
+}

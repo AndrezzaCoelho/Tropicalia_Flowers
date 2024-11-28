@@ -8,77 +8,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+</h1>
+<button class="btn-voltar" onclick="window.history.back();">Voltar</button>
+</header>
     <header class="header">
         <h1>
-            <a href="index.html">
-                <img src="C:/Users/andre/Downloads/WhatsApp Image 2024-11-26 at 23.01.32.jpeg" alt="Logo" class="logo" style="height: 30px;">
                 Tropicália Flowers
             </a>
         </h1>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Pesquisar...">
-            <button id="searchButton"><i class="fas fa-search"></i></button>
-        </div>
+        
     </header>
 
     <main class="main-content">
-        <h2>Cadastro de Cliente</h2>
+        <h2>Cadastro</h2>
         <form id="registrationForm" action="/submit_registration" method="POST">
             <fieldset>
                 <legend>Informações Pessoais</legend>
                 <label for="firstName">Primeiro Nome:</label>
                 <input type="text" id="firstName" name="firstName" required placeholder="Digite seu primeiro nome"><br>
-
+        
                 <label for="lastName">Sobrenome:</label>
                 <input type="text" id="lastName" name="lastName" required placeholder="Digite seu sobrenome"><br>
-
+        
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com"><br>
-
+        
                 <label for="phone">Telefone:</label>
                 <input type="tel" id="phone" name="phone" required placeholder="(99) 99999-9999"><br>
-
+        
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" required placeholder="Digite uma senha"><br>
-
+        
                 <label for="confirmPassword">Confirmar Senha:</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirme sua senha"><br>
             </fieldset>
-
+        
             <fieldset>
                 <legend>Endereço de Entrega</legend>
                 <label for="address">Endereço:</label>
                 <input type="text" id="address" name="address" required placeholder="Rua, Número"><br>
-
+        
                 <label for="complement">Complemento:</label>
                 <input type="text" id="complement" name="complement" placeholder="Apto, Bloco, etc."><br>
-
+        
                 <label for="city">Cidade:</label>
                 <input type="text" id="city" name="city" required placeholder="Digite sua cidade"><br>
-
+        
                 <label for="state">Estado:</label>
                 <select id="state" name="state" required>
                     <option value="" disabled selected>Escolha seu estado</option>
-                    <option value="SP">São Paulo</option>
+                    <option value="PE">Pernambuco</option>
                     <option value="RJ">Rio de Janeiro</option>
                     <option value="MG">Minas Gerais</option>
                     <!-- Adicione outros estados conforme necessário -->
                 </select><br>
-
-                <label for="zipCode">CEP:</label>
-                <input type="text" id="zipCode" name="zipCode" required placeholder="00000-000"><br>
             </fieldset>
-
-            <button type="submit">Cadastrar</button>
+        
+            <button type="submit">Cadastrar</button> <!-- Botão de cadastrar -->
         </form>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
-    </footer>
-
-    <script>
-        // Script para manipulações futuras, se necessário
-    </script>
+        </footer> 
+    
 </body>
 </html>

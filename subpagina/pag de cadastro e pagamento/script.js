@@ -25,3 +25,13 @@ function continueShopping() {
     // Aqui você pode redirecionar o usuário para outra página ou seção
     alert('Agora você pode continuar comprando!');
 }
+document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    // Aqui você pode processar as informações do formulário, se necessário
+
+    // Exibe a mensagem para o usuário
+    const mensagem = document.getElementById('mensagem');
+    mensagem.textContent = 'Cadastro realizado com sucesso!';
+    mensagem.style.display = 'block'; // Exibe a mensagem
+});
