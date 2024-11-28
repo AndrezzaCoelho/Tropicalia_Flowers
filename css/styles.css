@@ -361,7 +361,12 @@ nav a:hover {
     color: #fff; /* Alterando a cor do texto ao passar o mouse */
 }
 
-
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: flex-start; /* Alinha os itens no topo */
+  }
 
 
 
