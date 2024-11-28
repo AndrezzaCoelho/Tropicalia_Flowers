@@ -262,9 +262,8 @@ nav a:hover {
 /* Logo */
 
 .logo {
-    width: 100px; /* Aumenta a largura da logo */
-    height: 100px; /* Define a altura da logo para um valor fixo */
-    border-radius: 100%; /* Torna a logo redonda */
+    width: 120px; /* Aumenta a largura da logo */
+    height: 120px; /* Define a altura da logo para um valor fixo */
     margin-right: 20px; /* Espaço entre a logo e o título */
     object-fit: cover; /* Garante que a imagem se encaixe corretamente */
 }
@@ -373,6 +372,23 @@ nav a:hover {
     justify-content: space-between; /* Espaço igual entre os produtos */
 }
 
+.catalog-2 {
+    display: flex; /* Ativa o Flexbox */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha de baixo se não houver espaço */
+    justify-content: space-between; /* Espaço igual entre os produtos */
+}
+
+.catalog-2 .product-card::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Ajustar para posicionar acima da borda superior */
+    right: -10px; /* Ajustar para posicionar à direita da borda direita */
+    width: 30px; /* Largura da listra */
+    height: 30px; /* Altura da listra */
+    background-color: black;
+    transform: rotate(45deg) translateY(-50%) translateX(50%); /* Rotacionar e centralizar */
+  }
+
 .product-card {
     background-color: #fff; /* Cor de fundo das cartas */
     border: 1px solid #ffecb3; /* Borda para as cartas */
@@ -383,7 +399,19 @@ nav a:hover {
     padding: 15px; /* Espaçamento interno da carta */
     text-align: center; /* Texto centralizado */
     transition: transform 0.3s, box-shadow 0.3s; /* Transição suave para hover */
+    position: relative;
 }
+
+.red-stripe {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    transform: rotate(45deg) translateY(-50%) translateX(50%);
+  }
 
 .product-card:hover {
     transform: scale(1.03); /* Aumenta levemente o tamanho do card */
