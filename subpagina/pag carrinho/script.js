@@ -31,6 +31,14 @@ paymentOptions.forEach((option) => {
     });
 });
 
+ // Seleciona o botão usando seu ID
+ const backToTopButton = document.getElementById('backToTop');
+
+ // Adiciona um evento de clique ao botão
+ backToTopButton.addEventListener('click', function() {
+     // Função para voltar à página anterior
+     window.history.back();
+ });
 
 // Seleciona o botão de Modo Daltonismo
 const daltonismoBtn = document.getElementById('daltonismo-btn');
