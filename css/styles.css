@@ -364,12 +364,19 @@ nav a:hover {
     max-width: 1200px; /* Largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner na página */
     padding: 20px; /* Espaçamento interno */
+}.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-
-h
-
-
+.Banner {
+    width: 100%; /* Ajusta o banner para a largura total da tela */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove margens desnecessárias */
+    max-width: 100%; /* Evita que a imagem ultrapasse a largura do container */
+}
 
 
 .catalog {
