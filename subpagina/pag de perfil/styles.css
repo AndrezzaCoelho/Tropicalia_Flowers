@@ -49,19 +49,6 @@ nav {
     gap: 1rem;
 }
 
-/* Estilo para o botão de voltar */
-#backToTop {
-    background-color: #fff; /* Cor inicial */
-    color: #ff6699;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-
 
 /* Links do menu */
 nav a {
