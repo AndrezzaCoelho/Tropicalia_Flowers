@@ -360,6 +360,46 @@ nav a:hover {
     border-color: #ffd54f; /* Alterando a cor da borda ao passar o mouse */
     color: #fff; /* Alterando a cor do texto ao passar o mouse */
 }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Preenche toda a altura da janela */
+    background-color: #f4f4f4; /* Cor de fundo para destacar o banner */
+}
+
+.horizontal-menu {
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto; /* Centraliza a logo horizontalmente */
+}
+
+/* Banner centralizado e ajustável */
+.Banner {
+    display: block;
+    margin: 0 auto; /* Centraliza o banner horizontalmente */
+    width: auto; /* Ajuste automático para largura */
+    height: auto; /* Ajuste automático para altura */
+}
+
+/* Personalização opcional do tamanho do banner */
+.Banner.custom-size {
+    width: 70%; /* Alterar largura conforme necessário */
+    max-height: 500px; /* Ajustar altura máxima */
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+
+
+
+
 .products {
     max-width: 1200px; /* Largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner na página */
