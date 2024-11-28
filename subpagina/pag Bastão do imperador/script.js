@@ -91,7 +91,7 @@ function adicionarAoCarrinho() {
 
 function continuarComprando() {
     alert("Você está retornando à página de compras.");
-    const paginaCompras = 'file:///C:/Users/andre/pagina%20de%20flores/index.html#idioma'; // URL da página de compras
+    const paginaCompras = 'file:///C:/Users/andre/Flores/index.html'; // URL da página de compras
 
     if (document.referrer) {
         setTimeout(function () {
