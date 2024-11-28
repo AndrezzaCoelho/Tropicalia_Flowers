@@ -366,6 +366,25 @@ nav a:hover {
     padding: 20px; /* Espaçamento interno */
 }
 
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Banner {
+    width: 100%; /* Ajusta o banner para a largura total da tela */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove margens desnecessárias */
+    max-width: 100%; /* Evita que a imagem ultrapasse a largura do container */
+}
+
+
+
+
+
+
 .catalog {
     display: flex; /* Ativa o Flexbox */
     flex-wrap: wrap; /* Permite que os itens se movam para a linha de baixo se não houver espaço */
