@@ -362,24 +362,8 @@ nav a:hover {
 }
 
 
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Preenche toda a altura da janela */
-    background-color: #f4f4f4; /* Cor de fundo para destacar o banner */
-}
 
-.horizontal-menu {
-    text-align: center;
-}
 
-.logo {
-    display: block;
-    margin: 0 auto; /* Centraliza a logo horizontalmente */
-}
 
 /* Banner centralizado e ajustável */
 .Banner {
