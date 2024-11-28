@@ -375,8 +375,8 @@ nav a:hover {
 
 /* Personalização opcional do tamanho do banner */
 .Banner.custom-size {
-    width: 70%; /* Alterar largura conforme necessário */
-    max-height: 500px; /* Ajustar altura máxima */
+    width: 50%; /* Alterar largura conforme necessário */
+    max-height: 400px; /* Ajustar altura máxima */
     object-fit: contain; /* Mantém a proporção da imagem */
 }
 
