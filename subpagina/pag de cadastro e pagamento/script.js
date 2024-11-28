@@ -35,3 +35,40 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
     mensagem.textContent = 'Cadastro realizado com sucesso!';
     mensagem.style.display = 'block'; // Exibe a mensagem
 });
+
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    try {
+      // Captura os dados preenchidos no formulário
+      const formData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        password: document.getElementById('password').value,
+        confirmPassword: document.getElementById('confirmPassword').value,
+        address: document.getElementById('address').value,
+        complement: document.getElementById('complement').value,
+        city: document.getElementById('city').value,
+        state: document.getElementById('state').value
+      };
+
+      // Verifica se o localStorage está disponível
+      if (typeof(Storage) !== "undefined") {
+        // Salva os dados no localStorage
+        localStorage.setItem('registrationData', JSON.stringify(formData));
+        alert('Cadastro salvo no localStorage!');
+      } else {
+        throw new Error('LocalStorage não é suportado no seu navegador.');
+      }
+
+      // Limpa o formulário após salvar os dados
+      document.getElementById('registrationForm').reset();
+
+    } catch (error) {
+      // Captura qualquer erro que ocorrer
+      console.error('Erro ao salvar dados no localStorage:', error);
+      alert('Ocorreu um erro ao salvar os dados. Tente novamente.');
+    }
+  });
