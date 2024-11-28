@@ -361,34 +361,7 @@ nav a:hover {
     color: #fff; /* Alterando a cor do texto ao passar o mouse */
 }
 
-/* ... (seu código existente) ... */
 
-/* Banner centralizado e responsivo */
-.banner {
-    text-align: center; /* Centraliza o conteúdo dentro do banner */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    max-width: 80%; /* Define a largura máxima do banner */
-  }
-  
-  /* Container principal */
-  .container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: flex-start; /* Alinha os itens no topo */
-  }
-  
-  /* Seção dos produtos */
-  .products {
-    flex: 1; /* Ocupa o espaço restante */
-    padding: 20px;
-  }
-  
-  /* Menu vertical */
-  .sidebar-menu {
-    flex: 1;
-    /* ... (seu código existente) ... */
-  }
 
 
 
