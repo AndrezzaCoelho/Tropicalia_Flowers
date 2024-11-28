@@ -365,19 +365,13 @@ nav a:hover {
 
 
 
-/* Banner centralizado e ajustável */
+/* Banner */
 .Banner {
     display: block;
-    margin: 0 auto; /* Centraliza o banner horizontalmente */
-    width: auto; /* Ajuste automático para largura */
-    height: auto; /* Ajuste automático para altura */
-}
-
-/* Personalização opcional do tamanho do banner */
-.Banner.custom-size {
-    width: 50%; /* Alterar largura conforme necessário */
-    max-height: 200px; /* Ajustar altura máxima */
-    object-fit: contain; /* Mantém a proporção da imagem */
+    margin: 0 auto;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 
