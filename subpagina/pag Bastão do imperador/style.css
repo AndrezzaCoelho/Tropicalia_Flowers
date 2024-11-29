@@ -17,10 +17,19 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6699;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #ff6699;
 }
 
 /* Estilo para o modo daltônico */
@@ -51,9 +60,9 @@ button.voltar {
 background-color: #ff6699; /* Cor de fundo */
 color: #fff;               /* Cor do texto */
 border: none;               /* Sem borda */
-border-radius: 5px;        /* Bordas arredondadas */
+border-radius: 3px;        /* Bordas arredondadas */
 cursor: pointer;            /* Muda o cursor para indicador de botão */
-font-size: 12px;           /* Tamanho da fonte */
+font-size: 10px;           /* Tamanho da fonte */
 transition: background-color 0.3s; /* Transição suave */
 }
 
