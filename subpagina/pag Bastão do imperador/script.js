@@ -1,7 +1,14 @@
 // -------- Botão "Continuar Comprando" --------
 document.getElementById("continue-shopping").addEventListener("click", () => {
-    window.history.back(); // Volta para a página anterior
+    // Verifica se há uma página anterior no histórico
+    if (document.referrer) {
+        window.history.back(); // Volta para a página anterior
+    } else {
+        // Redireciona para a página de compras se não houver histórico
+        window.location.href = "index.html"; // Substitua pelo caminho real da página de compras
+    }
 });
+
 
 // -------- Barra de Pesquisa --------
 const searchButton = document.getElementById("searchButton");
