@@ -5,6 +5,12 @@
   box-sizing: border-box;
   font-family: 'Fira Sans', sans-serif;
 }
+/* Estilização para a div que contém o botão */
+.voltar {
+  text-align: center; /* Centraliza o conteúdo dentro da div */
+  margin: 20px 0; /* Adiciona espaço acima e abaixo da div */
+}
+
 
 /* Define altura mínima para a página */
 body, html {
