@@ -1,6 +1,7 @@
 // -------- Botão "Continuar Comprando" --------
 // Função para continuar comprando (redireciona para uma página específica)
-
+function continuarComprando() {
+    ("");
     // Caminho para a página desejada (substitua pelo caminho correto)
     window.location.href = "file:///C:/Users/andre/Flores/index.html"; // Altere "produtos.html" para o URL desejado
 
