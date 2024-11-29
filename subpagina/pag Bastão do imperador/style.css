@@ -33,7 +33,19 @@ button:hover {
 }
 
 /* Estilo para o modo daltônico */
+#daltonismo-btn:hover {
+  background-color: #0056b3;
+}
 
+/* Modo para daltônicos */
+.body-daltonico {
+  filter: grayscale(100%); /* Deixa tudo em tons de cinza */
+  background-color: #f0f0f0; /* Ajuste do fundo para melhor contraste */
+}
+
+.body-daltonico .product {
+  border: 2px solid black; /* Destacar elementos importantes */
+}
 
 /* Menu de navegação */
 nav {

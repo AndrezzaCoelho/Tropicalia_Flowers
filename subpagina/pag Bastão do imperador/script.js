@@ -10,7 +10,22 @@ document.getElementById("searchButton").addEventListener("click", function() {
     }
   });
 
- 
+  const daltonismoBtn = document.getElementById("daltonismo-btn");
+
+  // Adicionar evento ao botão
+  daltonismoBtn.addEventListener("click", () => {
+    // Alternar a classe no <body>
+    document.body.classList.toggle("body-daltonico");
+
+    // Alterar texto do botão conforme o estado
+    if (document.body.classList.contains("body-daltonico")) {
+      daltonismoBtn.innerHTML = '<i class="fas fa-eye-slash"></i> Modo Normal';
+      daltonismoBtn.setAttribute("aria-label", "Desativar modo para daltônicos");
+    } else {
+      daltonismoBtn.innerHTML = '<i class="fas fa-eye"></i> Modo Daltônico';
+      daltonismoBtn.setAttribute("aria-label", "Ativar modo para daltônicos");
+    }
+  });
 
     // Muda o texto do botão com base no estado atual
     if (document.body.classList.contains('daltonismo')) {
