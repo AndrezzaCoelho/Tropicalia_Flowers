@@ -22,7 +22,19 @@ document.getElementById("continue-shopping").addEventListener("click", () => {
 // Ligação automática no carregamento (opcional, caso queira usar sem inline JS)
 document.getElementById("continue-shopping").addEventListener("click", continuarComprando);
 
+// Alternar o modo daltônico
+button.addEventListener("click", () => {
+    body.classList.toggle("daltonismo");
 
+    // Alterar texto do botão dinamicamente
+    if (body.classList.contains("daltonismo")) {
+      button.textContent = "Modo Padrão";
+      button.setAttribute("aria-label", "Desativar modo para daltônicos");
+    } else {
+      button.textContent = "Modo Daltônico";
+      button.setAttribute("aria-label", "Ativar modo para daltônicos");
+    }
+  });
 
 // -------- Barra de Pesquisa --------
 const searchButton = document.getElementById("searchButton");

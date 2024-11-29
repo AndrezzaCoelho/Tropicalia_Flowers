@@ -49,18 +49,25 @@ button:hover {
 }
 
 /* Estilo para o modo daltônico */
-#daltonismo-btn:hover {
-  background-color: #ff6699;
+ 
+ body.daltonismo {
+  background-color: #000;
+  color: #faff00;
 }
 
-/* Modo para daltônicos */
-.body-daltonico {
-  filter: grayscale(100%); /* Deixa tudo em tons de cinza */
-  background-color: #f0f0f0; /* Ajuste do fundo para melhor contraste */
+body.daltonismo a {
+  color: #ff4500;
 }
 
-.body-daltonico .product {
-  border: 2px solid black; /* Destacar elementos importantes */
+
+
+#backToTop:active {
+  transform: translateY(1px); /* Pressiona o botão ao clicar */
+}
+
+
+#backToTop:hover .animated-button span {
+  transform: scale(1.05); /* Aumenta ligeiramente o texto ao passar o mouse */
 }
 
 /* Menu de navegação */
