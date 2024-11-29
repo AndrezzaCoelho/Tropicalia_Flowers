@@ -1,8 +1,11 @@
 // -------- Botão "Continuar Comprando" --------
-// Função para continuar comprando (pode ser ajustada para redirecionar para a página inicial ou produtos)
+// Função para continuar comprando (redireciona para uma página específica)
 function continuarComprando() {
     alert("Continuando a compra...");
+    // Caminho para a página desejada (substitua pelo caminho correto)
+    window.location.href = "file:///C:/Users/andre/Flores/index.html"; // Altere "produtos.html" para o URL desejado
 }
+
 
 // Ligação automática no carregamento (opcional, caso queira usar sem inline JS)
 document.getElementById("continue-shopping").addEventListener("click", continuarComprando);

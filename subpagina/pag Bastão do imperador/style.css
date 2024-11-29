@@ -58,17 +58,6 @@ nav {
 
 /* Estilo para o botão de voltar */
 
-#continue-shopping,
-button.voltar {
-background-color: #ff6699; /* Cor de fundo */
-color: #fff;               /* Cor do texto */
-border: none;               /* Sem borda */
-border-radius: 3px;        /* Bordas arredondadas */
-cursor: pointer;            /* Muda o cursor para indicador de botão */
-font-size: 10px;           /* Tamanho da fonte */
-transition: background-color 0.3s; /* Transição suave */
-}
-
 #continue-shopping:hover,
 button.voltar:hover {
 background-color: white; /* Mudança de cor ao passar o mouse */
