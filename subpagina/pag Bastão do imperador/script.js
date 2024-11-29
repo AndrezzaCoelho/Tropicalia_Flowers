@@ -5,7 +5,7 @@ document.getElementById("continue-shopping").addEventListener("click", () => {
         window.history.back(); // Volta para a página anterior
     } else {
         // Redireciona para a página de compras se não houver histórico
-        window.location.href = "index.html"; // Substitua pelo caminho real da página de compras
+        window.location.href = "file:///C:/Users/andre/Flores/index.html"; // Substitua pelo caminho real da página de compras
     }
 });
 
