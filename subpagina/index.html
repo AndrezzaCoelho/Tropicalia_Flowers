@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<button id="backToTop" title="Voltar" class="animated-button">
+    <span>Voltar</span> 
+</button>
+
+<body>
+    <header class="horizontal-menu">
+        <h1>
+            <a >
+                <img src="" alt="Logo" class="logo" style="height: 30px;">
+            </a>
+            Tropicália Flowers
+        </h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+        <ul class="menu-carrinho" id="carrinho"> 
+            <li><a href="carrinho"><i class="fas fa-shopping-cart"></i> </a></li>
+        </ul>     
+
+
+
+        </html>
+    </header>
+     <nav>
+        <!-- Menu Hambúrguer -->
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <main>
+            <ul class="menu-opcoes" id="menu">
+                <li><a href="file:///C:/Users/andre/pag%20de%20perfil/index.html?nome=&sobre-nome=&data=&email=&telefone="><i class="fas fa-user"></i> Perfil</a></li>
+                <li><a href="#promocoes"><i class="fas fa-tags"></i> Promoções</a></li>
+                <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
+                    <i class="fas fa-eye"></i> Modo Daltônico
+        </ul>
+    </nav>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+       
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#cadastro">Cadastro</a></li>
+                <li><a href="#contate-nos">Contate-nos</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                
+            </ul>
+        </nav>
+    
+
+        <div class="container">
+            <aside class="sidebar-menu">
+                <h2>Categorias</h2>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </aside>
+        
+        <main class="products">
+            <h4>ANIVERSÁRIO</h4>
+           
+            <div class="catalog">
+                <div class="product-card">
+                    <a href="c:\Users\camila\Pictures\Orquídea Branca e Kit Cereja e Avelã.jpg">
+                        <img src="c:\Users\camila\Pictures\Orquídea Branca e Kit Cereja e Avelã.jpg" alt="Orquídea Branca e Kit Natura Cereja e Avelã">
+                    </a>
+                    <h2>Orquídea Branca e Kit Natura Cereja e Avelã</h2>
+                    <p>R$ 150,00</p>
+                    <button onclick="addToCart('Orquídea Branca e Kit Natura Cereja e Avelã', 150,00)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="c:\Users\camila\Pictures\Arranjo antúrio e Pelúcia.jpg">
+                        <img src="c:\Users\camila\Pictures\Arranjo antúrio e Pelúcia.jpg" alt="Arranjo Antúrio e Pelúcia">
+                    </a>
+                    <h2>Arranjo Antúrio e Pelúcia</h2>
+                    <p>R$ 160,00</p>
+                    <button onclick="addToCart('Arranjo Antúrio e Pelúcia, 160,00)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="c:\Users\camila\Pictures\Bougainvillea e Chocolates.jpg">
+                        <img src="c:\Users\camila\Pictures\Bougainvillea e Chocolates.jpg" alt="Bougainvillea e Chocolates">
+                    </a>
+                    <h2>Bougainvillea e Chocolates</h2>
+                    <p>R$ 85,00</p>
+                    <button onclick="addToCart('Bougainvillea e Chocolates', 85,00)">Adicionar ao Carrinho</button>
+                </div>
+        <main class="products">
+         <h4>CASAMENTO</h4> 
+
+            <div class="catalog">
+                <div class="product-card">
+                    <a href="c:\Users\camila\Pictures\Buquê Bromélia e Espumante.jpg">
+                        <img src="c:\Users\camila\Pictures\Buquê Bromélia e Espumante.jpg" alt=" Buquê Bromélia">
+                    </a>
+                    <h2> Buquê Bromélia e Espumante</h2>
+                    <p>R$ 130,00</p>
+                    <button onclick="addToCart('Buquê Bromélia e Espumante', 130)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="c:\Users\camila\Pictures\Buquê Hibisco e Vela Aromatica.jpg">
+                        <img src="c:\Users\camila\Pictures\Buquê Hibisco e Vela Aromatica.jpg" alt="Buquê Hibisco e Vela Aromatica">
+                    </a>
+                    <h2>Buquê Hibisco e Vela Aromatica</h2>
+                    <p>R$ 110,00</p>
+                    <button onclick="addToCart('Buquê Hibisco e Vela Aromatica', 110)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="c:\Users\camila\Pictures\Buquê Orquídea com Cartão Mensagem.webp">
+                        <img src="c:\Users\camila\Pictures\Buquê Orquídea com Cartão Mensagem.webp" alt="Buquê Orquídea com Cartão mensagem">
+                    </a>
+                    <h2>Buquê Orquídea com Cartão Mensagem</h2>
+                    <p>R$ 120,00</p>
+                    <button onclick="addToCart('Buquê Orquídea com Cartão Mensagem', 120)">Adicionar ao Carrinho</button>
+                </div>
+                
+        <main class="products">
+            <h4>FORMATURA</h4>
+            
+            <div class="catalog">
+                <div class="product-card">
+                    <a href="c:\Users\camila\Pictures\Mini box formatura.jpg">
+                        <img src="c:\Users\camila\Pictures\Mini box formatura.jpg" alt=" Mni Box Formatura">
+                    </a>
+                    <h2>Mini Box Formatura</h2>
+                    <p>R$ 60,00</p>
+                    <button onclick="addToCart('Mini Box Formatura1', 60)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="c:\Users\camila\Pictures\Mini Box Formatura Helicônia.jpg">
+                        <img src="c:\Users\camila\Pictures\Mini Box Formatura Helicônia.jpg" alt="Mini Box Formatura Helicônia">
+                    </a>
+                    <h2>Mini Box Formatura Helicônia</h2>
+                    <p>R$ 90,00</p>
+                    <button onclick="addToCart('Mini Box Formatura Helicônia', 90)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="c:\Users\camila\Pictures\Mini Box Formatura Sucesso.png">
+                        <img src="c:\Users\camila\Pictures\Mini Box Formatura Sucesso.png" alt="Mini Box Formatura Sucesso">
+                    </a>
+                    <h2>Mini Box Formatura Sucesso</h2>
+                    <p>R$ 75,00</p>
+                    <button onclick="addToCart('Mini Box Formatura Sucesso', 75)">Adicionar ao Carrinho</button>
+                </div>
+                <footer>
+                    <script src="script.js"></script>
+                    <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </footer>
+            </body>
