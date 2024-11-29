@@ -1,14 +1,7 @@
 // -------- Botão "Continuar Comprando" --------
-// -------- Função para o botão "Continuar Comprando" --------
+// Função para continuar comprando (pode ser ajustada para redirecionar para a página inicial ou produtos)
 function continuarComprando() {
-    // Verifica se há uma página anterior no histórico
-    if (document.referrer) {
-        // Volta para a página anterior
-        window.history.back();
-    } else {
-        // Caso não haja histórico, redireciona para a página de compras
-        window.location.href = "index.html"; // Substitua "index.html" pelo caminho real da página de compras
-    }
+    alert("Continuando a compra...");
 }
 
 // Ligação automática no carregamento (opcional, caso queira usar sem inline JS)
