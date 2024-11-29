@@ -1,38 +1,47 @@
-const searchInput = document.getElementById('searchInput');
-const productList = document.getElementById('productList');
+// Adicionar evento ao botão de busca
+document.getElementById("searchButton").addEventListener("click", function() {
+    realizarBusca();
+  });
 
-// Lista de produtos
-const products = [
-    'Flor Rosa',
-    'Arranjo de Margaridas',
-    'Buquê de Lírios',
-    'Flor de Girassol',
-    'Arranjo de Orquídeas',
-    'Buquê de Tulipas',
-    'Arranjo de Ramos',
-    'Flor de Jasmim'
-];
+  // Permitir busca ao pressionar Enter
+  document.getElementById("searchInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      realizarBusca();
+    }
+  });
 
-// Função para mostrar os produtos
-function displayProducts(productsToDisplay) {
-    // Limpa a lista anterior
-    productList.innerHTML = ''; 
-    productsToDisplay.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.textContent = product;
-        productDiv.onclick = () => selectProduct(product); // Seleciona o produto ao clicar
-        productList.appendChild(productDiv);
-    });
-}
+  document.getElementById('daltonismo-btn').addEventListener('click', function() {
+    // Alterna a classe 'daltonismo' no body
+    document.body.classList.toggle('daltonismo');
 
-// Função para filtrar e exibir os produtos com base na pesquisa
-function searchProducts() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const filteredProducts = products.filter(product => 
-        product.toLowerCase().includes(searchTerm)
-    );
-    displayProducts(filteredProducts);
-}
+    // Muda o texto do botão com base no estado atual
+    if (document.body.classList.contains('daltonismo')) {
+        this.innerHTML = '<i class="fas fa-eye-slash"></i> Desativar Modo Daltônico';
+    } else {
+        this.innerHTML = '<i class="fas fa-eye"></i> Modo Daltônico';
+    }
+});
+document.getElementById('daltonismo-btn').addEventListener('click', function() {
+    // Alterna a classe 'daltonismo' no body
+    document.body.classList.toggle('daltonismo');
+
+    // Muda o texto do botão com base no estado atual
+    if (document.body.classList.contains('daltonismo')) {
+        this.innerHTML = '<i class="fas fa-eye-slash"></i> Desativar Modo Daltônico';
+    } else {
+        this.innerHTML = '<i class="fas fa-eye"></i> Modo Daltônico';
+    }
+});
+
+
+
+document.getElementById('continue-shopping').addEventListener('click', function() {
+    // Redireciona para a página anterior
+    window.history.back();
+    
+    // Se você quiser redirecionar para uma página específica, use:
+    // window.location.href = 'sua_pagina.html';
+});
 
 // Função chamada quando um produto é selecionado
 function selectProduct(product) {
@@ -137,11 +146,47 @@ flowerColorSelect.addEventListener('change', () => {
 const calculateFreightButton = document.getElementById('calculate-freight');
 const cepInput = document.getElementById('cep');
 
-calculateFreightButton.addEventListener('click', () => {
+calculateFreightButton.addEventListener('click', async () => {
     const cep = cepInput.value.trim();
-    if (cep) {
-        alert(`Frete calculado para o CEP: ${cep}`); // Corrigido para usar template string
+    
+    if (isValidCEP(cep)) {
+        try {
+            const freightValue = calculateFreight(cep); // Simula o cálculo do frete
+            const address = await getAddressByCEP(cep);
+            alert(`Frete calculado para o CEP: ${cep}.
+                  Valor: R$ ${freightValue.toFixed(2)}.
+                  Rua: ${address.logradouro}`);
+        } catch (error) {
+            alert('Erro ao buscar o endereço: ' + error.message);
+        }
     } else {
         alert('Por favor, insira um CEP válido.');
     }
 });
+
+// Função para validar o CEP
+function isValidCEP(cep) {
+    const cepPattern = /^\d{5}-?\d{3}$/; // ACEITA: 12345-678 ou 12345678
+    return cepPattern.test(cep);
+}
+
+// Função simulada para calcular o frete
+function calculateFreight(cep) {
+    return Math.random() * 50; // Simula um valor de frete entre 0 e 50
+}
+
+// Função para buscar endereço pelo CEP
+async function getAddressByCEP(cep) {
+    if (!isValidCEP(cep)) {
+        throw new Error("CEP inválido.");
+    }
+    
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    if (!response.ok) {
+        throw new Error("Erro ao buscar o endereço.");
+    }
+
+    const addressData = await response.json();
+    return addressData;
+}
+

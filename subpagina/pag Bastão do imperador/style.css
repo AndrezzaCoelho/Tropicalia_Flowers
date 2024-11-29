@@ -11,6 +11,37 @@ body, html {
   height: 100%;
 }
 
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para o modo daltônico */
+body.daltonismo {
+  background-color: #F1F1F1; /* Cor de fundo para daltônicos */
+  color: #000; /* Cor do texto */
+}
+
+.daltonismo button {
+  background-color: #28a745; /* Cor do botão no modo daltônico */
+  color: white;
+}
 
 
 /* Menu de navegação */
