@@ -1,79 +1,161 @@
+/* Reseta margens e espaçamentos */
 * {
-  margin: 0;             /* Remove a margem padrão de todos os elementos */
-  padding: 0;            /* Remove o preenchimento padrão de todos os elementos */
-  box-sizing: border-box; /* Altera o modelo de caixa dos elementos para incluir bordas e preenchimentos na largura e altura total do elemento */
-  font-family: Fira Sans; /* Define a fonte padrão como "Fira Sans" para todos os elementos */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
 }
 
-
-/* Estilo para o botão de voltar */
-#backToTop {
-  background-color: #fff; /* Cor inicial */
-  color: #ff6699;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  transition: background-color 0.3s ease;
+/* Define altura mínima para a página */
+body, html {
+  height: 100%;
 }
 
-/* Estilo padrão */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #eee4e7;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-  padding: 10px;
-  text-align: center;
-}
-
-button#daltonismo-btn {
-
-  font-size: 1rem;
-  color: #eee4e7;
-  background-color: #ff6699;
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  background-color: #ff6699;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-button#daltonismo-btn:hover {
-  background-color: #fff;
+button:hover {
+  background-color: #ff6699;
 }
 
 /* Estilo para o modo daltônico */
-body.daltonismo {
-  background-color: #000;
-  color: #faff00;
+
+
+/* Menu de navegação */
+nav {
+  background-color: #ff6699; /* Cor de fundo */
+  display: flex; /* Flexbox para alinhamento */
+  justify-content: space-between;
+  padding: 10px 20px; /* Espaçamento interno */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
 }
 
-body.daltonismo a {
-  color: #ff4500;
+/* Estilo para o botão de voltar */
+
+#continue-shopping,
+button.voltar {
+background-color: #ff6699; /* Cor de fundo */
+color: #fff;               /* Cor do texto */
+border: none;               /* Sem borda */
+border-radius: 3px;        /* Bordas arredondadas */
+cursor: pointer;            /* Muda o cursor para indicador de botão */
+font-size: 10px;           /* Tamanho da fonte */
+transition: background-color 0.3s; /* Transição suave */
 }
 
-
-
-#backToTop:active {
-  transform: translateY(1px); /* Pressiona o botão ao clicar */
+#continue-shopping:hover,
+button.voltar:hover {
+background-color: white; /* Mudança de cor ao passar o mouse */
 }
 
-
-#backToTop:hover .animated-button span {
-  transform: scale(1.05); /* Aumenta ligeiramente o texto ao passar o mouse */
+/* Lista do menu */
+nav ul {
+  list-style-type: none; /* Remove marcadores */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Alinha itens na horizontal */
 }
 
+/* Itens do menu */
+nav li {
+  position: relative; /* Necessário para dropdown */
+}
 
-/* Estilos para o select */
-select {
-  padding: 8px;
-  font-size: 8px;
-  margin: 8px;
+/* Links do menu */
+nav a {
+  display: block; /* Ocupa toda a área do <li> */
+  color: white; /* Cor do texto */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s, transform 0.2s; /* Suavidade ao interagir */
+}
+
+/* Hover nos links do menu */
+nav a:hover {
+  background-color: #fff;
+  color: #ff6699;
+  transform: scale(1.05); /* Efeito de zoom */
+}
+
+/* Dropdown (submenu) */
+.dropdown-content {
+  display: none; /* Esconde por padrão */
+  position: absolute;
+  background-color: #fff;
+  min-width: 150px;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Garante que fique sobre outros elementos */
+}
+
+/* Links do dropdown */
+.dropdown-content a {
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block; /* Ocupa a área */
+  transition: background-color 0.3s;
+}
+
+/* Hover no dropdown */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Logo redonda */
+.logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 80%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+}
+
+/* Campo de pesquisa */
+.search-bar input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botão de pesquisa */
+.search-bar button {
+  padding: 10px;
+  border: none;
+  background-color: #f47ea5;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+/* Hover no botão de pesquisa */
+.search-bar button:hover {
+  background-color: #f47ea5;
 }
 
 /* Menu horizontal fixo */
