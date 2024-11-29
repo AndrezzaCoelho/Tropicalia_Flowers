@@ -165,17 +165,16 @@ flowerColorSelect.addEventListener('change', () => {
 const calculateFreightButton = document.getElementById('calculate-freight');
 const cepInput = document.getElementById('cep');
 
-// Evento de clique no botão de cálculo de frete
 calculateFreightButton.addEventListener('click', async () => {
-    const cep = cepInput.value.trim(); // Remove espaços em branco do CEP
-
+    const cep = cepInput.value.trim();
+    
     if (isValidCEP(cep)) {
         try {
-            const freightValue = calculateFreight(cep); // Calcula o valor do frete (simulado)
-            const address = await getAddressByCEP(cep); // Busca o endereço pelo CEP
+            const freightValue = calculateFreight(cep); // Simula o cálculo do frete
+            const address = await getAddressByCEP(cep);
             alert(`Frete calculado para o CEP: ${cep}.
-Valor: R$ ${freightValue.toFixed(2)}.
-Rua: ${address.logradouro || "Informação indisponível"}`);
+                  Valor: R$ ${freightValue.toFixed(2)}.
+                  Rua: ${address.logradouro}`);
         } catch (error) {
             alert('Erro ao buscar o endereço: ' + error.message);
         }
@@ -186,27 +185,27 @@ Rua: ${address.logradouro || "Informação indisponível"}`);
 
 // Função para validar o CEP
 function isValidCEP(cep) {
-    const cepPattern = /^\d{5}-?\d{3}$/; // Aceita formatos: 12345-678 ou 12345678
+    const cepPattern = /^\d{5}-?\d{3}$/; // ACEITA: 12345-678 ou 12345678
     return cepPattern.test(cep);
 }
 
 // Função simulada para calcular o frete
 function calculateFreight(cep) {
-    return Math.random() * 50; // Retorna um valor de frete entre 0 e 50
+    return Math.random() * 50; // Simula um valor de frete entre 0 e 50
 }
 
 // Função para buscar endereço pelo CEP
 async function getAddressByCEP(cep) {
+    if (!isValidCEP(cep)) {
+        throw new Error("CEP inválido.");
+    }
+    
     const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
     if (!response.ok) {
         throw new Error("Erro ao buscar o endereço.");
     }
 
     const addressData = await response.json();
-
-    if (addressData.erro) {
-        throw new Error("CEP não encontrado.");
-    }
-
     return addressData;
 }
+
