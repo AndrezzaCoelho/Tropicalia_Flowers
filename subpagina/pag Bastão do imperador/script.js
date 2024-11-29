@@ -1,10 +1,19 @@
 // -------- Botão "Continuar Comprando" --------
-document.getElementById("continue-shopping").addEventListener("click", () => {
-    
-        // Redireciona para a página de compras se não houver histórico
-        window.location.href = "file:///C:/Users/andre/Flores/index.html"; // Substitua pelo caminho real da página de compras
+// -------- Função para o botão "Continuar Comprando" --------
+function continuarComprando() {
+    // Verifica se há uma página anterior no histórico
+    if (document.referrer) {
+        // Volta para a página anterior
+        window.history.back();
+    } else {
+        // Caso não haja histórico, redireciona para a página de compras
+        window.location.href = "index.html"; // Substitua "index.html" pelo caminho real da página de compras
     }
-);
+}
+
+// Ligação automática no carregamento (opcional, caso queira usar sem inline JS)
+document.getElementById("continue-shopping").addEventListener("click", continuarComprando);
+
 
 
 // -------- Barra de Pesquisa --------
