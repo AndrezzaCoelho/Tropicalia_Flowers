@@ -335,11 +335,11 @@ nav a:hover {
 }
 
 .sidebar-menu {
-    width: 200px;
+    width: 250px;
     background-color: #ffecb3;
     color: #ff6699;
     padding: 1rem;
-    height: 100vh;
+    height: 160vh;
 }
 
 .sidebar-menu a {
@@ -476,8 +476,8 @@ h1 a {
 /* Estilos gerais do corpo */
 body {
     font-family: Arial, sans-serif;
-    margin: 100;
-    padding: 100;
+    margin: 1000;
+    padding: 1000;
     background-color: #f5f5f5; /* Cor de fundo clara */
 }
 

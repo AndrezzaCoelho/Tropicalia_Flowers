@@ -47,32 +47,12 @@
 
 <!-- Campos de Endereço -->
 <section id="ajuda">
-    <h2>Precisa de Ajuda?</h2>
-    <p>Entre em contato com nosso suporte ou consulte nossa central de ajuda para mais informações.</p>
-    <button onclick="abrirJanelaAjuda()">Central de Ajuda</button>
+    <h2>Explore nosso site e deixe-se inspirar!</h2>
+    <p>Cada cliente é único, e estamos aqui para ajudar você a encontrar a combinação perfeita de flores que transmita seus sentimentos.</p>
+   
     <button onclick="abrirJanelaEndereco()">Editar Endereço</button>
 </section>
 
-<div id="janela-ajuda" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="fecharJanela('janela-ajuda')">&times;</span>
-        <h2>Contato para Ajuda</h2>
-        <p>Preencha o formulário abaixo para entrar em contato conosco:</p>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" placeholder="Seu nome" required>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" placeholder="Seu e-mail" required>
-            
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" placeholder="Digite sua mensagem" required></textarea>
-            
-            <button type="submit">Enviar</button>
-            <p id="selected-method"></p>
-        </form>
-    </div>
-</div>
 
 <div id="janela-endereco" class="modal">
     <div class="modal-content">
