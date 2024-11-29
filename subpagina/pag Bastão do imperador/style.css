@@ -14,10 +14,10 @@
   text-align: center; /* Centraliza o texto no botão */
   text-decoration: none; /* Remove sublinhado */
   display: inline-block; /* Permite definir largura e altura */
-  font-size: 16px; /* Tamanho da fonte */
-  margin: 4px 2px; /* Margens ao redor do botão */
+  font-size: 10px; /* Tamanho da fonte */
+  margin: 2px 1px; /* Margens ao redor do botão */
   cursor: pointer; /* Muda o cursor ao passar o mouse */
-  border-radius: 5px; /* Cantos arredondados */
+  border-radius: 3px; /* Cantos arredondados */
   transition: background-color 0.3s; /* Efeito de transição para a cor de fundo */
 }
 
