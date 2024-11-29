@@ -1,70 +1,164 @@
-// Variáveis globais
-let cartQuantity = 0; // Quantidade total no carrinho
+// -------- Botão "Continuar Comprando" --------
+// Função para continuar comprando (redireciona para uma página específica)
+function continuarComprando() {
+    ("");
+    // Caminho para a página desejada (substitua pelo caminho correto)
+    window.location.href = "file:///C:/Users/andre/Flores/index.html"; // Altere "produtos.html" para o URL desejado
 
-// Função para alternar a visibilidade do menu
+}
+
+// Função para o botão "Voltar"
+document.getElementById("continue-shopping").addEventListener("click", () => {
+    // Verifica se há uma página anterior no histórico
+    if (document.referrer) {
+        window.history.back(); // Volta para a página anterior
+    } else {
+        // Redireciona para uma página específica se não houver histórico
+        window.location.href = "index.html"; // Substitua "index.html" pelo caminho desejado
+    }
+});
+
+
+// Ligação automática no carregamento (opcional, caso queira usar sem inline JS)
+document.getElementById("continue-shopping").addEventListener("click", continuarComprando);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const daltonismoBtn = document.getElementById("daltonismo-btn");
+    let isDaltonismoActive = false;
+
+    daltonismoBtn.addEventListener("click", function() {
+        isDaltonismoActive = !isDaltonismoActive; // Alterna o estado
+
+        if (isDaltonismoActive) {
+            document.body.classList.add("modo-daltonico"); // Ativa o modo daltônico
+            daltonismoBtn.innerHTML = '<i class="fas fa-eye-slash"></i> Modo Normal'; // Muda o texto do botão
+        } else {
+            document.body.classList.remove("modo-daltonico"); // Desativa o modo daltônico
+            daltonismoBtn.innerHTML = '<i class="fas fa-eye"></i> Modo Daltônico'; // Restaura o texto original do botão
+        }
+    });
+});
+
+// -------- Barra de Pesquisa --------
+const searchButton = document.getElementById("searchButton");
+const searchInput = document.getElementById("searchInput");
+
+// Inicia a busca ao clicar no botão
+searchButton.addEventListener("click", realizarBusca);
+
+// Permite iniciar a busca ao pressionar "Enter"
+searchInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") realizarBusca();
+});
+
+// -------- Carrinho de Compras --------
+const addToCartButton = document.getElementById("add-to-cart");
+const itemCountDisplay = document.getElementById("item-count");
+const itemQuantityInput = document.getElementById("item-quantity");
+
+// Adicionar ao carrinho
+addToCartButton.addEventListener("click", () => {
+    const quantity = parseInt(itemQuantityInput.value) || 0;
+    const flowerColor = document.getElementById("flower-color").value;
+
+    if (quantity > 0) {
+        // Atualiza o número total de itens no carrinho
+        const currentCount = parseInt(itemCountDisplay.textContent) || 0;
+        itemCountDisplay.textContent = currentCount + quantity;
+
+        // Mostra uma mensagem de confirmação
+        alert(`Adicionado ao carrinho: ${quantity} Antúrio(s) na cor ${flowerColor}.`);
+    } else {
+        alert("Por favor, selecione uma quantidade maior que zero.");
+    }
+});
+
+// -------- Controle de Quantidade --------
+const removeItemButton = document.getElementById("remove-item");
+const addItemButton = document.getElementById("add-item");
+
+// Função para alterar a quantidade (incremento ou decremento)
+function alterarQuantidade(valor) {
+    const currentQuantity = parseInt(itemQuantityInput.value) || 1;
+    const newQuantity = Math.max(1, currentQuantity + valor); // Garante que a quantidade mínima seja 1
+    itemQuantityInput.value = newQuantity;
+}
+
+// Aumenta a quantidade
+addItemButton.addEventListener("click", () => alterarQuantidade(1));
+
+// Diminui a quantidade
+removeItemButton.addEventListener("click", () => alterarQuantidade(-1));
+
+// -------- Seleção de Cor --------
+document.getElementById("flower-color").addEventListener("change", (event) => {
+    console.log(`Cor escolhida: ${event.target.value}`);
+});
+
+// -------- Menu Hambúrguer --------
 function toggleMenu() {
     const menu = document.getElementById("menu");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
+    menu.classList.toggle("show"); // Alterna a visibilidade do menu
 }
 
-// Seleciona o botão
-const backToTopButton = document.getElementById("backToTop");
+// -------- Cálculo de Frete --------
+const calculateFreightButton = document.getElementById("calculate-freight");
+const cepInput = document.getElementById("cep");
 
-// Exibe o botão ao rolar a página
-window.onscroll = function () {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    backToTopButton.style.display = "block";
-  } else {
-    backToTopButton.style.display = "none";
-  }
-};
+// Clique no botão de calcular frete
+calculateFreightButton.addEventListener("click", async () => {
+    const cep = cepInput.value.trim(); // Remove espaços em branco
 
-// Scroll suave ao clicar no botão
-backToTopButton.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+    if (isValidCEP(cep)) {
+        try {
+            const freightValue = calculateFreight(cep); // Calcula o frete (simulação)
+            const address = await getAddressByCEP(cep); // Busca o endereço via API
+
+            // Exibe os dados ao usuário
+            alert(`Frete calculado para o CEP: ${cep}.
+Valor: R$ ${freightValue.toFixed(2)}.
+Rua: ${address.logradouro || "Informação indisponível"}`);
+        } catch (error) {
+            alert("Erro ao buscar o endereço: " + error.message);
+        }
+    } else {
+        alert("Por favor, insira um CEP válido.");
+    }
 });
 
-
-
-// Função para adicionar item ao carrinho
-document.getElementById("add-to-cart").addEventListener("click", function() {
-    const quantity = document.getElementById("item-quantity").value;
-    cartQuantity += parseInt(quantity);
-    alert("Item adicionado ao carrinho. Total de itens: " + cartQuantity);
-});
-
-// Função para continuar comprando (pode ser ajustada para redirecionar para a página inicial ou produtos)
-function continuarComprando() {
-    alert("Continuando a compra...");
+// Valida o formato do CEP
+function isValidCEP(cep) {
+    const cepPattern = /^\d{5}-?\d{3}$/; // Aceita 12345-678 ou 12345678
+    return cepPattern.test(cep);
 }
 
-// Funções para aumentar e diminuir a quantidade do item
-document.getElementById("add-item").addEventListener("click", function() {
-    const quantityInput = document.getElementById("item-quantity");
-    quantityInput.value = parseInt(quantityInput.value) + 1;
-});
+// Simula o cálculo do frete (gera valor aleatório entre 0 e 50)
+function calculateFreight(cep) {
+    return Math.random() * 50;
+}
 
-document.getElementById("remove-item").addEventListener("click", function() {
-    const quantityInput = document.getElementById("item-quantity");
-    if (parseInt(quantityInput.value) > 1) {
-        quantityInput.value = parseInt(quantityInput.value) - 1;
+// Busca o endereço pelo CEP usando a API ViaCEP
+async function getAddressByCEP(cep) {
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    if (!response.ok) {
+        throw new Error("Erro ao buscar o endereço.");
     }
-});
 
-// Função para calcular o frete (exemplo básico)
-document.getElementById("calculate-freight").addEventListener("click", function() {
-    const cep = document.getElementById("cep").value;
-    if (cep) {
-        alert("Calculando frete para o CEP: " + cep);
-        // Aqui você pode adicionar uma lógica para calcular o frete baseado no CEP
+    const addressData = await response.json();
+    if (addressData.erro) {
+        throw new Error("CEP não encontrado.");
+    }
+
+    return addressData;
+}
+
+// -------- Função para realizar a busca --------
+function realizarBusca() {
+    const searchQuery = searchInput.value.trim();
+    if (searchQuery) {
+        console.log(`Realizando busca por: ${searchQuery}`);
+        // Adicione aqui a lógica de busca (ex.: filtro de produtos)
     } else {
-        alert("Por favor, digite um CEP válido.");
+        alert("Por favor, insira um termo para pesquisar.");
     }
-});
+}
