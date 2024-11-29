@@ -484,7 +484,7 @@ body {
 /* Estilos do rodapé */
 footer {
     background-color: #ff6699; /* Cor de fundo verde */
-    color: white; /* Cor do texto */
+    color: #333; /* Cor do texto */
     text-align: center; /* Centraliza o texto */
     padding: 20px 0; /* Espaço em cima e embaixo */
 }
