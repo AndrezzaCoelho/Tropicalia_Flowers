@@ -134,3 +134,36 @@ document.addEventListener("DOMContentLoaded", () => {
         botao.addEventListener('click', adicionarAoCarrinho);
     });
 });
+let cart = [];
+
+function addToCart(productName, productPrice) {
+    const product = {
+        name: productName,
+        price: productPrice
+    };
+    cart.push(product);
+    updateCart();
+}
+
+function updateCart() {
+    const carrinho = document.getElementById('carrinho');
+    carrinho.innerHTML = `<li><a href="subpagina/pag carrinho/index.html"><i class="fas fa-shopping-cart"></i></a> (${cart.length} itens)</li>`;
+    // Aqui você pode adicionar lógica para mostrar o valor total, etc.
+}
+
+function toggleMenu() {
+    const menu = document.getElementById('nav');
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
+// Para fechar o menu ao clicar fora dele
+window.onclick = function(event) {
+    const menu = document.getElementById('nav');
+    if (!event.target.matches('.menu-hamburguer') && menu.style.display === "block") {
+        menu.style.display = "none";
+    }
+}
