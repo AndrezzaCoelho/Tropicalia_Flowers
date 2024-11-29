@@ -58,10 +58,6 @@ nav {
 
 /* Estilo para o botão de voltar */
 
-#continue-shopping:hover,
-button.voltar:hover {
-background-color: white; /* Mudança de cor ao passar o mouse */
-}
 
 /* Lista do menu */
 nav ul {
