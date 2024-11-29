@@ -10,6 +10,10 @@ document.getElementById("searchButton").addEventListener("click", function() {
     }
   });
 
+  document.getElementById('continue-shopping').addEventListener('click', function() {
+    window.history.back();
+});
+
   const daltonismoBtn = document.getElementById("daltonismo-btn");
 
   // Adicionar evento ao botão
