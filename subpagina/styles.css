@@ -334,11 +334,11 @@ nav a:hover {
 }
 
 .sidebar-menu {
-    width: 200px;
+    width: 250px;
     background-color: #ffecb3;
     color: #ff6699;
     padding: 1rem;
-    height: 200vh;
+    height: 500vh;
 }
 
 .sidebar-menu a {
