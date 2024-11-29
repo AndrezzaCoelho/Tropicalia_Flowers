@@ -472,3 +472,47 @@ h1 a {
     text-decoration: none;
     color: #ff6699; /* cor da fonte categoria*/
 }
+
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Cor de fundo clara */
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaço em cima e embaixo */
+}
+
+/* Estilos para o parágrafo dentro do rodapé */
+footer p {
+    margin: 0; /* Remove a margem padrão */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilos da lista */
+footer ul {
+    list-style-type: none; /* Remove a bolinha da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+}
+
+/* Estilos para os itens da lista */
+footer ul li {
+    display: inline; /* Exibe os itens em linha */
+    margin: 0 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilos para os links */
+footer a {
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Sublinha no hover */
+}
