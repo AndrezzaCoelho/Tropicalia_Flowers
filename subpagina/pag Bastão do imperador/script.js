@@ -1,13 +1,10 @@
 // -------- Botão "Continuar Comprando" --------
 document.getElementById("continue-shopping").addEventListener("click", () => {
-    // Verifica se há uma página anterior no histórico
-    if (document.referrer) {
-        window.history.back(); // Volta para a página anterior
-    } else {
+    
         // Redireciona para a página de compras se não houver histórico
         window.location.href = "file:///C:/Users/andre/Flores/index.html"; // Substitua pelo caminho real da página de compras
     }
-});
+);
 
 
 // -------- Barra de Pesquisa --------
