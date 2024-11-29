@@ -129,8 +129,8 @@ body {
     display: none;
     background-color:#eee4e7;
     position: absolute;
-    /top: 10px; / ajuste conforme necessário */
-    /left: 5px; / diminui a distância da esquerda */
+    /*top: 10px; / ajuste conforme necessário */
+    /*left: 5px; / diminui a distância da esquerda */
    /* right: 5px; /* adiciona uma distância da direita */
     border-radius: 5px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
