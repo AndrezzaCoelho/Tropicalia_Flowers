@@ -220,6 +220,43 @@ nav a:hover {
   align-items: center;
 }
 
+/* Lista de navegação no menu horizontal */
+.horizontal-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Links no menu horizontal */
+.horizontal-menu a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Menu fixo */
+.horizontal-menu.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Layout principal */
+.container {
+  display: flex;
+  margin: 100px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #ffcc00;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Imagem do produto */
 .product-image {
   max-width: 100%;
