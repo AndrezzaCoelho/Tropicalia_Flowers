@@ -33,15 +33,27 @@ button:hover {
 }
 
 /* Estilo para o modo daltônico */
+/* Estilo para o modo daltônico */
 body.daltonismo {
-  background-color: #F1F1F1; /* Cor de fundo para daltônicos */
-  color: #000; /* Cor do texto */
+  background-color: #000;
+  color: #faff00;
 }
 
-.daltonismo button {
-  background-color: #28a745; /* Cor do botão no modo daltônico */
-  color: white;
+body.daltonismo a {
+  color: #ff4500;
 }
+
+
+
+#backToTop:active {
+  transform: translateY(1px); /* Pressiona o botão ao clicar */
+}
+
+
+#backToTop:hover .animated-button span {
+  transform: scale(1.05); /* Aumenta ligeiramente o texto ao passar o mouse */
+}
+
 
 
 /* Menu de navegação */
