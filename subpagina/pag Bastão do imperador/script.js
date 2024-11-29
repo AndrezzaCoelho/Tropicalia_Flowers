@@ -4,7 +4,19 @@ function continuarComprando() {
     alert("Continuando a compra...");
     // Caminho para a página desejada (substitua pelo caminho correto)
     window.location.href = "file:///C:/Users/andre/Flores/index.html"; // Altere "produtos.html" para o URL desejado
+
 }
+
+// Função para o botão "Voltar"
+document.getElementById("continue-shopping").addEventListener("click", () => {
+    // Verifica se há uma página anterior no histórico
+    if (document.referrer) {
+        window.history.back(); // Volta para a página anterior
+    } else {
+        // Redireciona para uma página específica se não houver histórico
+        window.location.href = "index.html"; // Substitua "index.html" pelo caminho desejado
+    }
+});
 
 
 // Ligação automática no carregamento (opcional, caso queira usar sem inline JS)
