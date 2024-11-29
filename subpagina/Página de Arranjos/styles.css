@@ -129,9 +129,7 @@ body {
     display: none;
     background-color:#eee4e7;
     position: absolute;
-    /top: 10px; / ajuste conforme necessário */
-    /left: 5px; / diminui a distância da esquerda */
-   /* right: 5px; /* adiciona uma distância da direita */
+   
     border-radius: 5px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -336,11 +334,11 @@ nav a:hover {
 }
 
 .sidebar-menu {
-    width: 200px;
+    width: 250px;
     background-color: #ffecb3;
     color: #ff6699;
     padding: 1rem;
-    height: 100vh;
+    height: 160vh;
 }
 
 .sidebar-menu a {
@@ -426,3 +424,35 @@ h1 a {
     text-decoration: none;
     color: #ff6699; /* cor da fonte categoria*/
 }
+/* Estilo do rodapé */
+footer {
+    background-color: #ff6699; /* Cor de fundo do rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Espaçamento superior e inferior */
+    font-family: Arial, sans-serif; /* Fonte do rodapé */
+}
+
+/* Estilo para a seção de redes sociais */
+.social-media {
+    margin-bottom: 15px; /* Espaçamento inferior da seção de redes sociais */
+}
+
+.social-media h2 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #333; /* Cor do título */
+    margin-bottom: 10px; /* Espaçamento inferior do título */
+}
+
+.social-media p {
+    margin: 0; /* Remove margens do parágrafo */
+}
+
+/* Estilo para os links das redes sociais */
+.social-media a {
+    text-decoration: none; /* Remove sublinhado */
+    margin: 0 10px; /* Espaçamento horizontal entre os links */
+    font-size: 18px; /* Tamanho da fonte dos links */
+    transition: color 0.3s; /* Transição suave para cores */
+}
+
+

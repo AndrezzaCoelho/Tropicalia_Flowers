@@ -339,7 +339,7 @@ nav a:hover {
     background-color: #ffecb3;
     color: #ff6699;
     padding: 1rem;
-    height: 160vh;
+    height: 00vh;
 }
 
 .sidebar-menu a {
@@ -490,7 +490,7 @@ footer {
 }
 /* Estilos para o rodapé */
 footer {
-    width: 100%; /* O rodapé ocupa toda a largura disponível */
+    width: 200%; /* O rodapé ocupa toda a largura disponível */
     background-color: #ff6699; /* Cor de fundo do rodapé (altere conforme necessário) */
     color: white; /* Cor do texto no rodapé */
     text-align: center; /* Centraliza o texto */
