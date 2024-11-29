@@ -51,7 +51,14 @@ button:hover {
 /* Estilo para o modo daltônico */
 .modo-daltonico {
   filter: contrast(1.2) saturate(0.8); /* Ajustes de contraste e saturação */
+  background-color: #000;
+  color: #faff00;
 }
+
+body.daltonismo a {
+  color: #ff4500;
+}
+
 
 /* Menu de navegação */
 nav {
