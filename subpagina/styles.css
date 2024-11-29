@@ -193,8 +193,8 @@ nav {
 
 nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
-    margin: 15; /* Remove a margem padrão */
-    padding: 15 /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
     display: flex; /* Usando flexbox para a listagem de itens */
 }
 
