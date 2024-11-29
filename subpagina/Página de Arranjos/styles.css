@@ -424,50 +424,48 @@ h1 a {
     text-decoration: none;
     color: #ff6699; /* cor da fonte categoria*/
 }
-/* Estilo do rodapé */
+/* Estilos do rodapé */
 footer {
-    background-color: #f8f8f8; /* Cor de fundo do rodapé */
+    background-color: #ff6699; /* Cor de fundo verde */
+    color: #333; /* Cor do texto */
     text-align: center; /* Centraliza o texto */
-    padding: 20px 0; /* Espaçamento superior e inferior */
-    font-family: Arial, sans-serif; /* Fonte do rodapé */
+    padding: 20px 0; /* Espaço em cima e embaixo */
+}
+/* Estilos para o rodapé */
+footer {
+    width: 200%; /* O rodapé ocupa toda a largura disponível */
+    background-color: #ff6699; /* Cor de fundo do rodapé (altere conforme necessário) */
+    color: white; /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Preenchimento vertical no rodapé */
+    position: relative; /* Permite que outros elementos sejam posicionados em relação ao rodapé, se necessário */
 }
 
-/* Estilo para a seção de redes sociais */
-.social-media {
-    margin-bottom: 15px; /* Espaçamento inferior da seção de redes sociais */
-}
-
-.social-media h2 {
-    font-size: 24px; /* Tamanho da fonte do título */
-    color: #333; /* Cor do título */
-    margin-bottom: 10px; /* Espaçamento inferior do título */
-}
-
-.social-media p {
-    margin: 0; /* Remove margens do parágrafo */
-}
-
-/* Estilo para os links das redes sociais */
-.social-media a {
-    text-decoration: none; /* Remove sublinhado */
-    margin: 0 10px; /* Espaçamento horizontal entre os links */
-    font-size: 18px; /* Tamanho da fonte dos links */
-    transition: color 0.3s; /* Transição suave para cores */
-}
-
-/* Estilo para os ícones */
-.social-media a i {
-    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
-}
-
-/* Estilo ao passar o mouse sobre os links */
-.social-media a:hover {
-    opacity: 0.7; /* Faz o link ficar mais claro ao passar o mouse */
-}
-
-/* Estilo para o aviso de direitos autorais */
+/* Estilos para o parágrafo dentro do rodapé */
 footer p {
-    font-size: 14px; /* Tamanho da fonte do aviso */
-    color: #777; /* Cor do texto */
-    margin: 0; /* Remove margens */
+    margin: 0; /* Remove a margem padrão */
+    font-size: 14px; /* Tamanho da fonte */
 }
+
+/* Estilos da lista */
+footer ul {
+    list-style-type: none; /* Remove a bolinha da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+}
+
+/* Estilos para os itens da lista */
+footer ul li {
+    display: inline; /* Exibe os itens em linha */
+    margin: 0 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilos para os links */
+footer a {
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Sublinha no hover */
+}
+
