@@ -10,9 +10,7 @@ document.getElementById("searchButton").addEventListener("click", function() {
     }
   });
 
-  document.getElementById('daltonismo-btn').addEventListener('click', function() {
-    // Alterna a classe 'daltonismo' no body
-    document.body.classList.toggle('daltonismo');
+ 
 
     // Muda o texto do botão com base no estado atual
     if (document.body.classList.contains('daltonismo')) {
@@ -20,18 +18,20 @@ document.getElementById("searchButton").addEventListener("click", function() {
     } else {
         this.innerHTML = '<i class="fas fa-eye"></i> Modo Daltônico';
     }
-});
-document.getElementById('daltonismo-btn').addEventListener('click', function() {
-    // Alterna a classe 'daltonismo' no body
-    document.body.classList.toggle('daltonismo');
 
-    // Muda o texto do botão com base no estado atual
-    if (document.body.classList.contains('daltonismo')) {
-        this.innerHTML = '<i class="fas fa-eye-slash"></i> Desativar Modo Daltônico';
-    } else {
-        this.innerHTML = '<i class="fas fa-eye"></i> Modo Daltônico';
-    }
-});
+     // Script para alternar o modo daltônico
+     const toggleButton = document.getElementById('toggleDaltonismo');
+     const body = document.body;
+
+     toggleButton.addEventListener('click', () => {
+         body.classList.toggle('daltonismo');
+         if (body.classList.contains('daltonismo')) {
+             toggleButton.textContent = 'Desativar Modo Daltonismo';
+         } else {
+             toggleButton.textContent = 'Ativar Modo Daltonismo';
+         }
+     });
+
 
 
 
