@@ -333,13 +333,7 @@ nav a:hover {
     display: flex;
 }
 
-.sidebar-menu {
-    width: 200px;
-    background-color: #ffecb3;
-    color: #ff6699;
-    padding: 1rem;
-    height: 200vh;
-}
+
 
 .sidebar-menu a {
     color: #ff6699; /* Texto rosa */
