@@ -22,19 +22,22 @@ document.getElementById("continue-shopping").addEventListener("click", () => {
 // Ligação automática no carregamento (opcional, caso queira usar sem inline JS)
 document.getElementById("continue-shopping").addEventListener("click", continuarComprando);
 
-// Alternar o modo daltônico
-button.addEventListener("click", () => {
-    body.classList.toggle("daltonismo");
+document.addEventListener("DOMContentLoaded", function() {
+    const daltonismoBtn = document.getElementById("daltonismo-btn");
+    let isDaltonismoActive = false;
 
-    // Alterar texto do botão dinamicamente
-    if (body.classList.contains("daltonismo")) {
-      button.textContent = "Modo Padrão";
-      button.setAttribute("aria-label", "Desativar modo para daltônicos");
-    } else {
-      button.textContent = "Modo Daltônico";
-      button.setAttribute("aria-label", "Ativar modo para daltônicos");
-    }
-  });
+    daltonismoBtn.addEventListener("click", function() {
+        isDaltonismoActive = !isDaltonismoActive; // Alterna o estado
+
+        if (isDaltonismoActive) {
+            document.body.classList.add("modo-daltonico"); // Ativa o modo daltônico
+            daltonismoBtn.innerHTML = '<i class="fas fa-eye-slash"></i> Modo Normal'; // Muda o texto do botão
+        } else {
+            document.body.classList.remove("modo-daltonico"); // Desativa o modo daltônico
+            daltonismoBtn.innerHTML = '<i class="fas fa-eye"></i> Modo Daltônico'; // Restaura o texto original do botão
+        }
+    });
+});
 
 // -------- Barra de Pesquisa --------
 const searchButton = document.getElementById("searchButton");
