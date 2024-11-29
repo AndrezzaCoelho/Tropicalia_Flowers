@@ -488,6 +488,15 @@ footer {
     text-align: center; /* Centraliza o texto */
     padding: 20px 0; /* Espaço em cima e embaixo */
 }
+/* Estilos para o rodapé */
+footer {
+    width: 100%; /* O rodapé ocupa toda a largura disponível */
+    background-color: #333; /* Cor de fundo do rodapé (altere conforme necessário) */
+    color: white; /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Preenchimento vertical no rodapé */
+    position: relative; /* Permite que outros elementos sejam posicionados em relação ao rodapé, se necessário */
+}
 
 /* Estilos para o parágrafo dentro do rodapé */
 footer p {
@@ -516,3 +525,4 @@ footer a {
 footer a:hover {
     text-decoration: underline; /* Sublinha no hover */
 }
+
