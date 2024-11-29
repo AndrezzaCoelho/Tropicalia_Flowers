@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arranjo Bromélia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<button id="backToTop" title="Voltar" class="animated-button">
+    <span>Voltar</span> 
+</button>
+
+<body>
+    <header class="horizontal-menu">
+        <h1>
+            <a >
+                <img src="" alt="Logo" class="logo" style="height: 30px;">
+            </a>
+            Tropicália Flowers
+        </h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+        <ul class="menu-carrinho" id="carrinho"> 
+            <li><a href="carrinho"><i class="fas fa-shopping-cart"></i> </a></li>
+        </ul>     
+
+
+
+        </html>
+    </header>
+     <nav>
+        <!-- Menu Hambúrguer -->
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="menu-opcoes" id="menu">
+            <li><a href="#perfil"><i class="fas fa-user"></i> Perfil</a></li>
+            <li><a href="#promocoes"><i class="fas fa-tags"></i> Promoções</a></li>
+            <li><a href="#idioma"><i class="fas fa-globe"></i> Idioma</a></li>
+            <li><a href="#acessibilidade"><i class="fas fa-universal-access"></i> acessibilidade</a></li>
+        </ul>
+    </nav>
+    
+
+    <div class="container">
+        <h2>Arranjo Bromélia</h2>
+        <div class="product-details">
+            <img src="c:\Users\camila\Pictures\Arranjo Bromélia.jpg" alt="Arranjo Bromélia" class="product-image"> <!-- Caminho corrigido -->
+            <div class="info">"Arranjo de Bromélias deslumbrantes, com cores vibrantes e folhagem exótica, perfeito para adicionar um toque tropical e moderno a qualquer espaço. Ideal para decoração ou presentes marcantes."</p>
+                <p class="price">Preço: R$40,00</p>
+            </div>
+
+
+            <div class="quantity">
+                <button id="remove-item" aria-label="Remover item">-</button>
+                <input type="number" id="item-quantity" value="1" min="1" aria-label="Quantidade do item">
+                <button id="add-item" aria-label="Adicionar item">+</button>
+            </div>
+
+            <div class="button-container">
+                <button id="add-to-cart">Adicionar ao carrinho</button>
+                <button id="continue-shopping" onclick="continuarComprando()">Continuar comprando</button>
+            </div>
+
+           
+
+            <div class="freight-container">
+                <input type="text" id="cep" placeholder="Digite seu CEP" aria-label="Campo para digitar o CEP">
+                <button id="calculate-freight">Calcular Frete</button>
+            </div>
+
+            <script src="script.js"></script>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a> 
+    </footer>
+
+</body>
+</html>
