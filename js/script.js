@@ -192,8 +192,4 @@ updateCartCount();
             carrinhoItems.appendChild(li);
         }
 
-        // Adiciona escutadores de eventos aos botões
-        const botoesAdicionar = document.querySelectorAll('.add-to-cart');
-        botoesAdicionar.forEach(botao => {
-            botao.addEventListener('click', adicionarAoCarrinho);
-        });
+        
