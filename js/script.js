@@ -1,40 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Elementos principais
-    const searchInput = document.getElementById('searchInput');
-    const productList = document.getElementById('productList');
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
+    // Seletores principais
+    const searchInput = document.getElementById("searchInput");
+    const productList = document.getElementById("productList");
+    const cartCounter = document.getElementById("carrinho");
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav");
     const backToTopBtn = document.getElementById("backToTop");
     const daltonismoBtn = document.getElementById("daltonismo-btn");
-    const carrinho = document.getElementById('carrinho');
-    const carrinhoItems = document.getElementById('carrinhoItems'); // Lista de itens no carrinho
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const menu = document.getElementById("menu");
 
-    // Lista de produtos (exemplo)
+    // Array de produtos (exemplo)
     const products = [
         "Antúrio",
         "Bromélias",
         "Orquídea Oncidium",
         "Bougainvillea",
-        "Bastão do Imperador"
+        "Bastão do Imperador",
     ];
 
-    // Carrinho
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    // Carrinho (persistência com LocalStorage)
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Função para exibir os produtos
-    function displayProducts(productsToDisplay) {
-        productList.innerHTML = ''; // Limpa a lista anterior
-        productsToDisplay.forEach(product => {
-            const productDiv = document.createElement('div');
+    // Exibir produtos filtrados
+    function displayProducts(filteredProducts) {
+        productList.innerHTML = "";
+        filteredProducts.forEach(product => {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product-item");
             productDiv.textContent = product;
-            productDiv.onclick = () => selectProduct(product); // Seleciona o produto ao clicar
+            productDiv.addEventListener("click", () => selectProduct(product));
             productList.appendChild(productDiv);
         });
     }
 
-    // Filtrar e exibir produtos com base na pesquisa
-    function searchProducts() {
+    // Filtrar produtos
+    function filterProducts() {
         const searchTerm = searchInput.value.toLowerCase();
         const filteredProducts = products.filter(product =>
             product.toLowerCase().includes(searchTerm)
@@ -44,20 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Selecionar produto
     function selectProduct(product) {
-        searchInput.value = product; // Define o valor da pesquisa
-        productList.innerHTML = ''; // Limpa a lista
+        searchInput.value = product;
+        productList.innerHTML = ""; // Limpar a lista de sugestões
     }
 
-    // Evento para pesquisa dinâmica
-    searchInput.addEventListener('input', searchProducts);
-
-    // Inicializa a lista de produtos vazia
-    productList.innerHTML = '';
-
-    // Função para adicionar itens ao carrinho
+    // Adicionar produto ao carrinho
     function addToCart(productName, productPrice) {
         cart.push({ name: productName, price: productPrice });
-        localStorage.setItem('cart', JSON.stringify(cart)); // Atualiza o carrinho no LocalStorage
+        localStorage.setItem("cart", JSON.stringify(cart)); // Atualizar LocalStorage
         alert(`${productName} foi adicionado ao carrinho!`);
         updateCartCounter();
     }
@@ -65,18 +59,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Atualizar contador do carrinho
     function updateCartCounter() {
         const itemCount = cart.length;
-        carrinho.innerHTML = `<li><a href="carrinho"><i class="fas fa-shopping-cart"></i> (${itemCount})</a></li>`;
+        cartCounter.innerHTML = `<li><a href="subpagina/pag carrinho/index.html">
+            <i class="fas fa-shopping-cart"></i> (${itemCount})
+        </a></li>`;
     }
 
-    // Inicializa o contador do carrinho
-    updateCartCounter();
-
-    // Função para o menu hambúrguer
-    hamburger.addEventListener('click', () => {
-        nav.classList.toggle('active');
+    // Ativar/desativar menu hambúrguer
+    hamburger.addEventListener("click", () => {
+        nav.classList.toggle("active");
     });
 
-    // Voltar ao topo da página
+    // Função para voltar ao topo
     window.onscroll = () => {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             backToTopBtn.style.display = "block";
@@ -86,51 +79,31 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     backToTopBtn.onclick = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
-    // Alternar modo para daltônicos
+    // Alternar modo daltônico
     daltonismoBtn.addEventListener("click", () => {
         document.body.classList.toggle("daltonismo");
-        daltonismoBtn.textContent = document.body.classList.contains("daltonismo") ? 
-            "Modo Padrão" : "Modo Daltônico";
+        const isDaltonismo = document.body.classList.contains("daltonismo");
+        daltonismoBtn.textContent = isDaltonismo ? "Modo Padrão" : "Modo Daltônico";
         daltonismoBtn.setAttribute(
             "aria-label",
-            document.body.classList.contains("daltonismo") ? 
-                "Desativar modo para daltônicos" : 
-                "Ativar modo para daltônicos"
+            isDaltonismo ? "Desativar modo para daltônicos" : "Ativar modo para daltônicos"
         );
     });
 
-    // Adicionar ao carrinho (botões dinâmicos)
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const productElement = event.target.closest('.product');
-            const productName = productElement.getAttribute('data-name');
-            const productPrice = parseFloat(productElement.getAttribute('data-price'));
-
+    // Adicionar eventos aos botões "Adicionar ao Carrinho"
+    document.querySelectorAll(".product-card button").forEach(button => {
+        button.addEventListener("click", event => {
+            const productElement = event.target.closest(".product-card");
+            const productName = productElement.querySelector("h3").textContent;
+            const productPrice = parseFloat(productElement.querySelector("p").textContent.replace("R$", ""));
             addToCart(productName, productPrice);
         });
     });
 
-    // Atualiza contador do carrinho ao carregar a página
+    // Inicializar funcionalidades
+    searchInput.addEventListener("input", filterProducts);
     updateCartCounter();
-
-    // Adiciona produtos ao carrinho na lista visual
-    function adicionarAoCarrinho(event) {
-        const produto = event.target.parentElement;
-        const nomeProduto = produto.getAttribute('data-name');
-
-        // Cria novo item na lista
-        const li = document.createElement('li');
-        li.textContent = nomeProduto;
-
-        // Adiciona na lista do carrinho
-        carrinhoItems.appendChild(li);
-    }
-
-    // Adiciona eventos aos botões de adicionar ao carrinho
-    addToCartButtons.forEach(botao => {
-        botao.addEventListener('click', adicionarAoCarrinho);
-    });
 });
