@@ -7,7 +7,7 @@
 
 
 .slogan {
-    font-family: 'Pacifico', cursive; /* Fonte elegante e manuscrita */
+    font-family: 'Arial, sans-serif'; /* Fonte elegante e manuscrita */
     font-size: 3rem; /* Tamanho grande para destaque */
     font-weight: bold; /* Negrito para impacto */
     color: #e4d8dc; /* Rosa vibrante da marca */
@@ -17,18 +17,6 @@
 }
 
 
-/* Estilo para o botão de voltar */
-#backToTop {
-    background-color: #fff; /* Cor inicial */
-    color: #ff6699;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-  }
   
 /* Estilo padrão */
 body {
