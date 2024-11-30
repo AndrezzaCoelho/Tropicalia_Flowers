@@ -13,46 +13,6 @@ body {
 }
 
 /* Header */
-.horizontal-menu {
-    background-color: #ff6699;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.horizontal-menu .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.search-bar {
-    display: flex;
-    max-width: 300px;
-}
-
-.search-bar input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.search-bar button {
-    padding: 8px;
-    background-color: #f47ea5;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.search-bar button:hover {
-    background-color: #ff3385;
-}
 
 
 
