@@ -334,7 +334,7 @@ nav a:hover {
     display: flex;
 }
 
-.sidebar-menu {
+.sidebar-menu {    /*menu vertical*/
     width: 250px;
     background-color: #ffecb3;
     color: #ff6699;
@@ -363,8 +363,6 @@ nav a:hover {
 
 
 
-
-
 /* Banner */
 .Banner {
     display: block;
@@ -375,11 +373,8 @@ nav a:hover {
 }
 
 
-
-
-
 .products {
-    max-width: 1200px; /* Largura máxima do contêiner */
+    max-width: 200px; /* Largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner na página */
     padding: 20px; /* Espaçamento interno */
 }
