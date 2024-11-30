@@ -49,8 +49,6 @@ daltonismoBtn.addEventListener('click', () => {
     document.body.classList.toggle('daltonismo');
 });
 
-// Lógica para aplicar um esquema de cores específico no modo daltonismo
-// Adicione o seguinte CSS para complementar a funcionalidade:
 
 
 
