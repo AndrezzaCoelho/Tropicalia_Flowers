@@ -16,7 +16,7 @@
     margin: 20px 0; /* Espaçamento superior e inferior */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1500px) {
     .slogan {
         font-size: 2rem; /* Reduz tamanho em telas menores */
     }
