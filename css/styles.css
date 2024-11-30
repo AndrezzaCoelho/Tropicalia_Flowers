@@ -7,20 +7,27 @@
 
 
 .slogan {
-    font-family: 'Arial', sans-serif; /* Fonte simples e elegante */
-    font-size: 3rem; /* Tamanho ajustado para destaque sem exagero */
+    font-family: 'Playfair Display', serif; /* Fonte elegante e clássica */
+    font-size: 4rem; /* Tamanho grande para destaque */
     font-weight: bold; /* Negrito para impacto */
     color: #e4d8dc; /* Rosa suave da marca */
-    text-align: center; /* Centraliza o slogan */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
-    margin: 20px 0; /* Espaçamento superior e inferior */
+    text-align: center; /* Centraliza o título */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    margin: 30px 0; /* Espaçamento superior e inferior */
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 768px) {
     .slogan {
-        font-size: 0rem; /* Reduz tamanho em telas menores */
+        font-size: 2.5rem; /* Reduz tamanho para dispositivos menores */
     }
 }
+
+@media (max-width: 480px) {
+    .slogan {
+        font-size: 2rem; /* Ajuste adicional para telas muito pequenas */
+    }
+}
+
 
 
 
