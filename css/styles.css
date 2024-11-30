@@ -20,7 +20,7 @@
 /* Estilo para o botão de voltar */
 #backToTop {
     background-color: #fff; /* Cor inicial */
-    color: #ff6699;
+    color: hsl(339, 63%, 87%);
     border: none;
     border-radius: 5px;
     cursor: pointer;
