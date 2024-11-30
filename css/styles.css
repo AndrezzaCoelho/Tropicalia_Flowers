@@ -70,14 +70,25 @@ body {
   }
   
   /* Estilo para o modo daltônico */
-  body.daltonismo {
-    background-color: #000;
-    color: #faff00;
-  }
-  
-  body.daltonismo a {
-    color: #ff4500;
-  }
+  /* Modo Daltonismo */
+body.daltonismo {
+    background-color: #000; /* Fundo preto para contraste */
+    color: #faff00; /* Texto amarelo brilhante */
+}
+
+body.daltonismo a {
+    color: #ff4500; /* Links em laranja */
+}
+
+body.daltonismo button {
+    background-color: #444; /* Botões em tom escuro */
+    color: #faff00; /* Texto dos botões em amarelo */
+}
+
+body.daltonismo .menu-carrinho a i {
+    color: #faff00; /* Ícones no carrinho em amarelo */
+}
+
 
 
 
