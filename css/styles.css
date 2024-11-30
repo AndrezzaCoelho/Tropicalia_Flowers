@@ -6,6 +6,17 @@
 }
 
 
+.slogan {
+    font-family: 'Pacifico', cursive; /* Fonte elegante e manuscrita */
+    font-size: 3rem; /* Tamanho grande para destaque */
+    font-weight: bold; /* Negrito para impacto */
+    color: #ff6699; /* Rosa vibrante da marca */
+    text-align: center; /* Centraliza o slogan */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    margin: 20px 0; /* Espaçamento superior e inferior */
+}
+
+
 /* Estilo para o botão de voltar */
 #backToTop {
     background-color: #fff; /* Cor inicial */
