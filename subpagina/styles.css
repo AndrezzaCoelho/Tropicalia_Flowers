@@ -81,7 +81,7 @@ body {
 
 h4 {
     font-family: 'Arial', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     color: #ff69b4;
 }
 
@@ -129,7 +129,7 @@ body {
     display: none;
     background-color:#eee4e7;
     position: absolute;
-    
+   
     border-radius: 5px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -142,7 +142,7 @@ body {
 }
 
 .nav ul li {
-    padding: 8px px; /* diminui o padding */
+    padding: 8px 15px; /* diminui o padding */
 }
 
 .nav ul li a {
@@ -338,7 +338,7 @@ nav a:hover {
     background-color: #ffecb3;
     color: #ff6699;
     padding: 1rem;
-    height: 200vh;
+    height: 160vh;
 }
 
 .sidebar-menu a {
@@ -424,3 +424,48 @@ h1 a {
     text-decoration: none;
     color: #ff6699; /* cor da fonte categoria*/
 }
+/* Estilos do rodapé */
+footer {
+    background-color: #ff6699; /* Cor de fundo verde */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Espaço em cima e embaixo */
+}
+/* Estilos para o rodapé */
+footer {
+    width: 200%; /* O rodapé ocupa toda a largura disponível */
+    background-color: #ff6699; /* Cor de fundo do rodapé (altere conforme necessário) */
+    color: white; /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Preenchimento vertical no rodapé */
+    position: relative; /* Permite que outros elementos sejam posicionados em relação ao rodapé, se necessário */
+}
+
+/* Estilos para o parágrafo dentro do rodapé */
+footer p {
+    margin: 0; /* Remove a margem padrão */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilos da lista */
+footer ul {
+    list-style-type: none; /* Remove a bolinha da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+}
+
+/* Estilos para os itens da lista */
+footer ul li {
+    display: inline; /* Exibe os itens em linha */
+    margin: 0 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilos para os links */
+footer a {
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Sublinha no hover */
+}
+
