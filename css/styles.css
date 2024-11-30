@@ -7,14 +7,21 @@
 
 
 .slogan {
-    font-family: 'Arial, sans-serif'; /* Fonte elegante e manuscrita */
-    font-size: 10rem; /* Tamanho grande para destaque */
+    font-family: 'Arial', sans-serif; /* Fonte simples e elegante */
+    font-size: 3rem; /* Tamanho ajustado para destaque sem exagero */
     font-weight: bold; /* Negrito para impacto */
-    color: #e4d8dc; /* Rosa vibrante da marca */
+    color: #e4d8dc; /* Rosa suave da marca */
     text-align: center; /* Centraliza o slogan */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
     margin: 20px 0; /* Espaçamento superior e inferior */
 }
+
+@media (max-width: 768px) {
+    .slogan {
+        font-size: 2rem; /* Reduz tamanho em telas menores */
+    }
+}
+
 
 
   
