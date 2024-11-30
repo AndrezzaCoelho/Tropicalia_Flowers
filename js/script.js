@@ -60,7 +60,7 @@ let cart = [];
 function addToCart(productName, productPrice) {
     // Adiciona o produto ao carrinho
     cart.push({ name: productName, price: productPrice });
-    alert(${productName} foi adicionado ao carrinho!);
+    alert(`${productName} foi adicionado ao carrinho!`);
     updateCartCounter();
 }
 
@@ -70,7 +70,7 @@ function updateCartCounter() {
     const itemCount = cart.length;
     
     // Atualiza o conteúdo do carrinho (pode ser mudado com um badge, etc.)
-    carrinho.innerHTML = <li><a href="carrinho"><i class="fas fa-shopping-cart"></i> (${itemCount})</a></li>;
+    carrinho.innerHTML = `<li><a href="carrinho"><i class="fas fa-shopping-cart"></i> (${itemCount})</a></li>`;
 }
 
 // Funcionalidade do menu hambúrguer
@@ -131,8 +131,14 @@ const languageLabel = document.getElementById("language-label");
     const body = document.body;
   
     // Alternar o modo daltônico
-    button.addEventListener("click", () => {
-      body.classList.toggle("daltonismo");
+    // Seleciona o botão usando seu ID
+ const backToTopButton = document.getElementById('backToTop');
+
+ // Adiciona um evento de clique ao botão
+ backToTopButton.addEventListener('click', function() {
+     // Função para voltar à página anterior
+     window.history.back();
+ });
   
       // Alterar texto do botão dinamicamente
       if (body.classList.contains("daltonismo")) {
@@ -143,4 +149,56 @@ const languageLabel = document.getElementById("language-label");
         button.setAttribute("aria-label", "Ativar modo para daltônicos");
       }
     });
-  });
+
+  // Seleciona todos os botões de adicionar ao carrinho
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+// Adiciona evento de clique em cada botão
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const productElement = button.closest('.product');
+        const productId = productElement.getAttribute('data-id');
+        const productName = productElement.getAttribute('data-name');
+        const productPrice = productElement.getAttribute('data-price');
+
+        // Obtem o carrinho atual do Local Storage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Adiciona o produto ao carrinho
+        cart.push({ id: productId, name: productName, price: productPrice });
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Atualiza o contador do carrinho
+        updateCartCount();
+    });
+});
+
+// Atualiza o contador do carrinho no cabeçalho
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    document.getElementById('cart-count').textContent = cart.length;
+}
+
+// Atualiza o contador ao carregar a página
+updateCartCount();
+
+
+        // Função para adicionar produtos ao carrinho
+        function adicionarAoCarrinho(event) {
+            const produto = event.target.parentElement;
+            const nomeProduto = produto.getAttribute('data-name');
+
+            // Cria um novo item na lista do carrinho
+            const carrinhoItems = document.getElementById('carrinhoItems');
+            const li = document.createElement('li');
+            li.textContent = nomeProduto;
+
+            // Adiciona o item à lista do carrinho
+            carrinhoItems.appendChild(li);
+        }
+
+        // Adiciona escutadores de eventos aos botões
+        const botoesAdicionar = document.querySelectorAll('.add-to-cart');
+        botoesAdicionar.forEach(botao => {
+            botao.addEventListener('click', adicionarAoCarrinho);
+        });
