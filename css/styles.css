@@ -374,9 +374,9 @@ nav a:hover {
 
 
 .products {
-    max-width: 1400px; /* Largura máxima do contêiner */
+    max-width: 1500px; /* Largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner na página */
-    padding: 20px; /* Espaçamento interno */
+    padding: 30px; /* Espaçamento interno */
 }
 
 .catalog {
