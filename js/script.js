@@ -27,8 +27,13 @@ searchButton.addEventListener('click', () => {
     });
 });
 
-// Função de adicionar ao carrinho
+// Função de adicionar ao carrinho e atualizar o contador
+let cartCount = 0;
 function addToCart(productName, productPrice) {
+    cartCount++; // Incrementa o contador
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.textContent = cartCount; // Atualiza o número no botão do carrinho
+
     alert(`${productName} foi adicionado ao carrinho por R$ ${productPrice.toFixed(2)}.`);
 }
 
