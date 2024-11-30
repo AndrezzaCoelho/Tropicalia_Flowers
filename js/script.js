@@ -149,7 +149,6 @@ const languageLabel = document.getElementById("language-label");
         button.setAttribute("aria-label", "Ativar modo para daltônicos");
       }
     });
-  });
 
   // Seleciona todos os botões de adicionar ao carrinho
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
