@@ -172,4 +172,11 @@ updateCartCount();
             botao.addEventListener('click', adicionarAoCarrinho);
         });
 
-        
+// Seleciona o botão de Modo Daltonismo
+const daltonismoBtn = document.getElementById('daltonismo-btn');
+
+// Adiciona um evento de clique ao botão
+daltonismoBtn.addEventListener('click', () => {
+    // Alterna a classe "daltonismo" no elemento <body>
+    document.body.classList.toggle('daltonismo');
+});
