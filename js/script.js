@@ -84,30 +84,7 @@ function toggleMenu() {
     } else {
         menu.style.display = 'none'; // Esconde o menu
     }
-}
-
-// Função para voltar ao topo da página
-const backToTopBtn = document.getElementById("backToTop");
-
-window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopBtn.style.display = "block";
-    } else {
-        backToTopBtn.style.display = "none";
-    }
-};
-
-backToTopBtn.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
-const toggleButton = document.getElementById("language-toggle");
-const languageLabel = document.getElementById("language-label");
-
-
-
-
-  
+}  
   
   document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector('li a[href="#acessibilidade"]');
@@ -130,15 +107,7 @@ const languageLabel = document.getElementById("language-label");
     const button = document.getElementById("daltonismo-btn");
     const body = document.body;
   
-    // Alternar o modo daltônico
-    // Seleciona o botão usando seu ID
- const backToTopButton = document.getElementById('backToTop');
-
- // Adiciona um evento de clique ao botão
- backToTopButton.addEventListener('click', function() {
-     // Função para voltar à página anterior
-     window.history.back();
- });
+  
   
       // Alterar texto do botão dinamicamente
       if (body.classList.contains("daltonismo")) {
@@ -149,10 +118,6 @@ const languageLabel = document.getElementById("language-label");
         button.setAttribute("aria-label", "Ativar modo para daltônicos");
       }
     });
-
-
-
-    
 
   // Seleciona todos os botões de adicionar ao carrinho
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
@@ -206,3 +171,5 @@ updateCartCount();
         botoesAdicionar.forEach(botao => {
             botao.addEventListener('click', adicionarAoCarrinho);
         });
+
+        
