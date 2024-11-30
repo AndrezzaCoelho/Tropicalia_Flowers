@@ -58,10 +58,10 @@ let cart = [];
 
 // Função para adicionar itens ao carrinho
 function addToCart(productName, productPrice) {
-    // Adiciona o produto ao carrinho
-    cart.push({ name: productName, price: productPrice });
-    alert(${productName} foi adicionado ao carrinho!);
-    updateCartCounter();
+  // Adiciona o produto ao carrinho
+  cart.push({ name: productName, price: productPrice });
+  alert(`${productName} foi adicionado ao carrinho!`); // Corrigido aqui
+  updateCartCounter();
 }
 
 // Atualiza a contagem de itens no carrinho
