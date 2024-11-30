@@ -349,7 +349,11 @@ nav a:hover {
     padding: 0.5rem 0; /* Espaçamento interno */
     border: 2px solid transparent; /* Borda inicial transparente */
     transition: border-color 0.3s ease, color 0.3s ease; /* Transição suave */
+    font-family: 'Georgia', serif; /* Fonte elegante */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 1.1rem; /* Tamanho ligeiramente maior */
 }
+
 
 .sidebar-menu a:hover {
     border-color: #ffd54f; /* Cor da borda no hover */
