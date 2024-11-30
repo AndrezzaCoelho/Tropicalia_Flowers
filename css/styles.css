@@ -5,26 +5,35 @@
     font-family: Fira Sans; /* Define a fonte padrão como "Fira Sans" para todos os elementos */
 }
 
-
 .slogan {
     font-family: 'Playfair Display', serif; /* Fonte elegante e clássica */
-    font-size: 4rem; /* Tamanho grande para destaque */
+    font-size: 5rem; /* Tamanho grande para desktops */
     font-weight: bold; /* Negrito para impacto */
     color: #e4d8dc; /* Rosa suave da marca */
     text-align: center; /* Centraliza o título */
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
-    margin: 30px 0; /* Espaçamento superior e inferior */
+    margin: 30px 20px; /* Espaçamento superior, inferior e nas laterais */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
 }
 
-@media (max-width:1500px) {
+@media (max-width: 1024px) {
     .slogan {
-        font-size: 2.5rem; /* Reduz tamanho para dispositivos menores */
+        font-size: 4rem; /* Ajusta tamanho para tablets */
+        margin: 20px 15px; /* Reduz margem para telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .slogan {
+        font-size: 3rem; /* Ajusta tamanho para dispositivos móveis médios */
+        margin: 20px 10px; /* Reduz ainda mais as margens */
     }
 }
 
 @media (max-width: 480px) {
     .slogan {
-        font-size: 2rem; /* Ajuste adicional para telas muito pequenas */
+        font-size: 2.5rem; /* Ajuste adicional para smartphones */
+        margin: 15px 5px; /* Margens menores em telas muito pequenas */
     }
 }
 
