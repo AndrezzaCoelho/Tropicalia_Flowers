@@ -395,13 +395,5 @@ nav a:hover {
     border-radius: 5px; /* Cantos arredondados para as imagens */
 }
 
-.product-card button {
-    background-color: #ff6699; /* Cor do botão */
-    color: white; /* Cor do texto do botão */
-    border: none; /* Remove borda do botão */
-    padding: 10px 15px; /* Espaçamento interno do botão */
-    border-radius: 5px; /* Cantos arredondados do botão */
-    cursor: pointer; /* Muda o cursor ao passar por cima do botão */
-    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
-}
+
 
