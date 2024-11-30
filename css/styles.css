@@ -379,28 +379,61 @@ nav a:hover {
     padding: 10px; /* Espaçamento interno */
 }
 
+
 .catalog {
-    display: flex; /* Ativa o Flexbox */
-    flex-wrap: wrap; /* Permite que os itens se movam para a linha de baixo se não houver espaço */
-    justify-content: space-between; /* Espaço igual entre os produtos */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Define colunas dinâmicas */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px; /* Espaçamento interno */
 }
 
-.catalog-2 {
-    display: flex; /* Ativa o Flexbox */
-    flex-wrap: wrap; /* Permite que os itens se movam para a linha de baixo se não houver espaço */
-    justify-content: space-between; /* Espaço igual entre os produtos */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ffecb3;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.catalog-2 .product-card::before {
-    content: "";
-    position: absolute;
-    top: -10px; /* Ajustar para posicionar acima da borda superior */
-    right: -10px; /* Ajustar para posicionar à direita da borda direita */
-    width: 30px; /* Largura da listra */
-    height: 30px; /* Altura da listra */
-    background-color: black;
-    transform: rotate(45deg) translateY(-50%) translateX(50%); /* Rotacionar e centralizar */
-  }
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #ff6699;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.product-card button {
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #ff3385;
+}
+
 
 .product-card {
     background-color: #fff; /* Cor de fundo das cartas */
