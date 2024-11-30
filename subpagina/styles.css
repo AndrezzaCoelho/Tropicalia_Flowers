@@ -333,32 +333,7 @@ nav a:hover {
     display: flex;
 }
 
-.sidebar-menu {
-    width: 250px;
-    background-color: #ffecb3;
-    color: #ffecb3;;
-    padding: 1rem;
-    height: 200vh;
-}
 
-.sidebar-menu a {
-    color: #ff6699; /* Texto rosa */
-    text-decoration: none; /* Remove sublinhado */
-    display: block; /* Ocupa toda a área */
-    padding: 0.5rem 0; /* Espaçamento interno */
-    border: 2px solid transparent; /* Borda inicial transparente */
-    transition: border-color 0.3s ease, color 0.3s ease; /* Transição suave */
-}
-
-.sidebar-menu a:hover {
-    border-color: #ffd54f; /* Cor da borda no hover */
-    color: #fff; /* Texto branco no hover */
-}
-
-.sidebar-menu a:hover {
-    border-color: #ffd54f; /* Alterando a cor da borda ao passar o mouse */
-    color: #fff; /* Alterando a cor do texto ao passar o mouse */
-}
 .products {
     max-width: 1200px; /* Largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner na página */
