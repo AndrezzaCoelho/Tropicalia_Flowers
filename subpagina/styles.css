@@ -405,7 +405,3 @@ nav a:hover {
     transition: background-color 0.3s; /* Transição suave para a cor de fundo */
 }
 
-.product-card button:hover {
-    background-color: #ff3385; /* Cor do botão ao passar o mouse (mais escura para destaque) */
-}
-
