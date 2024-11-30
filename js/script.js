@@ -28,10 +28,19 @@ searchButton.addEventListener('click', () => {
 });
 
 // Função de adicionar ao carrinho e atualizar o contador
+let cart = {}; // Objeto para armazenar produtos e suas quantidades
 let cartCount = 0;
 
 function addToCart(productName, productPrice) {
-    cartCount++; // Incrementa o contador
+    // Verifica se o produto já está no carrinho
+    if (cart[productName]) {
+        cart[productName].quantity++; // Incrementa a quantidade
+    } else {
+        // Se o produto não está no carrinho, adiciona com quantidade 1
+        cart[productName] = { price: productPrice, quantity: 1 };
+    }
+
+    cartCount++; // Incrementa o contador total de produtos no carrinho
     const cartCountElement = document.getElementById('cart-count');
 
     // Verifica se o elemento existe antes de tentar atualizar o texto
@@ -44,10 +53,23 @@ function addToCart(productName, productPrice) {
     alert(`${productName} foi adicionado ao carrinho por R$ ${productPrice.toFixed(2)}.`);
 }
 
+// Função para mostrar o conteúdo do carrinho
+function showCart() {
+    let cartDetails = "Carrinho:\n";
+    for (const product in cart) {
+        cartDetails += `${product}: ${cart[product].quantity} unidade(s) - R$ ${cart[product].price.toFixed(2)} cada
+`;
+    }
+    alert(cartDetails);
+}
+
 // Exemplo de uso (você pode chamar essa função a partir de um evento, como um clique)
 document.getElementById('add-to-cart-button').addEventListener('click', function() {
     addToCart('Produto Exemplo', 99.99);
 });
+
+// Você pode conectar a função showCart a um botão ou evento específico
+document.getElementById('show-cart-button').addEventListener('click', showCart);
 
 // Função para fechar o menu ao clicar fora dele
 document.addEventListener('click', (e) => {
