@@ -18,7 +18,7 @@
 
 @media (max-width: 1500px) {
     .slogan {
-        font-size: 2rem; /* Reduz tamanho em telas menores */
+        font-size: 0rem; /* Reduz tamanho em telas menores */
     }
 }
 
