@@ -374,7 +374,7 @@ nav a:hover {
 
 
 .products {
-    max-width: 200px; /* Largura máxima do contêiner */
+    max-width: 1400px; /* Largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner na página */
     padding: 20px; /* Espaçamento interno */
 }
