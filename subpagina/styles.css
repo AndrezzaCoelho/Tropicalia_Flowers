@@ -414,11 +414,6 @@ h2 {
     margin-bottom: 20px; /* Espaçamento inferior do título */
 }
 
-h1 {
-    margin: 0;
-    font-size: 1.5em;
-    color:#eee4e7  /* cor da fonte tropicália flowers*/
-}
 
 h1 a {
     text-decoration: none;
