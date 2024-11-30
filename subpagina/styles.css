@@ -409,13 +409,3 @@ nav a:hover {
     background-color: #ff3385; /* Cor do botão ao passar o mouse (mais escura para destaque) */
 }
 
-h2 {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 20px; /* Espaçamento inferior do título */
-}
-
-
-h1 a {
-    text-decoration: none;
-    color: #ff6699; /* cor da fonte categoria*/
-}
