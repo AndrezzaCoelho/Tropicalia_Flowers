@@ -379,6 +379,11 @@ nav a:hover {
     padding: 10px; /* Espaçamento interno */
 }
 
+.catalog {
+    display: flex; /* Ativa o Flexbox */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha de baixo se não houver espaço */
+    justify-content: space-between; /* Espaço igual entre os produtos */
+}
 
 .catalog-2 {
     display: flex; /* Ativa o Flexbox */
