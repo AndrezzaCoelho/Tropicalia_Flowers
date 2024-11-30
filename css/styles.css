@@ -77,6 +77,15 @@ body {
 }
 
 
+/* Título flores */
+h4 {
+    font-family: 'Georgia', serif; /* Fonte mais elegante */
+    font-size: 2rem; /* Tamanho proporcional e responsivo */
+    font-weight: bold; /* Negrito */
+    color: #ff69b4; /* Cor rosa vibrante */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
 
 
 /* menu hamburgue */
