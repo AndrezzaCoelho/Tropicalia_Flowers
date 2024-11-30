@@ -142,7 +142,7 @@ body {
 }
 
 .nav ul li {
-    padding: 8px 20px; /* diminui o padding */
+    padding: 8px px; /* diminui o padding */
 }
 
 .nav ul li a {
@@ -388,7 +388,39 @@ nav a:hover {
     box-shadow: 0 4px 10px #ffecb3; /* Aumenta a sombra no hover */
 }
 
+.product-card img {
+    width: 100%; /* Imagem ocupa 100% da largura do card */
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Cobre a área, mantendo a proporção da imagem */
+    border-radius: 5px; /* Cantos arredondados para as imagens */
+}
 
+.product-card button {
+    background-color: #ff6699; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda do botão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Muda o cursor ao passar por cima do botão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
 
+.product-card button:hover {
+    background-color: #ff3385; /* Cor do botão ao passar o mouse (mais escura para destaque) */
+}
 
+h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
 
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color:#eee4e7  /* cor da fonte tropicália flowers*/
+}
+
+h1 a {
+    text-decoration: none;
+    color: #ff6699; /* cor da fonte categoria*/
+}
