@@ -70,7 +70,7 @@ body {
   }
   
   /* Estilo para o modo daltônico */
-  /* Modo Daltonismo */
+ 
 body.daltonismo {
     background-color: #000; /* Fundo preto para contraste */
     color: #faff00; /* Texto amarelo brilhante */
