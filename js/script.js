@@ -79,3 +79,15 @@ document.addEventListener('click', (e) => {
         menu.classList.remove('active');
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav");
+
+    // Adiciona um evento de clique ao hamburger
+    hamburger.addEventListener("click", function() {
+        // Alterna a classe que pode mostrar/esconder o menu
+        nav.classList.toggle("active");
+    });
+});
