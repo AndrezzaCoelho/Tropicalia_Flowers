@@ -151,18 +151,8 @@ const languageLabel = document.getElementById("language-label");
     });
 
 
-    document.getElementById("daltonismo-btn").addEventListener("click", function() {
-        document.body.classList.toggle("daltonico");
-    
-        // Alternar o texto do botão
-        if (document.body.classList.contains("daltonico")) {
-            this.innerHTML = '<i class="fas fa-eye-slash"></i> Modo Normal';
-        } else {
-            this.innerHTML = '<i class="fas fa-eye"></i> Modo Daltônico';
-        }
-    });
-    
 
+    
 
   // Seleciona todos os botões de adicionar ao carrinho
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
