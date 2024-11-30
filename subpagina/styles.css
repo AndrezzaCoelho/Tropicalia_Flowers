@@ -81,7 +81,7 @@ body {
 
 h4 {
     font-family: 'Arial', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     color: #ff69b4;
 }
 
@@ -129,7 +129,9 @@ body {
     display: none;
     background-color:#eee4e7;
     position: absolute;
-    
+    /top: 10px; / ajuste conforme necessário */
+    /left: 5px; / diminui a distância da esquerda */
+   /* right: 5px; /* adiciona uma distância da direita */
     border-radius: 5px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -142,7 +144,7 @@ body {
 }
 
 .nav ul li {
-    padding: 8px px; /* diminui o padding */
+    padding: 8px 15px; /* diminui o padding */
 }
 
 .nav ul li a {
@@ -334,11 +336,11 @@ nav a:hover {
 }
 
 .sidebar-menu {
-    width: 250px;
+    width: 200px;
     background-color: #ffecb3;
     color: #ff6699;
     padding: 1rem;
-    height: 200vh;
+    height: 100vh;
 }
 
 .sidebar-menu a {
@@ -422,5 +424,4 @@ h1 {
 
 h1 a {
     text-decoration: none;
-    color: #ff6699; /* cor da fonte categoria*/
-}
+    color: #ff6699; /* cor da fonte 
