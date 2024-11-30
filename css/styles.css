@@ -378,7 +378,7 @@ nav a:hover {
     object-fit: cover; /* Ajusta a imagem sem distorcer */
     border-radius: 20px; /* Cantos arredondados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra elegante */
-    margin: 40px 0; /* Espaçamento superior e inferior */
+    margin: 50px 0; /* Espaçamento superior e inferior */
 }
 
 
