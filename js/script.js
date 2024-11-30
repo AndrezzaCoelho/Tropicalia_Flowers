@@ -29,13 +29,25 @@ searchButton.addEventListener('click', () => {
 
 // Função de adicionar ao carrinho e atualizar o contador
 let cartCount = 0;
+
 function addToCart(productName, productPrice) {
     cartCount++; // Incrementa o contador
     const cartCountElement = document.getElementById('cart-count');
-    cartCountElement.textContent = cartCount; // Atualiza o número no botão do carrinho
+
+    // Verifica se o elemento existe antes de tentar atualizar o texto
+    if (cartCountElement) {
+        cartCountElement.textContent = cartCount; // Atualiza o número no botão do carrinho
+    } else {
+        console.error("Elemento com ID 'cart-count' não encontrado.");
+    }
 
     alert(`${productName} foi adicionado ao carrinho por R$ ${productPrice.toFixed(2)}.`);
 }
+
+// Exemplo de uso (você pode chamar essa função a partir de um evento, como um clique)
+document.getElementById('add-to-cart-button').addEventListener('click', function() {
+    addToCart('Produto Exemplo', 99.99);
+});
 
 // Função para fechar o menu ao clicar fora dele
 document.addEventListener('click', (e) => {
