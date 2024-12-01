@@ -21,9 +21,26 @@ header {
     border-bottom: 2px solid #ddd;
 }
 
-.logo {
-    height: 40px;
+/* Estilo do link */
+a {
+    display: block; /* Faz com que o link seja um bloco, permitindo que o padding funcione */
+    text-align: center; /* Centraliza o conteúdo dentro do link */
+    margin: 20px auto; /* Adiciona margens superiores e inferiores e centraliza horizontalmente */
+    text-decoration: none; /* Remove o sublinhado do link */
 }
+
+/* Estilo da imagem do logo */
+.logo {
+    max-width: 100%; /* Garante que a imagem não exceda a largura do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de hover */
+}
+
+/* Efeito de hover no link */
+a:hover .logo {
+    transform: scale(1.05); /* Aumenta a imagem em 5% no hover */
+}
+
 
 .login-container {
     background-color: white;
