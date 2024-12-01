@@ -21,13 +21,6 @@ header {
     border-bottom: 2px solid #ddd;
 }
 
-/* Estilo do link */
-a {
-    display: block; /* Faz com que o link seja um bloco, permitindo que o padding funcione */
-    text-align: center; /* Centraliza o conteúdo dentro do link */
-    margin: 20px auto; /* Adiciona margens superiores e inferiores e centraliza horizontalmente */
-    text-decoration: none; /* Remove o sublinhado do link */
-}
 
 /* Estilo da imagem do logo */
 .logo {
