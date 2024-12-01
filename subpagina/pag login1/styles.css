@@ -67,7 +67,7 @@ input {
 
 /* Estilizando o botão */
 button[type="submit"] {
-    background-color: #4CAF50; /* Cor de fundo verde */
+    background-color: #ff6699; /* Cor de fundo verde */
     color: white; /* Cor do texto branca */
     border: none; /* Sem borda */
     padding: 15px 32px; /* Espaçamento interno */
@@ -83,7 +83,7 @@ button[type="submit"] {
 
 /* Efeito ao passar o mouse sobre o botão */
 button[type="submit"]:hover {
-    background-color: #45a049; /* Cor de fundo mais escura ao passar o mouse */
+    background-color: #ff6699; /* Cor de fundo mais escura ao passar o mouse */
 }
 
 /* Estilizando o link de cadastro */
