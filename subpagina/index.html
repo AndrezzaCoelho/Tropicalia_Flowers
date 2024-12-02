@@ -1,175 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flores</title>
+    <title>Política de Privacidade - Tropicália Flowers</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<button id="backToTop" title="Voltar" class="animated-button">
-    <span>Voltar</span> 
-</button>
+<div class="back-button">
+    <button onclick="history.back()"><i class="fas fa-arrow-left"></i> Voltar</button>
+</div>
 
 <body>
-    <header class="horizontal-menu">
-        <h1>
-            <a >
-                <img src="" alt="Logo" class="logo" style="height: 30px;">
-            </a>
-            Tropicália Flowers
-        </h1>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar...">
-            <button type="button"><i class="fas fa-search"></i></button>
-        </div>
-        <ul class="menu-carrinho" id="carrinho"> 
-            <li><a href="carrinho"><i class="fas fa-shopping-cart"></i> </a></li>
-        </ul>     
-
-
-
-        </html>
-    </header>
-     <nav>
-        <!-- Menu Hambúrguer -->
-        <div class="menu-hamburguer" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <main>
-            <ul class="menu-opcoes" id="menu">
-                <li><a href="file:///C:/Users/andre/pag%20de%20perfil/index.html?nome=&sobre-nome=&data=&email=&telefone="><i class="fas fa-user"></i> Perfil</a></li>
-                <li><a href="#promocoes"><i class="fas fa-tags"></i> Promoções</a></li>
-                <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
-                    <i class="fas fa-eye"></i> Modo Daltônico
-        </ul>
-    </nav>
-</head>
-<body>
-    <div class="menu-container">
-        <div class="hamburger" id="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-       
-        <nav class="nav" id="nav">
-            <ul>
-                <li><a href="#login">Login</a></li>
-                <li><a href="#cadastro">Cadastro</a></li>
-                <li><a href="#contate-nos">Contate-nos</a></li>
-                <li><a href="#sobre-nos">Sobre Nós</a></li>
-                
-            </ul>
-        </nav>
-    
-
+    <!-- Barra superior -->
+    <nav class="horizontal-menu">
         <div class="container">
-            <aside class="sidebar-menu">
-                <h2>Categorias</h2>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Quem Somos</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </aside>
-        
-        <main class="products">
-            <h4>ANIVERSÁRIO</h4>
-           
-            <div class="catalog">
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Orquídea Branca e Kit Cereja e Avelã.jpg">
-                        <img src="c:\Users\camila\Pictures\Orquídea Branca e Kit Cereja e Avelã.jpg" alt="Orquídea Branca e Kit Natura Cereja e Avelã">
-                    </a>
-                    <h2>Orquídea Branca e Kit Natura Cereja e Avelã</h2>
-                    <p>R$ 150,00</p>
-                    <button onclick="addToCart('Orquídea Branca e Kit Natura Cereja e Avelã', 150,00)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Arranjo antúrio e Pelúcia.jpg">
-                        <img src="c:\Users\camila\Pictures\Arranjo antúrio e Pelúcia.jpg" alt="Arranjo Antúrio e Pelúcia">
-                    </a>
-                    <h2>Arranjo Antúrio e Pelúcia</h2>
-                    <p>R$ 160,00</p>
-                    <button onclick="addToCart('Arranjo Antúrio e Pelúcia, 160,00)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Bougainvillea e Chocolates.jpg">
-                        <img src="c:\Users\camila\Pictures\Bougainvillea e Chocolates.jpg" alt="Bougainvillea e Chocolates">
-                    </a>
-                    <h2>Bougainvillea e Chocolates</h2>
-                    <p>R$ 85,00</p>
-                    <button onclick="addToCart('Bougainvillea e Chocolates', 85,00)">Adicionar ao Carrinho</button>
-                </div>
-        <main class="products">
-         <h4>CASAMENTO</h4> 
+            <h1 class="logo">Tropicália Flowers</h1>
+            <ul class="menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+               
+            </ul>
+        </div>
+    </nav>
 
-            <div class="catalog">
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Buquê Bromélia e Espumante.jpg">
-                        <img src="c:\Users\camila\Pictures\Buquê Bromélia e Espumante.jpg" alt=" Buquê Bromélia">
-                    </a>
-                    <h2> Buquê Bromélia e Espumante</h2>
-                    <p>R$ 130,00</p>
-                    <button onclick="addToCart('Buquê Bromélia e Espumante', 130)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Buquê Hibisco e Vela Aromatica.jpg">
-                        <img src="c:\Users\camila\Pictures\Buquê Hibisco e Vela Aromatica.jpg" alt="Buquê Hibisco e Vela Aromatica">
-                    </a>
-                    <h2>Buquê Hibisco e Vela Aromatica</h2>
-                    <p>R$ 110,00</p>
-                    <button onclick="addToCart('Buquê Hibisco e Vela Aromatica', 110)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Buquê Orquídea com Cartão Mensagem.webp">
-                        <img src="c:\Users\camila\Pictures\Buquê Orquídea com Cartão Mensagem.webp" alt="Buquê Orquídea com Cartão mensagem">
-                    </a>
-                    <h2>Buquê Orquídea com Cartão Mensagem</h2>
-                    <p>R$ 120,00</p>
-                    <button onclick="addToCart('Buquê Orquídea com Cartão Mensagem', 120)">Adicionar ao Carrinho</button>
-                </div>
-                
-        <main class="products">
-            <h4>FORMATURA</h4>
-            
-            <div class="catalog">
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Mini box formatura.jpg">
-                        <img src="c:\Users\camila\Pictures\Mini box formatura.jpg" alt=" Mni Box Formatura">
-                    </a>
-                    <h2>Mini Box Formatura</h2>
-                    <p>R$ 60,00</p>
-                    <button onclick="addToCart('Mini Box Formatura1', 60)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Mini Box Formatura Helicônia.jpg">
-                        <img src="c:\Users\camila\Pictures\Mini Box Formatura Helicônia.jpg" alt="Mini Box Formatura Helicônia">
-                    </a>
-                    <h2>Mini Box Formatura Helicônia</h2>
-                    <p>R$ 90,00</p>
-                    <button onclick="addToCart('Mini Box Formatura Helicônia', 90)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Mini Box Formatura Sucesso.png">
-                        <img src="c:\Users\camila\Pictures\Mini Box Formatura Sucesso.png" alt="Mini Box Formatura Sucesso">
-                    </a>
-                    <h2>Mini Box Formatura Sucesso</h2>
-                    <p>R$ 75,00</p>
-                    <button onclick="addToCart('Mini Box Formatura Sucesso', 75)">Adicionar ao Carrinho</button>
-                </div>
-                <footer>
-                    <script src="script.js"></script>
-                    <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
-                    <ul>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </footer>
-            </body>
+    <!-- Conteúdo Principal -->
+    <main class="privacy-policy container">
+        <header>
+            <h2>Política de Privacidade</h2>
+            <p class="updated-date">Última atualização: 2 de dezembro de 2024</p>
+        </header>
+
+        <section>
+            <h3>1. Informações Recolhidas</h3>
+            <p>
+                Na <strong>Tropicália Flowers</strong>, valorizamos a sua privacidade. Recolhemos informações fornecidas por você, como nome, e-mail, endereço e telefone, durante o processo de compra ou contacto. Também recolhemos informações automaticamente, como dados de navegação e endereço IP.
+            </p>
+        </section>
+
+        <section>
+            <h3>2. Uso das Informações</h3>
+            <p>
+                Utilizamos as suas informações para:
+            </p>
+            <ul>
+                <li>Processar e entregar os seus pedidos;</li>
+                <li>Melhorar a experiência de navegação no nosso site;</li>
+                <li>Enviar notificações sobre promoções e ofertas, caso tenha consentido;</li>
+                <li>Cumprir obrigações legais e regulatórias.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>3. Partilha de Dados</h3>
+            <p>
+                A <strong>Tropicália Flowers</strong> compromete-se a nunca vender as suas informações. No entanto, podemos partilhar os dados com:
+            </p>
+            <ul>
+                <li>Parceiros logísticos para envio de encomendas;</li>
+                <li>Fornecedores de pagamento para processar transações;</li>
+                <li>Autoridades legais, caso seja necessário.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>4. Segurança</h3>
+            <p>
+                Implementamos medidas de segurança avançadas para proteger os seus dados contra acessos não autorizados. Usamos tecnologia SSL (Secure Socket Layer) para proteger informações sensíveis transmitidas online.
+            </p>
+        </section>
+
+        <section>
+            <h3>5. Cookies</h3>
+            <p>
+                Utilizamos cookies para melhorar a funcionalidade do site e personalizar a sua experiência. Você pode gerenciar as preferências de cookies no seu navegador.
+            </p>
+        </section>
+
+        <section>
+            <h3>6. Alterações à Política</h3>
+            <p>
+                Esta política poderá ser atualizada periodicamente. Recomendamos que reveja esta página para se manter informado sobre alterações. A última atualização ocorreu em 2 de dezembro de 2024.
+            </p>
+        </section>
+
+        <section class="contact-info">
+            <h3>Contacto</h3>
+            <p>
+                Caso tenha dúvidas sobre a nossa política de privacidade, entre em contacto:
+            </p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:suporte@tropicaliaflowers.com">suporte@tropicaliaflowers.com</a></p>
+            <p><i class="fas fa-phone"></i> +351 123 456 789</p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
