@@ -18,7 +18,7 @@ h1, h2, h3 {
 
 /* Barra de Navegação */
 .horizontal-menu {
-    background-color: #28a745;
+    background-color: #fa7ba5;;
     padding: 1rem 0;
 }
 
@@ -61,7 +61,7 @@ h1, h2, h3 {
 }
 
 .contact-info a {
-    color: #28a745;
+    color: #fa7ba5;;
     text-decoration: none;
 }
 
@@ -71,7 +71,7 @@ h1, h2, h3 {
 
 /* Rodapé */
 footer {
-    background-color: #28a745;
+    background-color: #fa7ba5;;
     color: white;
     text-align: center;
     padding: 1rem 0;
