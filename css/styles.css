@@ -5,19 +5,41 @@
     font-family: Fira Sans; /* Define a fonte padrão como "Fira Sans" para todos os elementos */
 }
 
+.slogan {
+    font-family: 'Playfair Display', serif; /* Fonte elegante e clássica */
+    font-size: 5rem; /* Tamanho grande para desktops */
+    font-weight: bold; /* Negrito para impacto */
+    color: #ffecb3; /*  suave da marca */
+    text-align: center; /* Centraliza o título */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    margin: 30px 20px; /* Espaçamento superior, inferior e nas laterais */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+}
 
-/* Estilo para o botão de voltar */
-#backToTop {
-    background-color: #fff; /* Cor inicial */
-    color: #ff6699;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-  }
+@media (max-width: 1024px) {
+    .slogan {
+        font-size: 4rem; /* Ajusta tamanho para tablets */
+        margin: 20px 15px; /* Reduz margem para telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .slogan {
+        font-size: 3rem; /* Ajusta tamanho para dispositivos móveis médios */
+        margin: 20px 10px; /* Reduz ainda mais as margens */
+    }
+}
+
+@media (max-width: 480px) {
+    .slogan {
+        font-size: 2.5rem; /* Ajuste adicional para smartphones */
+        margin: 15px 5px; /* Margens menores em telas muito pequenas */
+    }
+}
+
+
+
+
   
 /* Estilo padrão */
 body {
@@ -48,14 +70,25 @@ body {
   }
   
   /* Estilo para o modo daltônico */
-  body.daltonismo {
-    background-color: #000;
-    color: #faff00;
-  }
-  
-  body.daltonismo a {
-    color: #ff4500;
-  }
+ 
+body.daltonismo {
+    background-color: #000; /* Fundo preto para contraste */
+    color: #faff00; /* Texto amarelo brilhante */
+}
+
+body.daltonismo a {
+    color: #ff4500; /* Links em laranja */
+}
+
+body.daltonismo button {
+    background-color: #444; /* Botões em tom escuro */
+    color: #faff00; /* Texto dos botões em amarelo */
+}
+
+body.daltonismo .menu-carrinho a i {
+    color: #faff00; /* Ícones no carrinho em amarelo */
+}
+
 
 
 
@@ -77,13 +110,16 @@ body {
 }
 
 
-/* titulo flores*/
-
+/* Título flores */
 h4 {
-    font-family: 'Arial', sans-serif;
-    font-size: 30px;
-    color: #ff69b4;
+    font-family: 'Georgia', serif; /* Fonte mais elegante */
+    font-size: 2rem; /* Tamanho proporcional e responsivo */
+    font-weight: bold; /* Negrito */
+    color: #ff69b4; /* Cor rosa vibrante */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
+
 
 /* menu hamburgue */
 * {
@@ -334,12 +370,12 @@ nav a:hover {
     display: flex;
 }
 
-.sidebar-menu {
-    width: 200px;
+.sidebar-menu {    /*menu vertical*/
+    width: 250px;
     background-color: #ffecb3;
     color: #ff6699;
     padding: 1rem;
-    height: 100vh;
+    height:180vh;
 }
 
 .sidebar-menu a {
@@ -349,7 +385,11 @@ nav a:hover {
     padding: 0.5rem 0; /* Espaçamento interno */
     border: 2px solid transparent; /* Borda inicial transparente */
     transition: border-color 0.3s ease, color 0.3s ease; /* Transição suave */
+    font-family: 'Georgia', serif; /* Fonte elegante */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 1.1rem; /* Tamanho ligeiramente maior */
 }
+
 
 .sidebar-menu a:hover {
     border-color: #ffd54f; /* Cor da borda no hover */
@@ -363,8 +403,6 @@ nav a:hover {
 
 
 
-
-
 /* Banner */
 .Banner {
     display: block;
@@ -374,14 +412,24 @@ nav a:hover {
     object-fit: cover;
 }
 
+.Banner1 {
+    width: 100%; /* Faz o banner ocupar toda a largura disponível */
+    max-height: 500px; /* Define uma altura máxima */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    border-radius: 20px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra elegante */
+    margin: 50px 0; /* Espaçamento superior e inferior */
+}
+
+
 
 
 
 
 .products {
-    max-width: 1200px; /* Largura máxima do contêiner */
+    max-width: 1500px; /* Largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner na página */
-    padding: 20px; /* Espaçamento interno */
+    padding: 10px; /* Espaçamento interno */
 }
 
 .catalog {
@@ -476,8 +524,8 @@ h1 a {
 /* Estilos gerais do corpo */
 body {
     font-family: Arial, sans-serif;
-    margin: 100;
-    padding: 100;
+    margin: 1000;
+    padding: 1000;
     background-color: #f5f5f5; /* Cor de fundo clara */
 }
 
@@ -490,7 +538,7 @@ footer {
 }
 /* Estilos para o rodapé */
 footer {
-    width: 100%; /* O rodapé ocupa toda a largura disponível */
+    width: 200%; /* O rodapé ocupa toda a largura disponível */
     background-color: #ff6699; /* Cor de fundo do rodapé (altere conforme necessário) */
     color: white; /* Cor do texto no rodapé */
     text-align: center; /* Centraliza o texto */

@@ -1,52 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Perfil</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <div class="top-container">
-        <a href="javascript:void(0);" id="backButton" class="backBtn" title="Voltar">
-            <i class="fas fa-arrow-left"></i> Voltar
-        </a>
-    </div>
-    <title>Contato - Tropicália Flowers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
+
 <body>
+
+    <button id="continue-shopping">Voltar</button>
+    <!-- Botão de voltar -->
+
+<body>
+    <!-- Barra superior -->
+    <nav class="horizontal-menu">
+        <h1>Tropicália Flower</h1>
+       
+    </nav>
+
     <header class="header">
-        <h1>Tropicália Flowers</h1>
-        <h2>Entre em Contato Conosco</h2>
-    </header>
-    <div class="container">
-        <form id="contactForm">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+    <main class="main-content">
+        <div class="container">
+            <h1>Entre em Contato Conosco</h1>
+            <p>Estamos aqui para ajudar! Preencha o formulário abaixo ou entre em contato por um dos métodos disponíveis.</p>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <form action="/enviar-contato" method="post">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea>
+                <label for="email">Seu Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 
-            <button type="submit" class="search-btn">Enviar</button>
-        </form>
-        <div id="confirmationMessage" style="display: none; margin-top: 15px; color: #28a745;">
-            Sua mensagem foi enviada com sucesso!
-        </div>
+                <label for="telefone">Seu Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
 
-        <div class="contact-info" style="margin-top: 30px;">
-            <h3>Informações de Contato</h3>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5599999999999" target="_blank">(+55) 81 99999-9999</a></p>
-            <p><strong>Telefone:</strong> <a href="tel:+5599999999999">(+55) 81 99999-9999</a></p>
-            <p><strong>Email:</strong> <a href="mailto:contato@tropicaliaflowers.com">contato@tropicaliaflowers.com</a></p>
-            <p><strong>Redes Sociais:</strong></p>
-            <ul>
-                <li><a href="https://www.facebook.com/tropicaliaflowers" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com/tropicaliaflowers" target="_blank">Instagram</a></li>
-                
-            </ul>
-        </div>
-    </div>
-    <script src="script.js"></script>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="contact-info">
+                <h2>Outras formas de contato</h2>
+                <p><strong>Telefone:</strong> (81) 91234-5678</p>
+                <p><strong>Telefone:</strong> (81) 99999-8888</p>
+                <p><strong>Email:</strong> suporte@floresonline.pt</p>
+                <p><strong>Endereço:</strong> Rua das Flores, 123, Recife PE, Brasil</p>
+                <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 9h às 18h</p>
+            </div>
+
+           
+            
+            <div class="social-media">
+                <h2>Siga-nos</h2>
+                <p>
+                    <a href="https://facebook.com/floresonline" target="_blank" style="text-decoration: none; color: #1877F2;">
+                        <i class="fab fa-facebook" style="font-size: 24px; margin-right: 8px;"></i> Facebook
+                    </a>
+                    |
+                    <a href="https://instagram.com/floresonline" target="_blank" style="text-decoration: none; color: #E4405F;">
+                        <i class="fab fa-instagram" style="font-size: 24px; margin-right: 8px;"></i> Instagram
+                    </a>
+                    |
+                    <a href="https://wa.me/5581999998888" target="_blank" style="text-decoration: none; color: green;">
+                        <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 8px;"></i> WhatsApp
+                    </a>
+                </p>
+            </div>
+            
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+      
+    </footer>
 </body>
 </html>

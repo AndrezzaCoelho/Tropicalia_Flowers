@@ -1,175 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flores</title>
+    <title>Termos de Uso - Tropicália Flowers</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<button id="backToTop" title="Voltar" class="animated-button">
-    <span>Voltar</span> 
-</button>
-
-<body>
-    <header class="horizontal-menu">
-        <h1>
-            <a >
-                <img src="" alt="Logo" class="logo" style="height: 30px;">
-            </a>
-            Tropicália Flowers
-        </h1>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar...">
-            <button type="button"><i class="fas fa-search"></i></button>
-        </div>
-        <ul class="menu-carrinho" id="carrinho"> 
-            <li><a href="carrinho"><i class="fas fa-shopping-cart"></i> </a></li>
-        </ul>     
-
-
-
-        </html>
-    </header>
-     <nav>
-        <!-- Menu Hambúrguer -->
-        <div class="menu-hamburguer" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <main>
-            <ul class="menu-opcoes" id="menu">
-                <li><a href="file:///C:/Users/andre/pag%20de%20perfil/index.html?nome=&sobre-nome=&data=&email=&telefone="><i class="fas fa-user"></i> Perfil</a></li>
-                <li><a href="#promocoes"><i class="fas fa-tags"></i> Promoções</a></li>
-                <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
-                    <i class="fas fa-eye"></i> Modo Daltônico
-        </ul>
-    </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="menu-container">
-        <div class="hamburger" id="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-       
-        <nav class="nav" id="nav">
-            <ul>
-                <li><a href="#login">Login</a></li>
-                <li><a href="#cadastro">Cadastro</a></li>
-                <li><a href="#contate-nos">Contate-nos</a></li>
-                <li><a href="#sobre-nos">Sobre Nós</a></li>
-                
-            </ul>
-        </nav>
-    
+    <!-- Botão Voltar -->
+    <div class="back-button">
+        <button onclick="history.back()"><i class="fas fa-arrow-left"></i> Voltar</button>
+    </div>
 
+    <!-- Barra superior -->
+    <nav class="horizontal-menu">
         <div class="container">
-            <aside class="sidebar-menu">
-                <h2>Categorias</h2>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Quem Somos</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </aside>
-        
-        <main class="products">
-            <h4>ANIVERSÁRIO</h4>
-           
-            <div class="catalog">
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Orquídea Branca e Kit Cereja e Avelã.jpg">
-                        <img src="c:\Users\camila\Pictures\Orquídea Branca e Kit Cereja e Avelã.jpg" alt="Orquídea Branca e Kit Natura Cereja e Avelã">
-                    </a>
-                    <h2>Orquídea Branca e Kit Natura Cereja e Avelã</h2>
-                    <p>R$ 150,00</p>
-                    <button onclick="addToCart('Orquídea Branca e Kit Natura Cereja e Avelã', 150,00)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Arranjo antúrio e Pelúcia.jpg">
-                        <img src="c:\Users\camila\Pictures\Arranjo antúrio e Pelúcia.jpg" alt="Arranjo Antúrio e Pelúcia">
-                    </a>
-                    <h2>Arranjo Antúrio e Pelúcia</h2>
-                    <p>R$ 160,00</p>
-                    <button onclick="addToCart('Arranjo Antúrio e Pelúcia, 160,00)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Bougainvillea e Chocolates.jpg">
-                        <img src="c:\Users\camila\Pictures\Bougainvillea e Chocolates.jpg" alt="Bougainvillea e Chocolates">
-                    </a>
-                    <h2>Bougainvillea e Chocolates</h2>
-                    <p>R$ 85,00</p>
-                    <button onclick="addToCart('Bougainvillea e Chocolates', 85,00)">Adicionar ao Carrinho</button>
-                </div>
-        <main class="products">
-         <h4>CASAMENTO</h4> 
-
-            <div class="catalog">
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Buquê Bromélia e Espumante.jpg">
-                        <img src="c:\Users\camila\Pictures\Buquê Bromélia e Espumante.jpg" alt=" Buquê Bromélia">
-                    </a>
-                    <h2> Buquê Bromélia e Espumante</h2>
-                    <p>R$ 130,00</p>
-                    <button onclick="addToCart('Buquê Bromélia e Espumante', 130)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Buquê Hibisco e Vela Aromatica.jpg">
-                        <img src="c:\Users\camila\Pictures\Buquê Hibisco e Vela Aromatica.jpg" alt="Buquê Hibisco e Vela Aromatica">
-                    </a>
-                    <h2>Buquê Hibisco e Vela Aromatica</h2>
-                    <p>R$ 110,00</p>
-                    <button onclick="addToCart('Buquê Hibisco e Vela Aromatica', 110)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Buquê Orquídea com Cartão Mensagem.webp">
-                        <img src="c:\Users\camila\Pictures\Buquê Orquídea com Cartão Mensagem.webp" alt="Buquê Orquídea com Cartão mensagem">
-                    </a>
-                    <h2>Buquê Orquídea com Cartão Mensagem</h2>
-                    <p>R$ 120,00</p>
-                    <button onclick="addToCart('Buquê Orquídea com Cartão Mensagem', 120)">Adicionar ao Carrinho</button>
-                </div>
-                
-        <main class="products">
-            <h4>FORMATURA</h4>
+            <h1 class="logo">Tropicália Flowers</h1>
+            <ul class="menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
             
-            <div class="catalog">
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Mini box formatura.jpg">
-                        <img src="c:\Users\camila\Pictures\Mini box formatura.jpg" alt=" Mni Box Formatura">
-                    </a>
-                    <h2>Mini Box Formatura</h2>
-                    <p>R$ 60,00</p>
-                    <button onclick="addToCart('Mini Box Formatura1', 60)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Mini Box Formatura Helicônia.jpg">
-                        <img src="c:\Users\camila\Pictures\Mini Box Formatura Helicônia.jpg" alt="Mini Box Formatura Helicônia">
-                    </a>
-                    <h2>Mini Box Formatura Helicônia</h2>
-                    <p>R$ 90,00</p>
-                    <button onclick="addToCart('Mini Box Formatura Helicônia', 90)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="c:\Users\camila\Pictures\Mini Box Formatura Sucesso.png">
-                        <img src="c:\Users\camila\Pictures\Mini Box Formatura Sucesso.png" alt="Mini Box Formatura Sucesso">
-                    </a>
-                    <h2>Mini Box Formatura Sucesso</h2>
-                    <p>R$ 75,00</p>
-                    <button onclick="addToCart('Mini Box Formatura Sucesso', 75)">Adicionar ao Carrinho</button>
-                </div>
-                <footer>
-                    <script src="script.js"></script>
-                    <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
-                    <ul>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </footer>
-            </body>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="terms-of-use container">
+        <header>
+            <h2>Termos de Uso</h2>
+            <p class="updated-date">Última atualização: 2 de dezembro de 2024</p>
+        </header>
+
+        <section>
+            <h3>1. Aceitação dos Termos</h3>
+            <p>
+                Ao acessar e utilizar o site <strong>Tropicália Flowers</strong>, você concorda em cumprir os termos e condições descritos neste documento. Caso não concorde com algum termo, pedimos que não utilize os nossos serviços.
+            </p>
+        </section>
+
+        <section>
+            <h3>2. Uso do Site</h3>
+            <p>
+                Este site destina-se a oferecer informações e produtos relacionados à decoração com flores tropicais. Você concorda em utilizar o site apenas para fins legais e de acordo com estes Termos de Uso.
+            </p>
+            <ul>
+                <li>Não deve reproduzir, duplicar ou copiar qualquer parte do conteúdo sem permissão prévia.</li>
+                <li>É proibido utilizar o site para atividades fraudulentas ou prejudiciais.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>3. Produtos e Preços</h3>
+            <p>
+                Os preços e a disponibilidade dos produtos estão sujeitos a alterações sem aviso prévio. Reservamo-nos o direito de corrigir quaisquer erros ou omissões nas informações publicadas.
+            </p>
+        </section>
+
+        <section>
+            <h3>4. Direitos de Propriedade</h3>
+            <p>
+                Todo o conteúdo presente neste site, incluindo textos, imagens e logotipos, é propriedade exclusiva da <strong>Tropicália Flowers</strong> ou de seus parceiros licenciados. Qualquer uso não autorizado poderá resultar em ações legais.
+            </p>
+        </section>
+
+        <section>
+            <h3>5. Limitação de Responsabilidade</h3>
+            <p>
+                A <strong>Tropicália Flowers</strong> não se responsabiliza por danos diretos, indiretos ou consequenciais decorrentes do uso do site, incluindo falhas técnicas ou indisponibilidade do serviço.
+            </p>
+        </section>
+
+        <section>
+            <h3>6. Alterações aos Termos</h3>
+            <p>
+                Estes Termos de Uso podem ser atualizados periodicamente. Recomendamos que consulte esta página regularmente para verificar quaisquer alterações.
+            </p>
+        </section>
+
+        <section class="contact-info">
+            <h3>Contacto</h3>
+            <p>
+                Caso tenha dúvidas sobre os nossos Termos de Uso, entre em contacto:
+            </p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:suporte@tropicaliaflowers.com">suporte@tropicaliaflowers.com</a></p>
+            <p><i class="fas fa-phone"></i> +351 123 456 789</p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
