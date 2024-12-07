@@ -29,10 +29,16 @@ form.addEventListener('submit', (event) => {
     form.reset();
 });
 
-// Seleciona o botão de voltar pelo ID
-const botaoVoltar = document.getElementById('continue-shopping');
+// Seleciona o botão pelo ID
+const continueShoppingButton = document.getElementById('continue-shopping');
 
-// Adiciona evento ao botão de voltar
-botaoVoltar.addEventListener('click', () => {
-    window.history.back(); // Volta para a página anterior
+// Adiciona um evento de clique ao botão
+continueShoppingButton.addEventListener('click', () => {
+    // Verifica se há uma página anterior no histórico do navegador
+    if (document.referrer) {
+        window.history.back(); // Volta para a página anterior
+    } else {
+        // Caso não haja uma página anterior, redireciona para uma URL padrão
+        window.location.href = '/'; // Substitua '/' pela URL desejada
+    }
 });

@@ -1,128 +1,131 @@
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif; /* Fonte padrão */
+}
 
-/* Estiliza o h1 */
+/* CONFIGURAÇÕES DO CORPO */
+body {
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #333; /* Texto escuro */
+    line-height: 1.6; /* Linha mais espaçada para facilitar leitura */
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTILO DO H1 */
 h1 {
     font-family: 'Arial', sans-serif; /* Define a fonte */
     font-size: 2em; /* Tamanho da fonte */
-    color: hsl(341, 72%, 92%)
-    
-    ; /* Cor do texto */
+    color: hsl(341, 72%, 92%); /* Cor clara */
     text-align: center; /* Centraliza o texto */
-    margin: 20px 0; /* Margem superior e inferior */
+    margin: 20px 0; /* Espaçamento vertical */
 }
 
-/* Estiliza o link dentro do h1 */
 h1 a {
     text-decoration: none; /* Remove sublinhado */
     color: inherit; /* Herda a cor do h1 */
-    display: flex; /* Exibe como flexível para alinhamento */
-    align-items: center; /* Alinha verticalmente os itens */
+    display: flex; /* Layout flexível para alinhamento */
+    align-items: center; /* Alinha itens verticalmente */
+    gap: 10px; /* Espaçamento entre logo e texto */
 }
 
-/* Estiliza a imagem do logo */
-.logo {
-    margin-right: 10px; /* Espaço à direita da imagem */
-    height: 30px; /* Mantém a altura da imagem */
-    width: auto; /* Largura automática para manter proporção */
-}
-
-/* Adiciona efeito ao link ao passar o mouse */
 h1 a:hover {
-    color: #ff6699; /* Cor do texto ao passar o mouse */
-    transition: color 0.3s ease; /* Transição suave da cor */
+    color: #ff6699; /* Cor ao passar o mouse */
+    transition: color 0.3s ease; /* Transição suave */
 }
 
-
-/* Estilizando o corpo da página */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-
-/* Estilizando o cabeçalho */
-.header {
-    background-color: #ff6699; /* Verde Tropical */
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
+/* LOGO */
 .logo {
-    height: 40px; /* Ajustando a altura do logo */
+    margin-right: 10px;
+    height: 30px;
+    width: auto;
+    transition: transform 0.3s ease; /* Transição suave no hover */
 }
 
-/* Estilizando a barra de pesquisa */
+.logo:hover {
+    transform: scale(1.05); /* Aumenta levemente no hover */
+}
+
+/* CABEÇALHO */
+.header {
+    background-color: #ff6699; /* Fundo rosa */
+    color: white; /* Texto branco */
+    padding: 15px 20px; /* Espaçamento interno */
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaça itens */
+    align-items: center; /* Centraliza itens verticalmente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* BARRA DE PESQUISA */
 .search-bar {
-    display: flex;
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    border: 1px solid #ccc; /* Adiciona uma borda ao redor da barra de pesquisa */
-    border-radius: 25px; /* Faz a barra de pesquisa mais arredondada */
-    overflow: hidden; /* Garante que os bordas arredondadas sejam seguidas */
-    background-color: #f9f9f9; /* Cor de fundo da barra de pesquisa */
+    display: flex; /* Layout flexível */
+    align-items: center; /* Centraliza verticalmente */
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #f9f9f9; /* Fundo claro */
 }
 
 #searchInput {
-    padding: 10px; /* Aumenta o padding para mais conforto */
-    border: none; /* Remove borda interna */
-    outline: none; /* Remove contorno ao focus */
+    padding: 10px;
+    border: none;
+    outline: none; /* Remove contorno padrão */
     flex: 1; /* Faz o input ocupar todo o espaço disponível */
-    font-size: 16px; /* Tamanho de fonte maior */
+    font-size: 16px;
 }
 
 #searchButton {
-    background-color: #ff6699; /* Cor de fundo para o botão (azul) */
-    color: #fff; /* Cor do texto do botão */
-    border: none; /* Remove borda */
-    cursor: pointer; /* Mostra indicador de ponteiro ao passar o mouse */
-    padding: 10px 15px; /* Aumenta o padding do botão */
-    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    background-color: #ff6699; /* Fundo rosa */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease; /* Transição suave */
 }
 
 #searchButton:hover {
-    background-color: #ff6699; /* Cor do botão ao passar o mouse (azul mais escuro) */
+    background-color: #e55c8a; /* Fundo mais escuro no hover */
 }
 
-
-/* Estilizando o conteúdo principal */
+/* CONTEÚDO PRINCIPAL */
 .main-content {
-    max-width: 600px;
+    max-width: 600px; /* Largura máxima */
     margin: 20px auto;
     padding: 20px;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 h2 {
-    text-align: center;
+    text-align: center; /* Centraliza o título */
+    color: #ff6699; /* Rosa */
+    margin-bottom: 20px;
 }
 
-/* Estilizando formulários */
+/* FORMULÁRIOS */
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Layout vertical */
+    gap: 15px; /* Espaçamento entre itens */
 }
 
 fieldset {
-    border: 1px solid #ff6699;
+    border: 1px solid #ff6699; /* Borda rosa */
     border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 15px;
 }
 
 legend {
     font-weight: bold;
-    color: #ff6699;
+    color: #ff6699; /* Rosa */
 }
 
-/* Estilizando os rótulos e inputs */
-label {
-    margin-top: 10px;
-}
-
+/* INPUTS */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -135,33 +138,30 @@ select {
     font-size: 14px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="password"]:focus,
+input:focus,
 select:focus {
-    border-color: #ff6699;
+    border-color: #ff6699; /* Borda rosa ao focar */
 }
 
-/* Estilizando o botão de cadastro */
+/* BOTÃO DE CADASTRO */
 button[type="submit"] {
     background-color: #ff6699;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Transição suave */
 }
 
 button[type="submit"]:hover {
-    background-color: #ff6699; /* Cor do botão ao passar o mouse */
+    background-color: #e55c8a; /* Fundo mais escuro no hover */
 }
 
-/* Estilizando o rodapé */
+/* RODAPÉ */
 .footer {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* Fundo claro */
     padding: 20px;
     text-align: center;
 }
@@ -172,20 +172,64 @@ button[type="submit"]:hover {
 }
 
 .footer-nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove marcadores */
     padding: 0;
-}
-
-.footer-nav li {
-    display: inline;
-    margin: 0 15px;
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza itens */
+    gap: 15px; /* Espaçamento entre itens */
 }
 
 .footer-nav a {
     text-decoration: none;
-    color: #333;
+    color: #333; /* Texto escuro */
+    transition: color 0.3s ease; /* Transição suave */
 }
 
 .footer-nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Sublinha no hover */
+    color: #ff6699; /* Rosa */
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px; /* Reduz o padding */
+        max-width: 90%; /* Largura maior para telas menores */
+    }
+
+    .header {
+        flex-direction: column; /* Cabeçalho empilhado */
+        text-align: center;
+    }
+
+    .search-bar {
+        margin-top: 10px; /* Adiciona espaçamento no mobile */
+        width: 100%; /* Largura total */
+    }
+
+    button[type="submit"] {
+        font-size: 14px; /* Texto menor */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Título menor */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Título ainda menor */
+    }
+
+    .main-content {
+        padding: 10px; /* Reduz padding para telas pequenas */
+    }
+
+    button[type="submit"] {
+        padding: 8px 10px; /* Botão menor */
+    }
+
+    .footer {
+        font-size: 12px; /* Fonte menor no rodapé */
+    }
 }

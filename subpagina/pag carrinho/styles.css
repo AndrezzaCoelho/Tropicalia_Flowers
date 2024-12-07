@@ -4,49 +4,50 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante altura total da viewport */
 }
 
-/* Estilo para o botão de voltar */
+/* Botão "Voltar ao Topo" */
 #backToTop {
-    background-color: #ff6699; /* Cor inicial */
+    background-color: #ff6699;
     color: #fff;
     border: none;
-    border-radius: 5px; /* Curvatura dos cantos */
+    border-radius: 5px;
     cursor: pointer;
-    top: 10px; /* Distância do topo */
-    left: 10px; /* Distância da esquerda */
-    position: fixed; /* Permite que o botão permaneça na tela ao rolar */
+    top: 10px;
+    left: 10px;
+    position: fixed;
     z-index: 1000;
-    padding: 0.5rem 1rem; /* Adiciona padding para melhorar a aparência */
+    padding: 0.5rem 1rem;
     transition: background-color 0.3s ease;
 }
 
-/* Adiciona efeito ao passar o mouse sobre o botão */
 #backToTop:hover {
-    background-color: #ff3385; /* Cor ao passar o mouse */
+    background-color: #ff3385; /* Hover no botão */
 }
 
 /* Cabeçalho */
 header.horizontal-menu {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Para melhor espaçamento entre esquerda e direita */
+    justify-content: space-between;
     background-color: #ff6699;
     padding: 1rem;
     color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Alinha os elementos à esquerda */
 .header-left {
-    display: flex; /* Para alinhar logo e título na mesma linha */
+    display: flex;
     align-items: center;
 }
 
 .header-left img.logo {
-    height: 40px; /* Ajusta o tamanho da logo */
+    height: 40px;
     border-radius: 50%;
-    margin-right: 0.5rem; /* Espaço entre a logo e o título */
+    margin-right: 0.5rem;
 }
 
 .header-left h1 {
@@ -57,13 +58,12 @@ header.horizontal-menu {
 /* Botões no Cabeçalho */
 .menu-buttons {
     display: flex;
-    gap: 1rem; /* Espaço entre os botões */
-    align-items: center; /* Alinha os botões verticalmente */
+    gap: 1rem;
+    align-items: center;
 }
 
-/* Estilo dos botões */
 .menu-buttons a {
-    text-decoration: none; /* Remove o sublinhado do link */
+    text-decoration: none;
 }
 
 .menu-buttons button {
@@ -76,7 +76,7 @@ header.horizontal-menu {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Espaço entre o ícone e o texto */
+    gap: 0.5rem;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -89,44 +89,13 @@ header.horizontal-menu {
     font-size: 1.2rem;
 }
 
-/* Estilo para o carrinho */
-.menu-carrinho {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-
-
-/* Estilo Geral */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garante que o corpo ocupe a altura total da viewport */
-}
-
-
-.logo {
-    height: 40px;
-}
-
-.menu-carrinho i {
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-/* Container do Carrinho */
+/* Container Principal */
 main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem; /* Espaçamento para telas menores */
+    padding: 1rem;
 }
 
 #products {
@@ -135,7 +104,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    width: 100%; /* Ocupa 100% no mobile */
+    width: 100%; /* Responsivo para mobile */
     text-align: center;
 }
 
@@ -149,7 +118,7 @@ main {
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    flex-wrap: wrap; /* Ajusta o layout para telas pequenas */
+    flex-wrap: wrap; /* Ajusta para telas pequenas */
 }
 
 .product img {
@@ -218,18 +187,18 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    header {
+    header.horizontal-menu {
         flex-wrap: wrap;
         text-align: center;
     }
 
     #products {
         padding: 1.5rem;
-        max-width: 100%; /* Ocupar a largura total no mobile */
+        max-width: 100%; /* Largura total no mobile */
     }
 
     .product {
-        flex-direction: column; /* Produtos empilhados no mobile */
+        flex-direction: column; /* Empilhados no mobile */
         text-align: center;
     }
 
@@ -238,34 +207,37 @@ footer {
     }
 
     button {
-        width: 100%; /* Botões ocupam largura total no mobile */
+        width: 100%; /* Botões ocupam largura total */
         margin-top: 0.5rem;
     }
 }
 
 @media (max-width: 480px) {
     footer {
-        font-size: 0.8rem; /* Ajuste do tamanho da fonte no rodapé */
+        font-size: 0.8rem; /* Ajuste da fonte no rodapé */
+    }
+
+    #backToTop {
+        padding: 0.4rem 0.8rem; /* Botão menor */
+        font-size: 0.9rem;
     }
 }
 
-
-
 /* Modo Daltonismo */
 body.daltonismo {
-    background-color: #000; /* Fundo preto para contraste */
-    color: #faff00; /* Texto amarelo brilhante */
+    background-color: #000;
+    color: #faff00; /* Contraste máximo */
 }
 
 body.daltonismo a {
-    color: #ff4500; /* Links em laranja */
+    color: #ff4500;
 }
 
 body.daltonismo button {
-    background-color: #444; /* Botões em tom escuro */
-    color: #faff00; /* Texto dos botões em amarelo */
+    background-color: #444;
+    color: #faff00;
 }
 
 body.daltonismo .menu-carrinho a i {
-    color: #faff00; /* Ícones no carrinho em amarelo */
+    color: #faff00;
 }

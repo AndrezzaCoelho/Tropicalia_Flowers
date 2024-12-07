@@ -1,5 +1,5 @@
- /* Estilos gerais */
- body {
+/* RESET E ESTILOS GERAIS */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,39 +8,40 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #ebd5dc;
+    background-color: #ebd5dc; /* Fundo claro */
 }
 
+/* CABEÇALHO */
 header {
     width: 100%;
-    padding: 10px;
-    background-color: #ff6699;
+    padding: 10px 20px;
+    background-color: #ff6699; /* Fundo rosa */
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+/* LINKS E LOGO */
 a {
-    display: block; /* Faz com que o link seja um bloco, permitindo que o padding funcione */
-    text-align: center; /* Centraliza o conteúdo dentro do link */
-    margin: 20px auto; /* Adiciona margens superiores e inferiores e centraliza horizontalmente */
-    text-decoration: none; /* Remove o sublinhado do link */
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    text-decoration: none;
 }
 
-/* Estilo da imagem do logo */
 .logo {
-    max-width: 100%; /* Garante que a imagem não exceda a largura do contêiner pai */
-    height: auto; /* Mantém a proporção da imagem */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de hover */
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Efeito suave no hover */
 }
 
-/* Efeito de hover no link */
 a:hover .logo {
-    transform: scale(1.05); /* Aumenta a imagem em 5% no hover */
+    transform: scale(1.05); /* Aumenta levemente no hover */
 }
 
-
+/* CONTAINER DE LOGIN */
 .login-container {
     background-color: white;
     border-radius: 10px;
@@ -51,17 +52,21 @@ a:hover .logo {
     text-align: center;
 }
 
+/* TÍTULO */
 h2 {
     color: #333;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
+/* FORMULÁRIO */
 .login-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+/* GRUPOS DE FORMULÁRIO */
 .form-group {
     text-align: left;
 }
@@ -72,58 +77,57 @@ label {
     display: block;
 }
 
+/* CAMPOS DE ENTRADA */
 input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    transition: border-color 0.3s ease; /* Transição suave */
 }
 
+input:focus {
+    border-color: #ff6699; /* Borda rosa ao focar */
+    outline: none; /* Remove o outline padrão */
+}
 
-/* Estilizando o botão */
+/* BOTÃO DE ENVIO */
 button[type="submit"] {
-    background-color: #ff6699; /* Cor de fundo verde */
-    color: white; /* Cor do texto branca */
-    border: none; /* Sem borda */
-    padding: 15px 32px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-    text-decoration: none; /* Remove sublinhado */
-    display: inline-block; /* Permite definir largura e altura */
-    font-size: 16px; /* Tamanho da fonte */
-    margin: 4px 2px; /* Margens em volta do botão */
-    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
 button[type="submit"]:hover {
-    background-color: #ff6699; /* Cor de fundo mais escura ao passar o mouse */
+    background-color: #e55c8a;
 }
 
-/* Estilizando o link de cadastro */
+/* LINK DE CADASTRO */
 .signup-link {
-    margin-top: 20px; /* Margem acima do link */
-    font-size: 14px; /* Tamanho da fonte */
-    color: #555; /* Cor do texto */
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
 }
 
-/* Estilizando o link */
 .signup-link a {
-    color: #4CAF50; /* Cor do link */
-    text-decoration: none; /* Remove sublinhado */
+    color: #ff6699;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Efeito ao passar o mouse sobre o link */
 .signup-link a:hover {
-    text-decoration: underline; /* Sublinhado ao passar o mouse */
+    text-decoration: underline;
+    color: #e55c8a;
 }
 
-
-
-
-
+/* BOTÃO DE LOGIN EXTRA */
 .login-button {
     background-color: #ff6699;
     color: white;
@@ -132,35 +136,28 @@ button[type="submit"]:hover {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: #ff6699;
+    background-color: #e55c8a;
 }
 
-.signup-link {
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.signup-link a {
-    color: #ff6699;
-    text-decoration: none;
-}
-
-.signup-link a:hover {
-    text-decoration: underline;
-}
-
+/* RODAPÉ */
 footer {
+    width: 100%;
     text-align: center;
     margin-top: 20px;
+    padding: 10px 0;
+    background-color: #ff6699;
+    color: white;
     font-size: 14px;
-    color: #555;
+    position: relative;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve no topo do rodapé */
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
     .login-container {
         padding: 15px;
@@ -170,8 +167,45 @@ footer {
         font-size: 20px;
     }
 
-    input, .login-button {
+    input, button {
         font-size: 14px;
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+    }
+
+    .signup-link {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input {
+        font-size: 12px;
         padding: 8px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .signup-link {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 12px;
     }
 }

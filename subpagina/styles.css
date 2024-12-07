@@ -18,7 +18,7 @@ h1, h2, h3 {
 
 /* Barra de Navegação */
 .horizontal-menu {
-    background-color: #fa7ba5;;
+    background-color: #fa7ba5;
     padding: 1rem 0;
 }
 
@@ -26,12 +26,15 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
 }
 
 .horizontal-menu ul {
     list-style: none;
     display: flex;
     gap: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 .horizontal-menu ul li a {
@@ -50,6 +53,9 @@ h1, h2, h3 {
 /* Termos de Uso */
 .terms-of-use {
     margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
 }
 
 .terms-of-use section {
@@ -61,7 +67,7 @@ h1, h2, h3 {
 }
 
 .contact-info a {
-    color: #fa7ba5;;
+    color: #fa7ba5;
     text-decoration: none;
 }
 
@@ -71,7 +77,7 @@ h1, h2, h3 {
 
 /* Rodapé */
 footer {
-    background-color: #fa7ba5;;
+    background-color: #fa7ba5;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -83,6 +89,7 @@ footer .social-links {
     justify-content: center;
     gap: 1rem;
     margin-top: 0.5rem;
+    padding: 0;
 }
 
 footer .social-links a {
@@ -93,4 +100,34 @@ footer .social-links a {
 
 footer .social-links a:hover {
     color: #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Ajustes para telas menores */
+    .horizontal-menu .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .horizontal-menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .terms-of-use {
+        padding: 1rem 0.5rem;
+    }
+
+    footer .social-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Ajustes para telas maiores */
+    .horizontal-menu ul {
+        flex-direction: row;
+    }
 }

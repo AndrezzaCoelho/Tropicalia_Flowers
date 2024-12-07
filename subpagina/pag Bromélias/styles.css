@@ -5,32 +5,22 @@
   box-sizing: border-box;
   font-family: 'Fira Sans', sans-serif;
 }
+
 /* Estilização para o botão */
-#continue-shopping {
-  background-color: #ff6699; /* Cor de fundo verde */
+#continue-shopping,
+#add-to-cart {
+  background-color: #ff6699; /* Cor de fundo */
   color: white; /* Cor do texto branca */
   border: none; /* Remove borda padrão */
   padding: 10px 20px; /* Espaçamento interno do botão */
   text-align: center; /* Centraliza o texto no botão */
   text-decoration: none; /* Remove sublinhado */
   display: inline-block; /* Permite definir largura e altura */
-  font-size: 10px; /* Tamanho da fonte */
+  font-size: 14px; /* Tamanho da fonte */
   margin: 2px 1px; /* Margens ao redor do botão */
   cursor: pointer; /* Muda o cursor ao passar o mouse */
-  border-radius: 3px; /* Cantos arredondados */
+  border-radius: 5px; /* Cantos arredondados */
   transition: background-color 0.3s; /* Efeito de transição para a cor de fundo */
-}
-
-
-/* Define altura mínima para a página */
-body, html {
-  height: 100%;
-}
-
-body {
-  background-color: white;
-  color: black;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 button {
@@ -41,11 +31,22 @@ button {
   border-radius: 5px;
   background-color: #ff6699;
   color: white;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #ff6699;
+  background-color: #ff2c77;
+}
+
+/* Define altura mínima para a página */
+body, html {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Estilo para o modo daltônico */
@@ -59,7 +60,6 @@ body.daltonismo a {
   color: #ff4500;
 }
 
-
 /* Menu de navegação */
 nav {
   background-color: #ff6699; /* Cor de fundo */
@@ -68,9 +68,6 @@ nav {
   padding: 10px 20px; /* Espaçamento interno */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
 }
-
-/* Estilo para o botão de voltar */
-
 
 /* Lista do menu */
 nav ul {
@@ -165,7 +162,7 @@ nav a:hover {
 
 /* Hover no botão de pesquisa */
 .search-bar button:hover {
-  background-color: #f47ea5;
+  background-color: #ed95bba1;
 }
 
 /* Menu horizontal fixo */
@@ -181,43 +178,6 @@ nav a:hover {
 /* Estilo dos títulos no menu */
 .horizontal-menu h1 {
   font-size: 1.5rem;
-}
-
-/* Lista de navegação no menu horizontal */
-.horizontal-menu ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-/* Links no menu horizontal */
-.horizontal-menu a {
-  color: #ddd;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-/* Menu fixo */
-.horizontal-menu.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-/* Layout principal */
-.container {
-  display: flex;
-  margin: 100px auto;
-  max-width: 800px;
-  padding: 20px;
-  background-color: white;
-  border: 2px solid #ffcc00;
-  border-radius: 10px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  flex-direction: column;
-  align-items: center;
 }
 
 /* Lista de navegação no menu horizontal */
@@ -313,61 +273,33 @@ nav a:hover {
 
 /* Container dos botões */
 .button-container {
-display: flex; /* Alinha os botões lado a lado */
-justify-content: center; /* Centraliza os botões no container */
-gap: 10px; /* Espaçamento entre os botões */
-margin: 20px 0; /* Margem superior e inferior */
+  display: flex; /* Alinha os botões lado a lado */
+  justify-content: center; /* Centraliza os botões no container */
+  gap: 10px; /* Espaçamento entre os botões */
+  margin: 20px 0; /* Margem superior e inferior */
 }
 
 /* Estilo base dos botões */
 .button-container button {
-padding: 12px 24px; /* Espaçamento interno do botão */
-font-size: 16px; /* Tamanho da fonte */
-border: none; /* Remove bordas padrão */
-border-radius: 5px; /* Bordas arredondadas */
-cursor: pointer; /* Indica que é clicável */
-color: #fff; /* Cor do texto */
-transition: background-color 0.3s, transform 0.3s; /* Suaviza alterações de cor e escala */
-}
-
-/* Botão "Adicionar ao carrinho" */
-#add-to-cart {
-background-color: #ff6699; /* Cor de fundo inicial */
-}
-
-/* Botão "Continuar comprando" */
-#continue-shopping {
-background-color: #ff6699; /* Cor de fundo inicial */
+  padding: 12px 24px; /* Espaçamento interno do botão */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Remove bordas padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Indica que é clicável */
+  color: #fff; /* Cor do texto */
+  transition: background-color 0.3s, transform 0.3s; /* Suaviza alterações de cor e escala */
 }
 
 /* Hover nos botões */
 .button-container button:hover {
-transform: scale(1.05); /* Aumenta ligeiramente o botão */
-background-color: #ff3366; /* Nova cor ao passar o mouse (pode ajustar para cada botão) */
+  transform: scale(1.05); /* Aumenta ligeiramente o botão */
+  background-color: #ff3366; /* Nova cor ao passar o mouse */
 }
 
 /* Clique no botão */
 .button-container button:active {
-transform: scale(0.95); /* Reduz o botão ligeiramente */
-background-color: #cc0052; /* Cor ao clicar */
-}
-
-/* Botão principal */
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
-  padding: 10px 15px;
-  background-color: #ff3385be;
-  cursor: pointer;
-  gap: 10px;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-/* Hover nos botões */
-.button-container:hover {
-  background-color: #ff2c77;
-  transform: scale(1.05);
+  transform: scale(0.95); /* Reduz o botão ligeiramente */
+  background-color: #cc0052; /* Cor ao clicar */
 }
 
 /* Botão de calcular frete */
@@ -393,4 +325,33 @@ footer {
   text-align: center;
   padding: 1rem;
   background-color: #ff6699;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  #continue-shopping, #add-to-cart {
+    width: 100%; /* Botões ocupam a largura total */
+  }
+
+  .container {
+    margin: 20px; /* Menor margem em dispositivos móveis */
+    padding: 10px; /* Menor padding em dispositivos móveis */
+  }
+
+  nav ul {
+    flex-direction: column; /* Menu em coluna em dispositivos menores */
+  }
+
+  .horizontal-menu ul {
+    flex-direction: column; /* Menu horizontal em coluna em dispositivos menores */
+  }
+
+  .search-bar {
+    flex-direction: column; /* Barra de pesquisa em coluna em dispositivos menores */
+  }
+
+  .search-bar input[type="text"] {
+    width: 100%; /* Campo de pesquisa ocupa a largura total */
+    margin-bottom: 10px; /* Espaçamento inferior */
+  }
 }

@@ -1,55 +1,66 @@
-/* Geral */
+/* RESET E CONFIGURAÇÕES GERAIS */
 body {
     font-family: 'Fira Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     color: #333;
+    background-color: #f9f9f9; /* Fundo claro */
 }
 
+/* TÍTULOS */
 h1, h2, h3 {
-    color: #444;
+    color: #444; /* Texto escuro */
+    margin-bottom: 0.5rem;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+    max-width: 1200px; /* Largura máxima para desktop */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 1rem; /* Espaçamento interno */
 }
 
-/* Barra de Navegação */
+/* BARRA DE NAVEGAÇÃO */
 .horizontal-menu {
-    background-color: #fa7ba5;;
+    background-color: #fa7ba5; /* Fundo rosa */
     padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 .horizontal-menu .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite quebra de linha no mobile */
 }
 
 .horizontal-menu ul {
-    list-style: none;
+    list-style: none; /* Remove marcadores */
     display: flex;
-    gap: 1rem;
+    gap: 1rem; /* Espaçamento entre itens */
+    flex-wrap: wrap; /* Permite quebra de linha */
 }
 
 .horizontal-menu ul li a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado */
     font-weight: bold;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.5rem; /* Espaço entre ícone e texto */
+    transition: color 0.3s ease; /* Transição suave */
 }
 
 .horizontal-menu ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Sublinha no hover */
 }
 
-/* Termos de Uso */
+/* TERMOS DE USO */
 .terms-of-use {
     margin-top: 1rem;
+    padding: 1rem;
+    background-color: white; /* Fundo branco */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 .terms-of-use section {
@@ -58,23 +69,27 @@ h1, h2, h3 {
 
 .terms-of-use h3 {
     margin-bottom: 0.5rem;
+    color: #fa7ba5; /* Rosa para títulos */
 }
 
 .contact-info a {
-    color: #fa7ba5;;
+    color: #fa7ba5; /* Links rosa */
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Sublinha no hover */
+    color: #c2598e; /* Tom mais escuro no hover */
 }
 
-/* Rodapé */
+/* RODAPÉ */
 footer {
-    background-color: #fa7ba5;;
-    color: white;
+    background-color: #fa7ba5; /* Fundo rosa */
+    color: white; /* Texto branco */
     text-align: center;
     padding: 1rem 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior */
 }
 
 footer .social-links {
@@ -87,10 +102,48 @@ footer .social-links {
 
 footer .social-links a {
     color: white;
-    font-size: 1.5rem;
-    transition: color 0.3s;
+    font-size: 1.5rem; /* Ícones maiores */
+    transition: color 0.3s ease;
 }
 
 footer .social-links a:hover {
-    color: #ddd;
+    color: #ddd; /* Cor clara no hover */
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .horizontal-menu .container {
+        flex-direction: column; /* Menu empilhado no mobile */
+        text-align: center; /* Centraliza os itens */
+    }
+
+    .horizontal-menu ul {
+        justify-content: center; /* Centraliza os links no mobile */
+    }
+
+    .terms-of-use {
+        padding: 0.8rem; /* Reduz padding no mobile */
+    }
+
+    footer .social-links a {
+        font-size: 1.2rem; /* Ícones menores no mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Reduz tamanho dos títulos */
+    }
+
+    .container {
+        padding: 0.5rem; /* Menor padding em telas pequenas */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Texto menor no rodapé */
+    }
+
+    footer .social-links a {
+        font-size: 1rem; /* Ícones ainda menores */
+    }
 }

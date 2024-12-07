@@ -14,7 +14,7 @@ body {
 
 /* Barra de Navegação */
 .horizontal-menu {
-    background-color: #fa7ba5;;
+    background-color: #fa7ba5;
     padding: 1rem 0;
 }
 
@@ -66,7 +66,7 @@ body {
 }
 
 .contact-info a {
-    color: #fa7ba5;;
+    color: #fa7ba5;
     text-decoration: none;
 }
 
@@ -76,7 +76,7 @@ body {
 
 /* Rodapé */
 footer {
-    background-color: #fa7ba5;;
+    background-color: #fa7ba5;
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -109,5 +109,26 @@ footer .social-links a:hover {
     .horizontal-menu ul {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    footer .social-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .horizontal-menu ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    footer .social-links {
+        flex-direction: row;
+        gap: 1rem;
     }
 }
