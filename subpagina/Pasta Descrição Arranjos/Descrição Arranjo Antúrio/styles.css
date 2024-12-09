@@ -1,13 +1,56 @@
+/* Reset básico para margens e preenchimentos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif; /* Fonte padrão */
 }
 
 /* Define altura mínima para a página */
 body, html {
   height: 100%;
+}
+
+/* Estilos do cabeçalho */
+header {
+  background-color: #ff6699; /* Cor de fundo do cabeçalho */
+  padding: 10px 20px; /* Espaçamento interno */
+  display: flex;
+  justify-content: space-between; /* Alinha itens na extremidade */
+  align-items: center; /* Centraliza verticalmente */
+  color: white; /* Cor do texto do cabeçalho */
+}
+
+/* Estilos do título */
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 40px;
+  color: #ebcdd7;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+/* Menu do carrinho */
+.menu-carrinho, .menu-opcoes {
+  list-style-type: none; /* Remove os marcadores da lista */
+  display: flex; /* Exibe os itens em linha */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  gap: 15px; /* Espaçamento entre os itens */
+}
+
+.menu-carrinho a, .menu-opcoes a {
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+  font-size: 20px; /* Tamanho da fonte */
+}
+
+.menu-carrinho a:hover, .menu-opcoes a:hover {
+  color: #e1b5c4; /* Cor ao passar o mouse */
 }
 
 /* Barra superior */
@@ -19,66 +62,26 @@ body, html {
   padding: 0 20px;
 }
 
-/* Menu de navegação */
-nav {
-  background-color: #ff6699; /* Cor de fundo */
-  display: flex; /* Flexbox para alinhamento */
-  justify-content: space-between;
-  padding: 10px 20px; /* Espaçamento interno */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
-}
-
-/* Lista do menu */
-nav ul {
-  list-style-type: none; /* Remove marcadores */
-  margin: 0;
-  padding: 0;
-  display: flex; /* Alinha itens na horizontal */
-}
-
-/* Itens do menu */
-nav li {
-  position: relative; /* Necessário para dropdown */
-}
-
-/* Links do menu */
-nav a {
-  display: block; /* Ocupa toda a área do <li> */
-  color: white; /* Cor do texto */
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  font-family: 'Arial', sans-serif;
-  transition: background-color 0.3s, transform 0.2s; /* Suavidade ao interagir */
-}
-
-/* Hover nos links do menu */
-nav a:hover {
-  background-color: #fff;
-  color: #ff6699;
-  transform: scale(1.05); /* Efeito de zoom */
-}
-
 /* Layout principal */
 .container {
   display: flex;
-  margin: 100px auto;
-  max-width: 800px;
-  padding: 20px;
-  background-color: white;
-  border: 2px solid #ffcc00;
-  border-radius: 10px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   align-items: center;
+  margin: 100px auto; /* Margem centralizada */
+  max-width: 800px; /* Largura máxima */
+  padding: 20px;
+  background-color: white; /* Cor de fundo */
+  border: 2px solid #ffcc00; /* Borda */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 /* Imagem do produto */
 .product-image {
-  max-width: 100%;
+  max-width: 100%; /* Responsividade */
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto; /* Centraliza imagem */
 }
 
 /* Botões */
@@ -89,7 +92,6 @@ nav a:hover {
   margin: 20px 0; /* Margem superior e inferior */
 }
 
-/* Botão principal */
 .button-container button {
   padding: 12px 24px; /* Espaçamento interno do botão */
   font-size: 16px; /* Tamanho da fonte */
@@ -101,7 +103,6 @@ nav a:hover {
   transition: background-color 0.3s, transform 0.3s; /* Suaviza alterações */
 }
 
-/* Hover nos botões */
 .button-container button:hover {
   transform: scale(1.05); /* Aumenta ligeiramente o botão */
   background-color: #ff3366; /* Nova cor ao passar o mouse */
@@ -111,7 +112,8 @@ nav a:hover {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #ff6699;
+  background-color: #ff6699; /* Cor de fundo do rodapé */
+  color: white; /* Cor do texto do rodapé */
 }
 
 /* RESPONSIVIDADE */
@@ -129,25 +131,78 @@ footer {
   }
 
   .container {
-    margin: 20px;
+    margin: 20px; /* Reduz margem em mobile */
     width: 100%; /* Ocupa toda a largura */
-    padding: 10px;
+    padding: 10px; /* Reduz padding */
   }
 
   .button-container button {
-    font-size: 14px;
+    font-size: 14px; /* Tamanho da fonte menor */
     padding: 10px 15px; /* Botões menores */
+  }
+
+  .product-image {
+    max-width: 100%; /* Imagem responsiva */
   }
 }
 
 /* Para telas maiores que 768px (desktop) */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   nav ul {
     flex-direction: row; /* Itens do menu em linha */
-    gap: 0;
   }
 
   .container {
-    max-width: 800px; /* Largura fixa */
+    max-width: 800px; /* Largura fixa no desktop */
   }
 }
+
+/* Estilos adicionais para o layout responsivo */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaçamento entre detalhes do produto */
+  margin-bottom: 30px;
+}
+
+.quantity, .freight-container {
+  margin-top: 20px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre elementos da quantidade */
+}
+
+/* Efeito de animação no botão */
+.animated-button:hover {
+  background-color: #ff6699; /* Efeito de hover */
+}
+
+/* Estilo básico do botão de voltar ao topo */
+#backToTop {
+  background-color: #ff6699; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 5px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+  position: fixed; /* Fixo na tela */
+  top: 10px; /* Distância do topo (ajustado para 10px) */
+  left: 20px; /* Distância da esquerda */
+  z-index: 1000; /* Para garantir que fique acima dos outros elementos */
+}
+

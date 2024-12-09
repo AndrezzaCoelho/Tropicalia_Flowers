@@ -1,48 +1,53 @@
-// Variáveis globais
-let cartQuantity = 0; // Quantidade total no carrinho
+// script.js
 
-// Função para alternar a visibilidade do menu
+// Adiciona evento de clique para o botão "Adicionar ao carrinho"
+document.getElementById('add-to-cart').addEventListener('click', function() {
+    const quantity = document.getElementById('item-quantity').value;
+    alert(`Você adicionou ${quantity} item(s) ao carrinho!`);
+});
+
+// Função para continuar comprando
+function continuarComprando() {
+    // Redireciona ou faz outra ação para continuar comprando
+    window.location.href = 'file:///C:/Users/andre/Flores/index.html'; // Substitua pelo seu caminho desejado
+}
+
+// Adiciona evento de clique para calcular o frete
+document.getElementById('calculate-freight').addEventListener('click', function() {
+    const cep = document.getElementById('cep').value;
+    if (cep) {
+        alert(`Calculando frete para o CEP: ${cep}`);
+        // Aqui você pode adicionar lógica para calcular o frete, se necessário
+    } else {
+        alert('Por favor, digite um CEP válido.');
+    }
+});
+
+// Exibir botão "Voltar ao topo" quando a página for rolada para baixo
+const backToTopButton = document.getElementById('backToTop');
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+};
+
+// Adiciona evento de clique para o botão "Voltar ao topo"
+backToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Rolagem suave
+    });
+});
+
+// Função para alternar o menu hambúrguer
 function toggleMenu() {
-    const menu = document.getElementById("menu");
+    const menu = document.getElementById('menu');
     if (menu.style.display === "block") {
         menu.style.display = "none";
     } else {
         menu.style.display = "block";
     }
 }
-
-// Função para adicionar item ao carrinho
-document.getElementById("add-to-cart").addEventListener("click", function() {
-    const quantity = document.getElementById("item-quantity").value;
-    cartQuantity += parseInt(quantity);
-    alert("Item adicionado ao carrinho. Total de itens: " + cartQuantity);
-});
-
-// Função para continuar comprando (pode ser ajustada para redirecionar para a página inicial ou produtos)
-function continuarComprando() {
-    alert("Continuando a compra...");
-}
-
-// Funções para aumentar e diminuir a quantidade do item
-document.getElementById("add-item").addEventListener("click", function() {
-    const quantityInput = document.getElementById("item-quantity");
-    quantityInput.value = parseInt(quantityInput.value) + 1;
-});
-
-document.getElementById("remove-item").addEventListener("click", function() {
-    const quantityInput = document.getElementById("item-quantity");
-    if (parseInt(quantityInput.value) > 1) {
-        quantityInput.value = parseInt(quantityInput.value) - 1;
-    }
-});
-
-// Função para calcular o frete (exemplo básico)
-document.getElementById("calculate-freight").addEventListener("click", function() {
-    const cep = document.getElementById("cep").value;
-    if (cep) {
-        alert("Calculando frete para o CEP: " + cep);
-        // Aqui você pode adicionar uma lógica para calcular o frete baseado no CEP
-    } else {
-        alert("Por favor, digite um CEP válido.");
-    }
-});

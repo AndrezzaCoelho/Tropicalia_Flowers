@@ -6,192 +6,188 @@
     <title>Tropicália Flowers</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
-
-<!-- First Commit in new line-->
-
+<script src="js/script.js"></script>
 <body>
+    <!-- Cabeçalho -->
     <header class="horizontal-menu">
-        <img src="img/pngtree-watercolor-flower-arrangement-for-wedding-decoration-png-image_12857847.png" alt="Logo" class="logo" style="height: 30px;">
-        <h1 class="slogan">Tropicália Flowers</h1>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Pesquisar...">
-            <button id="searchButton"><i class="fas fa-search"></i></button>
-        </div>
-    
-        <div class="product-list" id="productList">
-            <!-- A lista de produtos será gerada aqui -->
-        </div>
-        <ul class="menu-carrinho" id="carrinho"> 
-            <li><a href="subpagina/pag carrinho/index.html"><i class="fas fa-shopping-cart"></i> </a></li>
-        </ul> 
-            
-
-    </header>
-     <nav>
-        <!-- Menu Hambúrguer -->
-        <div class="menu-hamburguer" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-          <main>
-        <ul class="menu-opcoes" id="menu">
-            <li><a href="subpagina/pag de perfil/index.html"><i class="fas fa-user"></i> Perfil</a></li>
-             <!-- Botão de Modo Daltonismo -->
-             <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
-                <i class="fas fa-eye"></i> Modo Daltonismo
-            </button>
-        
+        <div class="header-content">
+            <img src="img/pngtree-watercolor-flower-arrangement-for-wedding-decoration-png-image_12857847.png" alt="Logo" class="logo">
+            <h1 class="slogan">Tropicália Flowers</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Pesquisar...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="menu-carrinho">
+                <li>
+                    <a href="subpagina/pag carrinho/index.html">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <!-- Botão de Modo Daltonismo -->
+                    <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </li>
             </ul>
+            
+            <!-- Menu Hambúrguer -->
+            <div class="menu-hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <!-- Menu de navegação oculto -->
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="subpagina/pag login1/index.html">Login</a></li>
+                <li><a href="subpagina/pag de cadastro e pagamento/index.html">Cadastro</a></li>
+                <li><a href="subpagina/Página de Arranjos/index.html">Mais Produtos</a></li>
+                <li><a href="subpagina/pag quem somos/index.html">Quem Somos</a></li>
+                <li><a href="subpagina/pg de contato/index.html">Contate-nos</a></li>
+            </ul>
+            
         </nav>
-    </head>
-    
-    
-      </main>
-    </div>
-    <body>
-        <div class="menu-hamburger">
-            <div class="hamburger" id="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    </header>
+
+  <!-- Conteúdo Principal -->
+<main>
+    <!-- Banner -->
+    <section class="banner">
+        <img src="img/WhatsApp Image 2024-11-28 at 00.28.13.jpeg" alt="Banner" class="banner-img">
+    </section>
+
+    <!-- Produtos Sem Promoção -->
+    <section class="products">
+        <h4>FLORES EM DESTAQUES</h4>
+        <div class="catalog">
+            <!-- Produto: Antúrio -->
+            <div class="product-card">
+                <a href="subpagina/pag Antúrio/index.html">
+                    <img src="img/Antúrio1.jpg" alt="Antúrio">
+                </a>
+                <h3>Antúrio</h3>
+                <p>R$ 39,99</p>
+         
             </div>
-           
-            <nav class="nav" id="nav">
-                <ul>
-                    <li><a href="subpagina/pag login1/index.html">Login</a></li>
-                    <li><a href="subpagina/pag de cadastro e pagamento/index.html">Cadastro</a></li>
-                    <li><a href="subpagina/pg de contato/index.html">Contate-nos</a></li>
-                    
-                </ul>
-            </nav>
-        
-    
-            <div class="container">
-                <aside class="sidebar-menu">
-                    
-                    <ul>
-                        
-                        <li><a href="subpagina/Página de Arranjos/index.html">Mais Produtos</a></li>
-                        <li><a href="subpagina/pag quem somos/index.html">Quem Somos</a></li>
-                      
 
-                        
-                        <h2> Nossa Missão 🌿</h2>
-
-<strong>Tropicália Flowers</strong>, nossa missão é levar a exuberância das flores tropicais diretamente para a sua casa, unindo a beleza da natureza à praticidade do digital. Trabalhamos para proporcionar uma experiência de compra eficaz e fácil, garantindo que cada cliente encontre a perfeição em cada pétala com apenas alguns cliques.
-    
-
-
-<img src="img/banner promo 1.jpg" alt="Banner1" class="Banner1">
-                    </ul>
-                    <div class="social-media">
-                        <h2>Siga-nos</h2>
-                        <p>
-                            <a href="https://facebook.com/floresonline" target="_blank" style="text-decoration: none; color: #1877F2;">
-                                <i class="fab fa-facebook" style="font-size: 24px; margin-right: 8px;"></i> Facebook
-                            </a>
-                            <a href="https://instagram.com/floresonline" target="_blank" style="text-decoration: none; color: #E4405F;">
-                                <i class="fab fa-instagram" style="font-size: 24px; margin-right: 8px;"></i> Instagram
-                            </a>
-                            <a href="https://wa.me/5581999998888" target="_blank" style="text-decoration: none; color: green;">
-                                <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 8px;"></i> WhatsApp
-                            </a>                    
-
-                </aside>
-            
-           
-        <main class="products">
-            <img src="img/WhatsApp Image 2024-11-28 at 00.28.13.jpeg" alt="Banner" class="Banner">
-            <h4>FLORES EM DESTAQUES</h4>
-            <div class="catalog">
-                <div class="product-card">
-                    <a href="subpagina/pag Antúrio/index.html">
-                        <img src="img/Antúrio1.jpg" alt="Antúrio">
-                    </a>
-                    <h3>Antúrio</h3>
-                    <p>R$ 39,99</p>
-                    <button onclick="addToCart('Antúrio', 39.99)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="subpagina/pag Bastão do imperador/index.html">
-                        <img src="img/bastão do imperador.webp" alt="Bastão do Imperador">
-                    </a>
-                    <h3>B. do Imperador</h3>
-                    <p>R$ 15,00</p>
-                    <button onclick="addToCart('Bastão do Imperador', 15)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="subpagina/pag Bromélias/index.html">
-                        <img src="img/Bromélias.jpg" alt="Bromélias">
-                    </a>
-                    <h3>Bromélias</h3>
-                    <p>R$ 19,00</p>
-                    <button onclick="addToCart('Bromélias', 19)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="subpagina/pag Bougainvillea/index.html">
-                        <img src="img/Bougainvillea.webp" alt="Bougainvillea">
-                    </a>
-                    <h3>Bougainvillea</h3>
-                    <p>R$ 19,00</p>
-                    <button onclick="addToCart('Bougainvillea', 19)">Adicionar ao Carrinho</button>
-                </div>
-               
-                <h4>PROMOÇÕES DE ORQUÍDEAS</h4>
-            <div class="catalog-2">
-
-
-                <div class="product-card">
-                    <a href="subpagina/pag Orquídea Oncidium/index.html">
-                        <div class="red-stripe">10%</div>
-                        <img src="img/Orquídea Oncidium.jpg" alt="Orquídea Oncidiu">
-                    </a>
-                    <h3>Orquídea Oncidium</h3>
-                    <p>R$ 89,99</p>
-                    <button onclick="addToCart('Orquídea Oncidium', 18)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="subpagina/pg Orquídea Cattleya/index.html">
-                        <div class="red-stripe">10%</div>
-                        <img src="img/Orquídea Cattleya.webp" alt="Orquídea Cattleya">
-                    </a>
-                    <h3>Orq. Cattleya</h3>
-                    <p>R$ 69,00</p>
-                    <button onclick="addToCart('Orquídea Cattleya', 110)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="subpagina/psg Orquídea Cymbidium/index.html">
-                        <div class="red-stripe">10%</div>
-                        <img src="img/Orquídea Cymbidium.jpeg" alt="Orquídea Cymbidium">
-                    </a>
-                    <h3>Orq. Cymbidium</h3>
-                    <p>R$ 79,99</p>
-                    <button onclick="addToCart('Orquídea Cymbidium', 130)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card">
-                    <a href="subpagina/pag Orquídea Miltonia/index.html">
-                        <div class="red-stripe">10%</div>
-                        <img src="img/Orquídea Miltonia.jpg" alt="Orquídea Miltonia">
-                    </a>
-                    <h3>Orq. Miltonia</h3>
-                    <p>R$ 69,99</p>
-                    <button onclick="addToCart('Orquídea Miltonia', 110)">Adicionar ao Carrinho</button>
-                </div>
-                <footer>
-                    <script src="js/script.js"></script>
-                    <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
-                    <ul>
-                        <li><a href="pag de polit de privacidade/index.html">Política de Privacidade</a></li>
-                        <li><a href="pag termos de uso/index.html">Termos de Uso</a></li>
-                       
-        
-           
-                </p>
+            <!-- Produto: Bastão do Imperador -->
+            <div class="product-card">
+                <a href="subpagina/pag Bastão do imperador/index.html">
+                    <img src="img/bastão do imperador.webp" alt="Bastão do Imperador">
+                </a>
+                <h3>B. do Imperador</h3>
+                <p>R$ 15,00</p>
+                
             </div>
-            
+
+            <!-- Produto: Bromélias -->
+            <div class="product-card">
+                <a href="subpagina/pag Bromélias/index.html">
+                    <img src="img/Bromélias.jpg" alt="Bromélias">
+                </a>
+                <h3>Bromélias</h3>
+                <p>R$ 19,00</p>
+            </div>
+
+            <!-- Produto: Bougainvillea -->
+            <div class="product-card">
+                <a href="subpagina/pag Bougainvillea/index.html">
+                    <img src="img/Bougainvillea.webp" alt="Bougainvillea">
+                </a>
+                <h3>Bougainvillea</h3>
+                <p>R$ 19,00</p>
+          
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos com Promoção -->
+    <section class="products">
+        <h4>PROMOÇÕES DE ORQUIDEAS</h4>
+        <div class="catalog">
+            <!-- Produto: Orquídea Oncidium -->
+            <div class="product-card">
+                <a href="subpagina/pag Orquídea Oncidium/index.html">
+                    <div class="red-stripe">10% OFF</div>
+                    <img src="img/Orquídea Oncidium.jpg" alt="Orquídea Oncidium">
+                </a>
+                <h3>Orquídea Oncidium</h3>
+                <p>R$ 89,99</p>
+                
+            </div>
+
+            <!-- Produto: Orquídea Cattleya -->
+            <div class="product-card">
+                <a href="subpagina/pg Orquídea Cattleya/index.html">
+                    <div class="red-stripe">10% OFF</div>
+                    <img src="img/Orquídea Cattleya.webp" alt="Orquídea Cattleya">
+                </a>
+                <h3>Orquídea Cattleya</h3>
+                <p>R$ 69,00</p>
+                
+            </div>
+
+            <!-- Produto: Orquídea Cymbidium -->
+            <div class="product-card">
+                <a href="subpagina/psg Orquídea Cymbidium/index.html">
+                    <div class="red-stripe">10% OFF</div>
+                    <img src="img/Orquídea Cymbidium.jpeg" alt="Orquídea Cymbidium">
+                </a>
+                <h3>Orquídea Cymbidium</h3>
+                <p>R$ 79,99</p>
+                
+            </div>
+
+            <!-- Produto: Orquídea Miltonia -->
+            <div class="product-card">
+                <a href="subpagina/pag Orquídea Miltonia/index.html">
+                    <div class="red-stripe">10% OFF</div>
+                    <img src="img/Orquídea Miltonia.jpg" alt="Orquídea Miltonia">
+                </a>
+                <h3>Orquídea Miltonia</h3>
+                <p>R$ 69,99</p>
+              
+            </div>
+        </div>
+    </section>
+</main>
+
+            </div>
+        </section>
     </main>
 
+    <!-- Rodapé -->
+     
+    <footer>
+        <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="pag de polit de privacidade/index.html">Política de Privacidade</a></li>
+            <li><a href="pag termos de uso/index.html">Termos de Uso</a></li>
+           
+                <a href="https://facebook.com/floresonline" target="_blank" style="text-decoration: none; color: #1877F2;">
+                    <i class="fab fa-facebook" style="font-size: 24px; margin-right: 8px;"></i> Facebook
+                </a>
+                <a href="https://instagram.com/floresonline" target="_blank" style="text-decoration: none; color: #E4405F;">
+                    <i class="fab fa-instagram" style="font-size: 24px; margin-right: 8px;"></i> Instagram
+                </a>
+                <a href="https://wa.me/5581999998888" target="_blank" style="text-decoration: none; color: green;">
+                    <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 8px;"></i> WhatsApp
+                </a> 
+        </ul>
+    </footer>
+
+    <!-- Script do Menu Hambúrguer -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

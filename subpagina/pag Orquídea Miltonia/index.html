@@ -7,38 +7,30 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head> 
-
-<div class="voltar">
-    <button id="continue-shopping">Voltar</button>
-    <!-- Botão de voltar -->
-</div>
-
 <body>
+    <!-- Botão de voltar -->
+    <div class="voltar">
+        <button id="continue-shopping">Voltar</button>
+    </div>
+
     <header class="horizontal-menu">
-        <h1>
-           
-            Tropicália Flowers
-        </h1>
+        <h1>Tropicália Flowers</h1>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Pesquisar...">
             <button id="searchButton"><i class="fas fa-search"></i></button>
         </div>
-    
-        <div class="product-list" id="productList">
-            <!-- A lista de produtos será gerada aqui -->
-        </div>
-          <!-- Botões para adicionar itens -->
+        <div class="product-list" id="productList"></div>
+
+        <!-- Botões para adicionar itens -->
         <ul class="menu-carrinho" id="carrinho"> 
             <li><a href="carrinho"><i class="fas fa-shopping-cart"></i> <span id="item-count">0</span></a></li>
-                <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
-                    <i class="fas fa-eye"></i> Modo Daltônico
-            
-    
         </ul>
-    
+        <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
+            <i class="fas fa-eye"></i> Modo Daltônico
+        </button>
     </header>
-     <nav>
-        <!-- Menu Hambúrguer -->
+
+    <nav>
         <div class="menu-hamburguer" onclick="toggleMenu()">
             <div></div>
             <div></div>
@@ -48,15 +40,15 @@
            <li><a href="../../index.html"><i class="fas fa-home"></i> Inicio</a></li>
         </ul>
     </nav>
+
     <div class="container">
         <h1>Orquídea Miltonia</h1>
         <div class="product-details">
-            <img src="../../img/Orquídea Miltonia123.webp" alt="Orquídea Miltonia" class="product-image"> <!-- Caminho corrigido -->
+            <img src="../../img/Orquídea Miltonia123.webp" alt="Orquídea Miltonia" class="product-image">
             <div class="info">
                 <p class="description">A Orquídea Miltonia, ou "Orquídea do Exército", é conhecida por suas grandes flores coloridas e vibrantes, como roxo, amarelo e branco. Para florescer bem, necessita de ambientes com boa iluminação, umidade e temperaturas amenas.</p>
                 <p class="price">Preço: R$69,99</p>
             </div>
-
 
             <div class="quantity">
                 <button id="remove-item" aria-label="Remover item">-</button>
@@ -66,7 +58,7 @@
 
             <div class="button-container">
                 <button id="add-to-cart">Adicionar ao carrinho</button>
-                <button id="continue-shopping" onclick="continuarComprando()">Continuar comprando</button>
+                <button id="continuar-comprando" onclick="continuarComprando()">Continuar comprando</button>
             </div>
 
             <div class="color-selection">
@@ -84,8 +76,6 @@
                 <input type="text" id="cep" placeholder="Digite seu CEP" aria-label="Campo para digitar o CEP">
                 <button id="calculate-freight">Calcular Frete</button>
             </div>
-
-            <script src="script.js"></script>
         </div>
     </div>
 
@@ -93,6 +83,6 @@
     <footer>
         <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,48 +1,75 @@
-// Variáveis globais
-let cartQuantity = 0; // Quantidade total no carrinho
+// script.js
 
-// Função para alternar a visibilidade do menu
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
+// Função para atualizar o valor da quantidade
+function updateQuantity(change) {
+    const quantityInput = document.getElementById('item-quantity');
+    let currentQuantity = parseInt(quantityInput.value);
+    
+    currentQuantity += change;
+    
+    // Garantir que a quantidade não fique abaixo de 1
+    if (currentQuantity < 1) {
+        currentQuantity = 1;
+    }
+    
+    quantityInput.value = currentQuantity;
+}
+
+// Função para adicionar o item ao carrinho
+function addToCart() {
+    const quantityInput = document.getElementById('item-quantity');
+    const quantity = parseInt(quantityInput.value);
+    const price = 50.00; // Preço fixo do arranjo
+    const totalPrice = (price * quantity).toFixed(2);
+    
+    alert(`Você adicionou ${quantity} item(s) ao carrinho. Total: R$${totalPrice}`);
+}
+
+// Função para calcular o frete
+function calculateFreight() {
+    const cepInput = document.getElementById('cep');
+    const cep = cepInput.value;
+
+    if (cep) {
+        // Aqui você pode adicionar a lógica para calcular o frete baseado no CEP
+        // Por exemplo, um valor fixo só para fins de demonstração
+        const freightCost = 15.00; // Custo de frete fixo
+        alert(`O frete para o CEP ${cep} é R$${freightCost.toFixed(2)}`);
     } else {
-        menu.style.display = "block";
+        alert('Por favor, insira um CEP válido.');
     }
 }
+
+// Função para continuar comprando (navegar para outra página, por exemplo)
+function continuarComprando() {
+    // Aqui você pode redirecionar para outra página, por exemplo:
+    window.location.href = 'index.html'; // Mudar para a URL desejada
+}
+
+// Adiciona eventos aos botões
+document.getElementById('add-item').addEventListener('click', () => updateQuantity(1));
+document.getElementById('remove-item').addEventListener('click', () => updateQuantity(-1));
+document.getElementById('add-to-cart').addEventListener('click', addToCart);
+document.getElementById('calculate-freight').addEventListener('click', calculateFreight);
+//botão voltar//
+document.getElementById("backToTop").addEventListener("click", function() {
+    window.history.back();
+});
+
 
 // Função para adicionar item ao carrinho
-document.getElementById("add-to-cart").addEventListener("click", function() {
-    const quantity = document.getElementById("item-quantity").value;
-    cartQuantity += parseInt(quantity);
-    alert("Item adicionado ao carrinho. Total de itens: " + cartQuantity);
-});
-
-// Função para continuar comprando (pode ser ajustada para redirecionar para a página inicial ou produtos)
-function continuarComprando() {
-    alert("Continuando a compra...");
+function adicionarAoCarrinho() {
+    // Aqui você pode adicionar a lógica para adicionar o item ao carrinho
+    alert("Item adicionado ao carrinho!");
 }
 
-// Funções para aumentar e diminuir a quantidade do item
-document.getElementById("add-item").addEventListener("click", function() {
-    const quantityInput = document.getElementById("item-quantity");
-    quantityInput.value = parseInt(quantityInput.value) + 1;
-});
+// Função para continuar comprando
+function continuarComprando() {
+    // Substitua 'sua-url-aqui' pela URL da página desejada
+    window.location.href = '../../../';
+}
 
-document.getElementById("remove-item").addEventListener("click", function() {
-    const quantityInput = document.getElementById("item-quantity");
-    if (parseInt(quantityInput.value) > 1) {
-        quantityInput.value = parseInt(quantityInput.value) - 1;
-    }
-});
-
-// Função para calcular o frete (exemplo básico)
-document.getElementById("calculate-freight").addEventListener("click", function() {
-    const cep = document.getElementById("cep").value;
-    if (cep) {
-        alert("Calculando frete para o CEP: " + cep);
-        // Aqui você pode adicionar uma lógica para calcular o frete baseado no CEP
-    } else {
-        alert("Por favor, digite um CEP válido.");
-    }
+// Adiciona os eventos aos botões quando o documento estiver pronto
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("add-to-cart").addEventListener("click", adicionarAoCarrinho);
 });

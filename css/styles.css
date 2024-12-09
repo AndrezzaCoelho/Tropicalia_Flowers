@@ -1,227 +1,338 @@
-/* RESET CSS */
-/* Remove margens e preenchimentos padrão e ajusta o box-sizing para incluir bordas no cálculo da largura e altura */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Fira Sans', Arial, sans-serif; /* Define a fonte padrão */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamento padrão */
+    box-sizing: border-box; /* Inclui padding e borda na largura e altura */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
 }
 
-/* BODY E BASE */
-/* Estilo geral do corpo da página */
+/* Corpo da Página */
 body {
-    font-family: Arial, sans-serif; /* Fonte padrão */
-    line-height: 1.6; /* Altura das linhas para facilitar a leitura */
-    background-color: #eee4e7; /* Cor de fundo clara */
+    background-color: #dfc6ce; /* Cor de fundo */
     color: #333; /* Cor do texto */
-    margin: 0;
-    padding: 0;
 }
 
-/* HEADER */
-/* Estilo para o cabeçalho da página */
+/* Cabeçalho */
 header {
-    padding: 10px; /* Espaçamento interno */
-    text-align: center; /* Alinha o texto ao centro */
-    background-color: #ff6699; /* Cor de fundo rosa */
-    color: white; /* Cor do texto */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    background-color: #ff6699; /* Cor de fundo do cabeçalho */
+    color: #f4e1e7; /* Cor do texto do cabeçalho */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    /*position: sticky; /* Mantém o cabeçalho fixo ao rolar */
+    /*top: 0; /* Posição fixa no topo */
+    /*z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Fonte em negrito */
 }
 
-/* SLOGAN */
-/* Estilo do slogan principal */
-.slogan {
-    font-family: 'Playfair Display', serif; /* Fonte elegante */
-    font-size: 5rem; /* Tamanho grande */
-    font-weight: bold; /* Texto em negrito */
-    color: #ffecb3; /* Cor suave */
+.header-content {
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: space-between; /* Espaço entre itens */
+    align-items: center; /* Alinhamento vertical */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    gap: 10px; /* Espaçamento entre itens */
+}
+
+.logo {
+    height: 150px; /* Altura da logo */
+    margin: 50px; /* Espaço em torno da logo */
+}
+
+/* Menu e Carrinho */
+.menu-carrinho {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Utiliza flexbox para layout do menu */
+    justify-content: flex-end; /* Alinha itens à direita */
+    align-items: center; /* Alinhamento vertical */
+    position: fixed; /* Fixa o menu no canto superior direito */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    z-index: 999; /* Garante que o menu fique acima de outros elementos */
+}
+
+.menu-carrinho li {
+    margin: 0 5px; /* Espaçamento entre os itens do menu */
+}
+
+.menu-carrinho a,
+.menu-carrinho button {
+    display: inline-block; /* Permite definir dimensões */
+    width: 40px; /* Largura dos itens */
+    height: 40px; /* Altura dos itens */
     text-align: center; /* Centraliza o texto */
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra no texto */
-    margin: 30px 20px; /* Espaçamento externo */
-    line-height: 1.2; /* Ajuste do espaçamento entre linhas */
+    line-height: 40px; /* Centraliza verticalmente o texto */
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #fff; /* Cor do texto */
+    background-color: #f8acc4; /* Cor de fundo */
+    border-radius: 50%; /* Bordas arredondadas */
 }
 
-/* Responsividade para o slogan */
-@media (max-width: 1024px) {
-    /* Ajuste do tamanho da fonte e margens para telas menores */
-    .slogan {
-        font-size: 4rem;
-        margin: 20px 15px;
-    }
+.menu-carrinho a:hover,
+.menu-carrinho button:hover {
+    background-color: #ff6699; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
 }
 
-@media (max-width: 768px) {
-    .slogan {
-        font-size: 3rem;
-        margin: 20px 10px;
-    }
+/* Barra de Pesquisa */
+.search-bar {
+    display: flex; /* Utiliza flexbox para layout */
+    align-items: center; /* Alinha itens verticalmente */
+    flex: 1; /* Expande para preencher espaço disponível */
+    max-width: 400px; /* Limita a largura máxima */
+    margin-left: auto; /* Empurra a barra para a direita */
 }
 
-@media (max-width: 480px) {
-    .slogan {
-        font-size: 2.5rem;
-        margin: 15px 5px;
-    }
+.search-bar input {
+    flex: 1; /* Preenche o espaço restante */
+    padding: 5px; /* Espaçamento interno */
+    margin-right: 5px; /* Espaçamento entre input e botão */
+    border: none; /* Remove borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
 }
 
-/* BOTÕES E MODOS DE ACESSIBILIDADE */
-/* Estilo para o botão de alternância para modo daltônico */
-button#daltonismo-btn {
-    font-size: 1rem; /* Tamanho do texto do botão */
-    color: #eee4e7; /* Cor do texto */
-    background-color: #ff6699; /* Cor de fundo */
-    border: none; /* Remove a borda */
-    border-radius: 5px; /* Arredonda os cantos */
-    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
-    transition: background-color 0.3s; /* Transição suave para hover */
+.search-bar button {
+    background-color: white; /* Botão com fundo branco */
+    border: none; /* Remove borda padrão */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
 }
 
-/* Estilo ao passar o mouse sobre o botão */
-button#daltonismo-btn:hover {
-    background-color: #fff; /* Altera a cor de fundo no hover */
-}
-
-/* Modo daltônico: ajusta cores do corpo e links */
-body.daltonismo {
-    background-color: #000; /* Fundo preto */
-    color: #faff00; /* Texto amarelo brilhante */
-}
-
-body.daltonismo a {
-    color: #ff4500; /* Links laranja vibrante */
-}
-
-/* CARDS DE PRODUTO */
-/* Estilo dos cards de produto */
-.product-card {
-    background-color: #fff; /* Fundo branco */
-    border: 1px solid #ffecb3; /* Borda suave */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    width: calc(25% - 20px); /* Largura dinâmica para 4 cards por linha */
-    margin-bottom: 20px; /* Espaçamento inferior */
-    padding: 15px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
-    position: relative; /* Necessário para elementos posicionados */
-}
-
-/* Efeito hover no card */
-.product-card:hover {
-    transform: scale(1.03); /* Aumenta levemente o tamanho */
-    box-shadow: 0 4px 10px #ffecb3; /* Sombra mais pronunciada */
-}
-
-/* Estilo das imagens dentro dos cards */
-.product-card img {
-    width: 100%; /* Largura total do card */
-    height: 200px; /* Altura fixa */
-    object-fit: cover; /* Mantém a proporção da imagem */
-    border-radius: 5px; /* Cantos arredondados */
-}
-
-/* Botão dentro dos cards */
-.product-card button {
-    background-color: #ff6699; /* Fundo rosa */
-    color: white; /* Texto branco */
-    border: none; /* Remove bordas */
-    padding: 10px 15px; /* Espaçamento interno */
-    border-radius: 5px; /* Cantos arredondados */
-    cursor: pointer; /* Muda o cursor ao passar */
-    transition: background-color 0.3s; /* Transição suave */
-}
-
-/* Efeito hover no botão */
-.product-card button:hover {
-    background-color: #ff3385; /* Fundo rosa mais escuro */
-}
-
-/* RESPONSIVIDADE PARA CARDS */
-/* Ajuste da largura dos cards para diferentes tamanhos de tela */
-@media (max-width: 1024px) {
-    .product-card {
-        width: calc(33.33% - 20px); /* 3 cards por linha */
-    }
-}
-
-@media (max-width: 768px) {
-    .product-card {
-        width: calc(50% - 20px); /* 2 cards por linha */
-    }
-}
-
-@media (max-width: 480px) {
-    .product-card {
-        width: 100%; /* 1 card por linha */
-    }
-}
-
-/* MENU HAMBÚRGUER */
-/* Barra de navegação fixa */
-.header {
-    position: fixed; /* Fixa no topo */
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff; /* Fundo branco */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    z-index: 1000; /* Fica acima de outros elementos */
-    display: flex; /* Layout flexível */
-    justify-content: space-between; /* Itens espaçados */
-    padding: 10px; /* Espaçamento interno */
-}
-
-/* Ícone do menu hambúrguer */
-.hamburger {
-    cursor: pointer; /* Cursor de clique */
+/* Ícone do Menu Hambúrguer */
+.menu-hamburger {
+    cursor: pointer; /* Muda o cursor para pointer */
     width: 30px; /* Largura do ícone */
     height: 25px; /* Altura do ícone */
-    display: flex; /* Layout flexível */
-    flex-direction: column; /* Linhas verticais */
-    justify-content: space-between; /* Espaçamento entre linhas */
+    display: flex; /* Utiliza flexbox para layout */
+    flex-direction: column; /* Coloca as linhas em coluna */
+    justify-content: space-between; /* Espaça as linhas */
+    margin: 10px; /* Espaçamento em torno do ícone */
+    position: absolute; /* Posição absoluta em relação ao elemento pai */
+    top: 50px; /* Distância do topo */
+    left: 10px; /* Distância da esquerda */
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
 }
 
-/* Linhas do ícone */
-.hamburger .line {
-    width: 100%; /* Largura total */
-    height: 3px; /* Altura de cada linha */
-    background-color: #ff6699; /* Cor rosa */
-    transition: transform 0.3s ease; /* Transição suave */
+.menu-hamburger .line {
+    width: 100%; /* Largura total da linha */
+    height: 3px; /* Altura da linha */
+    background-color: #edd0da; /* Cor da linha */
+    transition: all 0.3s ease-in-out; /* Transição suave para alterações */
 }
 
-/* Menu expandido */
+/* Menu Flutuante */
 .nav {
-    display: none; /* Oculto por padrão */
-    position: absolute;
-    top: 60px; /* Abaixo do cabeçalho */
-    left: 0;
-    right: 0;
-    background-color: #eee4e7; /* Fundo claro */
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: none; /* Oculto inicialmente */
+    position: absolute; /* Posição absoluta em relação ao elemento pai */
+    top: 50px; /* Distância do topo */
+    left: 10px; /* Distância da esquerda */
+    background-color: #ff6699; /* Cor de fundo do menu */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 15px; /* Espaçamento interno */
+    z-index: 999; /* Garante que o menu fique acima de outros elementos */
+    width: 200px; /* Largura fixa */
 }
 
-/* Menu visível */
 .nav.active {
-    display: block; /* Exibe o menu */
+    display: block; /* Exibe o menu quando ativo */
 }
 
-/* FOOTER */
-/* Estilo do rodapé */
-footer {
+.nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos padrão */
+    text-align: center; /* Centraliza o texto */
+}
+
+.nav ul li {
+    margin-bottom: 10px; /* Espaçamento inferior entre itens */
+}
+
+.nav ul li:last-child {
+    margin-bottom: 0; /* Remove margem do último item */
+}
+
+.nav ul li a {
+    text-decoration: none; /* Remove sublinhado */
+    color: white; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para cor de fundo */
+    display: block; /* Exibe como bloco */
+}
+
+.nav ul li a:hover {
+    background-color: #ff3385; /* Fundo mais escuro ao passar o mouse */
+}
+
+/* Banner */
+.banner {
+    display: flex; /* Utiliza flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
     width: 100%; /* Largura total */
-    background-color: #ff6699; /* Fundo rosa */
-    color: white; /* Texto branco */
+    overflow: hidden; /* Evita rolagem */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.banner img {
+    width: 100%; /* Ajusta a largura da imagem ao contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 400px; /* Altura máxima */
+    object-fit: cover; /* Preenche o espaço sem distorção */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilização do Título */
+h4 {
+    font-family: 'Arial', sans-serif; /* Fonte clara e moderna */
+    font-size: 2em; /* Tamanho do texto */
+    font-weight: bold; /* Texto em negrito */
+    text-align: center; /* Centraliza o texto */
+    color: #ff6699; /* Cor vibrante */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+/* Produtos */
+.products {
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza texto */
+}
+
+.catalog {
+    display: flex; /* Utiliza flexbox para layout dos produtos */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza produtos */
+    gap: 20px; /* Espaçamento entre cartões */
+}
+
+.product-card {
+    background-color: #fff; /* Cor de fundo do cartão */
+    border: 1px solid #ccc; /* Borda do cartão */
+    border-radius: 8px; /* Bordas arredondadas */
+    width: calc(25% - 20px); /* 4 produtos por linha */
+    text-align: center; /* Centraliza texto */
+    padding: 15px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra do cartão */
+    transition: transform 0.3s; /* Animação ao passar o mouse */
+}
+
+.product-card:hover {
+    transform: scale(1.03); /* Aumenta levemente o cartão ao passar o mouse */
+}
+
+.product-card img {
+    width: 100%; /* Largura total da imagem */
+    height: 200px; /* Altura fixa */
+    object-fit: cover; /* Ajusta sem distorção */
+}
+
+.product-card button {
+    margin-top: 10px; /* Espaçamento superior */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    background-color: #ff6699; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para cor de fundo */
+}
+
+.product-card button:hover {
+    background-color: #ff3385; /* Fundo mais escuro ao passar o mouse */
+}
+
+/* Faixa Vermelha de Promoção */
+.red-stripe {
+     /* Posição absoluta em relação ao elemento pai */
+    top: 10px; /* Distância do topo */
+    left: 10px; /* Distância da esquerda */
+    background-color: #333; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    font-size: 0.9em; /* Tamanho da fonte */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Rodapé */
+footer {
+    background-color: #ff6699; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto */
     text-align: center; /* Centraliza o texto */
     padding: 20px 0; /* Espaçamento interno */
 }
 
-/* Links no rodapé */
 footer a {
-    color: white; /* Texto branco */
     text-decoration: none; /* Remove sublinhado */
-    transition: text-decoration 0.3s; /* Transição suave */
+    color: white; /* Cor do texto */
+    transition: color 0.3s; /* Transição suave para cor do texto */
 }
 
 footer a:hover {
-    text-decoration: underline; /* Sublinha no hover */
+    color: #ff3385; /* Texto mais escuro ao passar o mouse */
 }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(33.33% - 20px); /* 3 produtos por linha */
+    }
+
+    .menu-carrinho {
+        position: static; /* Muda para posição estática em telas menores */
+        justify-content: center; /* Centraliza os itens */
+        margin: 10px 0; /* Margens para espaçamento */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Ajusta a direção dos itens */
+        align-items: flex-start; /* Alinha itens à esquerda */
+    }
+
+    .product-card {
+        width: calc(50% - 20px); /* 2 produtos por linha */
+    }
+
+    .search-bar {
+        margin: 10px 0; /* Adiciona margens em torno da barra de pesquisa */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column; /* Ajusta a direção dos itens */
+        gap: 10px; /* Espaçamento vertical */
+    }
+
+    .catalog {
+        flex-direction: column; /* Um produto por linha */
+    }
+
+    .product-card {
+        width: 100%; /* Ocupa a largura total */
+    }
+}
+
+  /* Estilo para o modo daltonico */
+/* Estilo normal */
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Estilo para daltônicos */
+body.daltonismo {
+    filter: grayscale(100%);
+}
+
+

@@ -17,19 +17,21 @@
     <main class="login-container">
         <h3>Tropicália Flowers</h3>
         <h2>Login</h2>
-        <form action="file:///C:/Users/andre/Flores/index.html" method="POST" class="login-form">
+        <form id="login-for" method="POST" class="login-form">
             <div class="form-group">
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
             </div>
             <div class="form-group">
                 <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required minlength="6">
             </div>
-            <button type="submit">Entrar</button> <!-- Removido atributo class incorreto -->
+            <a href="index.html"><button type="submit">Entrar</button></a>
+
         </form>
+        
         <p class="signup-link">
-            Não tem uma conta? <a href="file:///C:/Users/andre/Flores/subpagina/pag%20de%20cadastro%20e%20pagamento/index.html">Cadastre-se</a> <!-- Corrigido o link -->
+            Não tem uma conta? <a href="../pag de cadastro e pagamento/index.html">Cadastre-se</a> <!-- Corrigido o link -->
         </p>
     </main>
     <footer>

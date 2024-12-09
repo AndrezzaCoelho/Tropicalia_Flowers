@@ -1,17 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('loginForm');
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("login-form");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
 
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
+    form.addEventListener("submit", function (event) {
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
 
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
+        // Validação de e-mail
+        if (!validateEmail(email)) {
+            event.preventDefault();
+            alert("Por favor, insira um e-mail válido.");
+            emailInput.focus();
+            return;
+        }
 
-        // Aqui você pode adicionar lógica para autenticar o usuário
-        console.log('E-mail:', email);
-        console.log('Senha:', password);
+        // Validação de senha
+        if (password.length < 6) {
+            event.preventDefault();
+            alert("A senha deve ter pelo menos 6 caracteres.");
+            passwordInput.focus();
+            return;
+        }
 
-        // Simulando um redirecionamento após "autenticação"
-        // window.location.href = 'dashboard.html';
+        alert("Login enviado com sucesso!");
     });
+
+    function validateEmail(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
 });
+
+
+    document.querySelector('a[href="index.html"]').addEventListener('click', function(event) {
+        event.preventDefault(); // Evita o comportamento padrão do link (navegação para a URL)
+        window.location.href = 'index.html'; // Redireciona para a página desejada
+    });
+

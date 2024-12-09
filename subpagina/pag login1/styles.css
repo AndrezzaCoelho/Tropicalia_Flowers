@@ -22,6 +22,43 @@ header {
     border-bottom: 2px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
+a {
+    display: block; /* Torna o link um elemento de bloco */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #ddd; /* Cor do texto */
+    background-color: #ff6699; /* Cor de fundo */
+    padding: 15px 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    margin: 20px auto; /* Margem para centralizar */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: all 0.3s ease; /* Animação de transição suave */
+    max-width: 500px; /* Limita a largura */
+}
+
+h3 {
+    font-family: 'Georgia', serif; /* Fonte elegante */
+    font-size: 28px; /* Tamanho da fonte */
+    color: #2c3e50; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Espaçamento acima e abaixo */
+    letter-spacing: 1.5px; /* Espaçamento entre letras */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    background: linear-gradient(90deg,  #ff6699,  #d889a4); /* Gradiente de fundo */
+    -webkit-background-clip: text; /* Clip do gradiente no texto (para navegadores baseados em Webkit) */
+    -webkit-text-fill-color: transparent; /* Deixa o fundo visível no texto */
+}
+
+/* Efeito de animação ao passar o mouse */
+h3:hover {
+    letter-spacing: 2px; /* Aumenta o espaçamento entre letras */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+
 
 /* LINKS E LOGO */
 a {
@@ -54,7 +91,7 @@ a:hover .logo {
 
 /* TÍTULO */
 h2 {
-    color: #333;
+    color: #ff6699;
     margin-bottom: 20px;
     font-size: 24px;
 }
@@ -117,7 +154,7 @@ button[type="submit"]:hover {
 }
 
 .signup-link a {
-    color: #ff6699;
+    color:  #ebd5dc;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -127,20 +164,10 @@ button[type="submit"]:hover {
     color: #e55c8a;
 }
 
-/* BOTÃO DE LOGIN EXTRA */
-.login-button {
-    background-color: #ff6699;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+
 
 .login-button:hover {
-    background-color: #e55c8a;
+    background-color: #ebd5dc;
 }
 
 /* RODAPÉ */

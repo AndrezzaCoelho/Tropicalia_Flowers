@@ -1,11 +1,10 @@
 // -------- Botão "Continuar Comprando" --------
-// Função para continuar comprando (redireciona para uma página específica)
-function continuarComprando() {
-    ("");
-    // Caminho para a página desejada (substitua pelo caminho correto)
-    window.location.href = "file:///C:/Users/andre/Flores/index.html"; // Altere "produtos.html" para o URL desejado
 
+// Função para redirecionar ao continuar comprando
+function continuarComprando() {
+    window.location.href = '../../index.html'; // Certifique-se de que o caminho está correto
 }
+
 
 // Função para o botão "Voltar"
 document.getElementById("continue-shopping").addEventListener("click", () => {
@@ -14,7 +13,7 @@ document.getElementById("continue-shopping").addEventListener("click", () => {
         window.history.back(); // Volta para a página anterior
     } else {
         // Redireciona para uma página específica se não houver histórico
-        window.location.href = "index.html"; // Substitua "index.html" pelo caminho desejado
+        window.location.href = "../../index.html"; // Substitua "index.html" pelo caminho desejado
     }
 });
 
@@ -162,3 +161,23 @@ function realizarBusca() {
         alert("Por favor, insira um termo para pesquisar.");
     }
 }
+// Selecionar o menu e os links
+const menu = document.getElementById('menu');
+const menuLinks = menu.querySelectorAll('a');
+
+// Função para destacar o link da página atual
+function highlightCurrentPage() {
+    menuLinks.forEach(link => {
+        // Obter o href do link
+        const linkHref = link.getAttribute('href');
+        // Comparar com a URL atual
+        if (window.location.href.includes(linkHref)) {
+            link.classList.add('active'); // Adiciona a classe 'active' ao link atual
+        } else {
+            link.classList.remove('active'); // Remove a classe 'active' de outros links
+        }
+    });
+}
+
+// Chamar a função ao carregar a página
+document.addEventListener('DOMContentLoaded', highlightCurrentPage);

@@ -1,260 +1,222 @@
+/* styles.css */
+
+/* Resetando margens e padding */
 * {
-    margin: 0; /* Remove a margem padrão de todos os elementos */
-    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
-    box-sizing: border-box; /* Inclui bordas e preenchimentos na largura e altura total do elemento */
-    font-family: 'Fira Sans', sans-serif; /* Define a fonte padrão como "Fira Sans" para todos os elementos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Estilo para o botão de voltar */
-#backToTop {
-    background-color: #fff; /* Cor inicial */
-    color: #ff6699; /* Cor do texto */
-    border: none; /* Remove borda padrão */
-    border-radius: 5px; /* Cantos arredondados */
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
-    bottom: 20px; /* Distância do fundo */
-    right: 20px; /* Distância da direita */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
-}
-
-/* Estilo padrão */
+/* Corpo da página */
 body {
-    font-family: Arial, sans-serif; /* Fonte padrão do corpo */
-    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
-    color: #333; /* Cor do texto */
-    background-color: #eee4e7; /* Cor de fundo */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Estilo do cabeçalho */
+/* Estilizando o cabeçalho */
 header {
-    padding: 10px; /* Espaçamento ao redor do cabeçalho */
-    text-align: center; /* Centraliza o texto */
+    background-color: #ff6699; /* Cor de fundo do cabeçalho */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* Botão de acessibilidade para daltonismo */
-button#daltonismo-btn {
-    font-size: 1rem; /* Tamanho da fonte */
-    color: #eee4e7; /* Cor do texto */
-    background-color: #ff6699; /* Cor de fundo */
-    border: none; /* Remove borda */
-    border-radius: 5px; /* Cantos arredondados */
-    cursor: pointer; /* Muda o cursor ao passar por cima */
-    transition: background-color 0.3s; /* Transição suave na cor de fundo */
+/* Estilizando o logo */
+.logo {
+    height: 40px; /* Altura do logo */
 }
 
-button#daltonismo-btn:hover {
-    background-color: #fff; /* Cor de fundo ao passar o mouse */
+/* Estilizando a barra de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
 }
 
-/* Estilo para o modo daltônico */
-body.daltonismo {
-    background-color: #000; /* Cor de fundo no modo daltônico */
-    color: #faff00; /* Cor do texto no modo daltônico */
+.search-bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
-body.daltonismo a {
-    color: #ff4500; /* Cor dos links no modo daltônico */
+.search-bar button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Efeito ao clicar no botão de voltar ao topo */
-#backToTop:active {
-    transform: translateY(1px); /* Pressiona o botão ao clicar */
+/* Estilizando a lista de produtos */
+.product-list {
+    margin-top: 20px;
 }
 
-/* Efeito ao passar o mouse sobre o botão de voltar ao topo */
-#backToTop:hover .animated-button span {
-    transform: scale(1.05); /* Aumenta ligeiramente o texto ao passar o mouse */
+/* Estilizando o carrinho */
+.menu-carrinho {
+    list-style: none;
+    display: flex;
+    align-items: center;
 }
 
-/* Estilos para o select */
-select {
-    padding: 8px; /* Preenchimento */
-    font-size: 8px; /* Tamanho da fonte */
-    margin: 8px; /* Margem */
+.menu-carrinho li {
+    margin-left: 20px;
 }
 
-/* Estilo do título */
+/* Estilizando o botão "Voltar" */
+.animated-button {
+    background-color: #ff6699; /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilizando o menu hamburguer */
+.menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburguer div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Estilizando o menu de opções */
+.menu-opcoes {
+    list-style: none;
+    display: none; /* Oculto por padrão */
+}
+
+.menu-opcoes li {
+    padding: 10px 0;
+}
+
+.menu-opcoes a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilo para o botão daltônico */
+#daltonismo-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Botão de voltar ao topo */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: none; /* Oculto por padrão */
+}
+
+/* Mostra o botão de voltar ao topo quando a página é rolada */
+.show {
+    display: block;
+}
+
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
 h4 {
-    font-family: 'Arial', sans-serif; /* Fonte do título */
-    font-size: 30px; /* Tamanho da fonte do título */
-    color: #ff69b4; /* Cor do título */
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
 }
 
-/* Menu hamburguer */
-.header {
-    position: fixed; /* Fixa o cabeçalho no topo */
-    top: 0; /* Alinha ao topo */
-    left: 0; /* Alinha à esquerda */
-    right: 0; /* Alinha à direita */
-    background-color: #fff; /* Cor de fundo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    display: flex; /* Usa flexbox para layout */
-    justify-content: flex-start; /* Alinha itens à esquerda */
-    padding: 10px; /* Espaçamento */
+/* Container de Produtos */
+.products {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Estilo do hamburguer */
-.hamburger {
-    cursor: pointer; /* Muda o cursor para pointer */
-    width: 15px; /* Largura do hamburguer */
-    height: 10px; /* Altura do hamburguer */
-    margin: 5px; /* Margem */
+/* Catalogo de Produtos */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.line {
-    width: 200%; /* Largura da linha do hamburguer */
-    height: 3px; /* Altura da linha */
-    background-color: #ff6699; /* Cor da linha */
-    margin: 3px 0; /* Espaçamento entre as linhas */
-    transition: 0.3s; /* Transição suave */
+/* Cartão de Produto */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-/* Estilo do dropdown */
-.nav {
-    display: none; /* Esconde o dropdown por padrão */
-    background-color: #eee4e7; /* Cor de fundo do dropdown */
-    position: absolute; /* Posiciona sobre outros elementos */
-    border-radius: 5px; /* Cantos arredondados */
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Sombra no dropdown */
-    z-index: 1; /* Garante que fique acima de outros elementos */
+.product-card:hover {
+    transform: translateY(-5px);
 }
 
-.nav ul {
-    list-style-type: none; /* Remove marcadores da lista */
-    padding: 0; /* Remove preenchimento */
-    margin: 0; /* Remove margens */
+/* Imagem do Produto */
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
-.nav ul li {
-    padding: 8px 15px; /* Preenchimento interno dos itens */
+/* Título do Produto */
+.product-card h2 {
+    font-size: 18px;
+    margin: 15px 0 10px;
+    color: #333;
 }
 
-.nav ul li a {
-    text-decoration: none; /* Remove sublinhado dos links */
-    color: #ff6699; /* Cor do texto do link */
+/* Preço do Produto */
+.product-card p {
+    font-size: 16px;
+    color: #e63946;
+    margin: 10px 0;
 }
 
-/* Efeito de hover no dropdown */
-.nav ul li:hover {
-    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+/* Botão de Adicionar ao Carrinho */
+.product-card button {
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Exibe o dropdown ao passar o mouse */
-.iconBtn:hover .dropdown-content {
-    display: block; /* Mostra o dropdown */
+.product-card button:hover {
+    background-color: #ff6699;
 }
 
-/* Estilos da barra de navegação */
-nav {
-    background-color: #ff6699; /* Cor de fundo */
-    display: flex; /* Flexbox para alinhamento */
-    justify-content: space-between; /* Espaço entre itens */
-    padding: 10px 20px; /* Espaçamento interno */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
-}
-
-nav ul {
-    list-style-type: none; /* Remove marcadores da lista */
-    margin: 0; /* Remove margens */
-    padding: 0; /* Remove preenchimento */
-    display: flex; /* Flexbox para alinhamento */
-}
-
-nav li {
-    position: relative; /* Necessário para o dropdown */
-}
-
-nav a {
-    display: block; /* Faz o link ocupar toda a área do li */
-    color: #f3dce4f8; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    padding: 20px 20px; /* Espaçamento interno */
-    text-decoration: none; /* Remove o sublinhado */
-    font-family: 'Roboto Slab', sans-serif; /* Fonte moderna */
-    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
-}
-
-/* Efeito de hover nos links */
-nav a:hover {
-    background-color: #fff; /* Cor de fundo ao passar o mouse */
-    color: #ff6699; /* Cor do texto ao passar o mouse */
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-}
-
-/* Estilos do rodapé */
-footer {
-    background-color: #ff6699; /* Cor de fundo do rodapé */
-    color: #333; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    padding: 20px 0; /* Espaçamento vertical */
-}
-
-/* Estilos para o rodapé */
-footer {
-    width: 100%; /* O rodapé ocupa toda a largura */
-    background-color: #ff6699; /* Cor de fundo do rodapé */
-    color: white; /* Cor do texto no rodapé */
-    text-align: center; /* Centraliza o texto */
-    padding: 20px 0; /* Preenchimento vertical no rodapé */
-}
-
-/* Estilos para o parágrafo dentro do rodapé */
-footer p {
-    margin: 0; /* Remove a margem padrão */
-    font-size: 14px; /* Tamanho da fonte */
-}
-
-/* Estilos da lista */
-footer ul {
-    list-style-type: none; /* Remove a bolinha da lista */
-    padding: 0; /* Remove o preenchimento padrão */
-}
-
-/* Estilos para os itens da lista */
-footer ul li {
-    display: inline; /* Exibe os itens em linha */
-    margin: 0 10px; /* Espaçamento entre os itens */
-}
-
-/* Estilos para os links */
-footer a {
-    color: white; /* Cor dos links */
-    text-decoration: none; /* Remove o sublinhado */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Sublinha no hover */
-}
-
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
-    /* Ajustes para telas menores */
-    #backToTop {
-        bottom: 10px; /* Ajusta a posição do botão em telas menores */
-        right: 10px; /* Ajusta a posição do botão em telas menores */
-    }
-
-    .search-bar {
-        width: 100%; /* Faz a barra de pesquisa ocupar 100% da largura disponível */
-        max-width: none; /* Remove a largura máxima */
-    }
-
-    h4 {
-        font-size: 24px; /* Reduz o tamanho do título em telas menores */
-    }
-
-    nav ul {
-        flex-direction: column; /* Alinha os itens da navbar em coluna */
-    }
-
-    .navbar li {
-        margin: 5px 0; /* Espaçamento vertical entre os itens da navbar */
-    }
-
-    .product-card {
-        width: 100%; /* As cartas ocupam toda a largura em dispositivos móveis */
-        margin-bottom: 20px; /* Espaço entre as linhas */
+/* Responsividade */
+@media (max-width: 600px) {
+    .catalog {
+        grid-template-columns: 1fr;
     }
 }
+
+

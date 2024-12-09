@@ -162,3 +162,9 @@ function realizarBusca() {
         alert("Por favor, insira um termo para pesquisar.");
     }
 }
+
+// Função para redirecionar o usuário para a página inicial ou outra página desejada
+function continuarComprando() {
+    // Substitua o caminho abaixo pelo correto para a página inicial
+    window.location.href = "../../index.html";
+}

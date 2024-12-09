@@ -13,27 +13,7 @@ body, html {
   transition: background-color 0.3s, color 0.3s; /* Transições suaves */
 }
 
-/* CONFIGURAÇÕES DO BOTÃO CONTINUAR COMPRANDO */
-#continue-shopping {
-  background-color: #ff6699; /* Fundo rosa */
-  color: white; /* Texto branco */
-  border: none; /* Remove borda */
-  padding: 10px 20px; /* Espaçamento interno */
-  font-size: 16px; /* Tamanho do texto */
-  cursor: pointer; /* Indica botão clicável */
-  border-radius: 5px; /* Bordas arredondadas */
-  transition: background-color 0.3s, transform 0.2s; /* Efeitos de hover */
-}
 
-#continue-shopping:hover {
-  background-color: #ff3366; /* Fundo mais escuro ao passar o mouse */
-  transform: scale(1.05); /* Aumenta ligeiramente no hover */
-}
-
-#continue-shopping:active {
-  transform: scale(0.95); /* Reduz tamanho ao clicar */
-  background-color: #cc0052; /* Fundo mais escuro ao clicar */
-}
 
 /* MENU DE NAVEGAÇÃO */
 nav {
@@ -64,34 +44,8 @@ nav a:hover {
   transform: scale(1.05); /* Aumenta levemente */
 }
 
-/* DROPDOWN (MENU SECUNDÁRIO) */
-.dropdown-content {
-  display: none; /* Esconde por padrão */
-  position: absolute;
-  background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-  z-index: 1; /* Garante sobreposição */
-}
 
-.dropdown-content a {
-  color: #333; /* Texto escuro */
-  padding: 10px;
-  display: block; /* Ocupa toda a área */
-  transition: background-color 0.3s;
-}
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1; /* Fundo claro ao passar o mouse */
-}
-
-/* LOGO */
-.logo {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%; /* Torna a logo circular */
-  object-fit: cover; /* Ajusta a imagem à proporção */
-  margin-right: 20px;
-}
 
 /* PESQUISA */
 .search-bar {
@@ -134,53 +88,8 @@ nav a:hover {
   align-items: center;
 }
 
-/* IMAGEM DO PRODUTO */
-.product-image {
-  max-width: 100%; /* Evita que a imagem ultrapasse o container */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
 
-/* DESCRIÇÃO E PREÇO */
-.description {
-  font-size: 1.1em; /* Texto levemente maior */
-  margin: 15px 0;
-}
 
-.price {
-  font-size: 1.2em;
-  color: #333;
-}
-
-/* QUANTIDADE */
-.quantity {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Espaçamento entre itens */
-}
-
-.quantity input {
-  width: 50px;
-  text-align: center; /* Centraliza o texto */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.quantity button {
-  width: 30px;
-  height: 30px;
-  background-color: #ff6699; /* Fundo rosa */
-  color: white;
-  border: none;
-  border-radius: 50%; /* Botão circular */
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.quantity button:hover {
-  background-color: #ff3366; /* Fundo mais escuro no hover */
-}
 
 /* RODAPÉ */
 footer {
