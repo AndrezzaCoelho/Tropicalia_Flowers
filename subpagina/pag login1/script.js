@@ -38,3 +38,33 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = 'index.html'; // Redireciona para a página desejada
     });
 
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        // Impede o envio padrão do formulário
+        event.preventDefault();
+
+        // Obtendo os valores dos campos
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Validando os campos
+        if (validateEmail(email) && validatePassword(password)) {
+            // Simula um envio bem-sucedido
+            console.log('Login bem-sucedido!');
+            console.log('E-mail:', email);
+            console.log('Senha:', password);
+            // Aqui você pode adicionar a lógica para enviar os dados para o servidor
+        } else {
+            console.log('Por favor, preencha os campos corretamente.');
+        }
+    });
+
+    function validateEmail(email) {
+        // Regex simples para validação de e-mail
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    function validatePassword(password) {
+        // Valida se a senha possui pelo menos 6 caracteres
+        return password.length >= 6;
+    }
