@@ -6,10 +6,8 @@
     <title>Tropicália Flowers</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <script src="js/script.js" defer></script>
 </head>
-<script src="js/script.js"></script>
 <body>
     <!-- Cabeçalho -->
     <header class="horizontal-menu">
@@ -33,8 +31,6 @@
                     </button>
                 </li>
             </ul>
-            
-            
             <!-- Menu Hambúrguer -->
             <div class="menu-hamburger" onclick="toggleMenu()">
                 <div class="line"></div>
@@ -42,7 +38,7 @@
                 <div class="line"></div>
             </div>
         </div>
-        <!-- Menu de navegação oculto -->
+        <!-- Menu de navegação -->
         <nav class="nav" id="nav">
             <ul>
                 <li><a href="subpagina/pag login1/index.html">Login</a></li>
@@ -51,143 +47,109 @@
                 <li><a href="subpagina/pag quem somos/index.html">Quem Somos</a></li>
                 <li><a href="subpagina/pg de contato/index.html">Contate-nos</a></li>
             </ul>
-            
         </nav>
     </header>
 
-  <!-- Conteúdo Principal -->
-<main>
-    <!-- Banner -->
-    <section class="banner">
-        <img src="img/WhatsApp Image 2024-11-28 at 00.28.13.jpeg" alt="Banner" class="banner-img">
-    </section>
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Banner -->
+        <section class="banner">
+            <img src="img/WhatsApp Image 2024-11-28 at 00.28.13.jpeg" alt="Banner" class="banner-img">
+        </section>
 
-    <!-- Produtos Sem Promoção -->
-    <section class="products">
-        <h4>FLORES EM DESTAQUES</h4>
-        <div class="catalog">
-            <!-- Produto: Antúrio -->
-            <div class="product-card">
-                <a href="subpagina/pag Antúrio/index.html">
-                    <img src="img/Antúrio1.jpg" alt="Antúrio">
-                </a>
-                <h3>Antúrio</h3>
-                <p>R$ 39,99</p>
-         
+        <!-- Produtos Sem Promoção -->
+        <section class="products">
+            <h4>FLORES EM DESTAQUE</h4>
+            <div class="catalog">
+                <div class="product-card">
+                    <a href="subpagina/pag Antúrio/index.html">
+                        <img src="img/Antúrio1.jpg" alt="Antúrio">
+                    </a>
+                    <h3>Antúrio</h3>
+                    <p>R$ 39,99</p>
+                </div>
+                <div class="product-card">
+                    <a href="subpagina/pag Bastão do imperador/index.html">
+                        <img src="img/bastão do imperador.webp" alt="Bastão do Imperador">
+                    </a>
+                    <h3>B. do Imperador</h3>
+                    <p>R$ 15,00</p>
+                </div>
+                <div class="product-card">
+                    <a href="subpagina/pag Bromélias/index.html">
+                        <img src="img/Bromélias.jpg" alt="Bromélias">
+                    </a>
+                    <h3>Bromélias</h3>
+                    <p>R$ 19,00</p>
+                </div>
+                <div class="product-card">
+                    <a href="subpagina/pag Bougainvillea/index.html">
+                        <img src="img/Bougainvillea.webp" alt="Bougainvillea">
+                    </a>
+                    <h3>Bougainvillea</h3>
+                    <p>R$ 19,00</p>
+                </div>
             </div>
+        </section>
 
-            <!-- Produto: Bastão do Imperador -->
-            <div class="product-card">
-                <a href="subpagina/pag Bastão do imperador/index.html">
-                    <img src="img/bastão do imperador.webp" alt="Bastão do Imperador">
-                </a>
-                <h3>B. do Imperador</h3>
-                <p>R$ 15,00</p>
-                
-            </div>
-
-            <!-- Produto: Bromélias -->
-            <div class="product-card">
-                <a href="subpagina/pag Bromélias/index.html">
-                    <img src="img/Bromélias.jpg" alt="Bromélias">
-                </a>
-                <h3>Bromélias</h3>
-                <p>R$ 19,00</p>
-            </div>
-
-            <!-- Produto: Bougainvillea -->
-            <div class="product-card">
-                <a href="subpagina/pag Bougainvillea/index.html">
-                    <img src="img/Bougainvillea.webp" alt="Bougainvillea">
-                </a>
-                <h3>Bougainvillea</h3>
-                <p>R$ 19,00</p>
-          
-            </div>
-        </div>
-    </section>
-
-    <!-- Produtos com Promoção -->
-    <section class="products">
-        <h4>PROMOÇÕES DE ORQUIDEAS</h4>
-        <div class="catalog">
-            <!-- Produto: Orquídea Oncidium -->
-            <div class="product-card">
-                <a href="subpagina/pag Orquídea Oncidium/index.html">
-                    <div class="red-stripe">10% OFF</div>
-                    <img src="img/Orquídea Oncidium.jpg" alt="Orquídea Oncidium">
-                </a>
-                <h3>Orquídea Oncidium</h3>
-                <p>R$ 89,99</p>
-                
-            </div>
-
-            <!-- Produto: Orquídea Cattleya -->
-            <div class="product-card">
-                <a href="subpagina/pg Orquídea Cattleya/index.html">
-                    <div class="red-stripe">10% OFF</div>
-                    <img src="img/Orquídea Cattleya.webp" alt="Orquídea Cattleya">
-                </a>
-                <h3>Orquídea Cattleya</h3>
-                <p>R$ 69,00</p>
-                
-            </div>
-
-            <!-- Produto: Orquídea Cymbidium -->
-            <div class="product-card">
-                <a href="subpagina/psg Orquídea Cymbidium/index.html">
-                    <div class="red-stripe">10% OFF</div>
-                    <img src="img/Orquídea Cymbidium.jpeg" alt="Orquídea Cymbidium">
-                </a>
-                <h3>Orquídea Cymbidium</h3>
-                <p>R$ 79,99</p>
-                
-            </div>
-
-            <!-- Produto: Orquídea Miltonia -->
-            <div class="product-card">
-                <a href="subpagina/pag Orquídea Miltonia/index.html">
-                    <div class="red-stripe">10% OFF</div>
-                    <img src="img/Orquídea Miltonia.jpg" alt="Orquídea Miltonia">
-                </a>
-                <h3>Orquídea Miltonia</h3>
-                <p>R$ 69,99</p>
-              
-            </div>
-        </div>
-    </section>
-</main>
-
+        <!-- Produtos com Promoção -->
+        <section class="products">
+            <h4>PROMOÇÕES DE ORQUÍDEAS</h4>
+            <div class="catalog">
+                <div class="product-card">
+                    <a href="subpagina/pag Orquídea Oncidium/index.html">
+                        <div class="red-stripe">10% OFF</div>
+                        <img src="img/Orquídea Oncidium.jpg" alt="Orquídea Oncidium">
+                    </a>
+                    <h3>Orquídea Oncidium</h3>
+                    <p>R$ 89,99</p>
+                </div>
+                <div class="product-card">
+                    <a href="subpagina/pg Orquídea Cattleya/index.html">
+                        <div class="red-stripe">10% OFF</div>
+                        <img src="img/Orquídea Cattleya.webp" alt="Orquídea Cattleya">
+                    </a>
+                    <h3>Orquídea Cattleya</h3>
+                    <p>R$ 69,00</p>
+                </div>
+                <div class="product-card">
+                    <a href="subpagina/psg Orquídea Cymbidium/index.html">
+                        <div class="red-stripe">10% OFF</div>
+                        <img src="img/Orquídea Cymbidium.jpeg" alt="Orquídea Cymbidium">
+                    </a>
+                    <h3>Orquídea Cymbidium</h3>
+                    <p>R$ 79,99</p>
+                </div>
+                <div class="product-card">
+                    <a href="subpagina/pag Orquídea Miltonia/index.html">
+                        <div class="red-stripe">10% OFF</div>
+                        <img src="img/Orquídea Miltonia.jpg" alt="Orquídea Miltonia">
+                    </a>
+                    <h3>Orquídea Miltonia</h3>
+                    <p>R$ 69,99</p>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Rodapé -->
-     
     <footer>
         <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
         <ul>
             <li><a href="pag de polit de privacidade/index.html">Política de Privacidade</a></li>
             <li><a href="pag termos de uso/index.html">Termos de Uso</a></li>
-           
-                <a href="https://facebook.com/floresonline" target="_blank" style="text-decoration: none; color: #1877F2;">
-                    <i class="fab fa-facebook" style="font-size: 24px; margin-right: 8px;"></i> Facebook
+            <li>
+                <a href="https://facebook.com/floresonline" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
                 </a>
-                <a href="https://instagram.com/floresonline" target="_blank" style="text-decoration: none; color: #E4405F;">
-                    <i class="fab fa-instagram" style="font-size: 24px; margin-right: 8px;"></i> Instagram
+                <a href="https://instagram.com/floresonline" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
                 </a>
-                <a href="https://wa.me/5581999998888" target="_blank" style="text-decoration: none; color: green;">
-                    <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 8px;"></i> WhatsApp
-                </a> 
+                <a href="https://wa.me/5581999998888" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </li>
         </ul>
     </footer>
-
-    <!-- Script do Menu Hambúrguer -->
-    <script>
-        function toggleMenu() {
-            const nav = document.getElementById('nav');
-            nav.classList.toggle('active');
-        }
-    </script>
 </body>
 </html>

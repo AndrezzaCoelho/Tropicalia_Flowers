@@ -75,4 +75,26 @@ function renderCartItems() {
 }
 
 // Chama a função para exibir os itens ao carregar a página
-renderCartItems();
+const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+function carregarCarrinho() {
+    const cartListDiv = document.getElementById('cart-list');
+    cartListDiv.innerHTML = ""; // Limpa o carrinho antes de atualizar
+
+    if (carrinho.length === 0) {
+        cartListDiv.innerHTML = "<p>Seu carrinho está vazio.</p>";
+        return;
+    }
+
+    carrinho.forEach((flor, index) => {
+        const cartItemDiv = document.createElement('div');
+        cartItemDiv.className = 'cart-card';
+        cartItemDiv.innerHTML = `
+            ${index + 1}. <strong>${flor.nome}</strong> - R$${flor.valor.toFixed(2)}
+        `;
+        cartListDiv.appendChild(cartItemDiv);
+    });
+}
+
+// Carregar o carrinho ao carregar a página
+window.onload = carregarCarrinho;

@@ -3,7 +3,7 @@
 function continuarComprando() {
     ("");
     // Caminho para a página desejada (substitua pelo caminho correto)
-    window.location.href = "file:///C:/Users/andre/Flores/index.html"; // Altere "produtos.html" para o URL desejado
+    window.location.href = "../../index.html"; // Altere "produtos.html" para o URL desejado
 
 }
 
@@ -161,4 +161,35 @@ function realizarBusca() {
     } else {
         alert("Por favor, insira um termo para pesquisar.");
     }
+}
+function adicionarAoCarrinho(id) {
+    const flor = flores.find(flor => flor.id === id);
+    if (flor) {
+        carrinho.push(flor);
+        localStorage.setItem('carrinho', JSON.stringify(carrinho)); // Salva o carrinho no localStorage
+        atualizarCarrinho();
+    } else {
+        alert("Flor não encontrada!");
+    }
+}
+
+function carregarFlores() {
+    const carrinhoSalvo = localStorage.getItem('carrinho');
+    if (carrinhoSalvo) {
+        carrinho.push(...JSON.parse(carrinhoSalvo));
+    }
+    // Carrega as flores como antes
+    const flowerListDiv = document.getElementById('flower-list');
+    flowerListDiv.innerHTML = ""; 
+    flores.forEach(flor => {
+        const florDiv = document.createElement('div');
+        florDiv.className = 'flower-card';
+        florDiv.innerHTML = `
+            <strong>${flor.nome}</strong><br>
+            Preço: R$${flor.valor.toFixed(2)}<br>
+            <button onclick="adicionarAoCarrinho(${flor.id})">Adicionar ao Carrinho</button>
+        `;
+        flowerListDiv.appendChild(florDiv);
+    });
+    atualizarCarrinho();
 }

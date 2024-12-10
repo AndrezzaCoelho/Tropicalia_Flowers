@@ -1,70 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("login-form");
-    const emailInput = document.getElementById("email");
-    const passwordInput = document.getElementById("password");
+// Função de login
+function entrar() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-    form.addEventListener("submit", function (event) {
-        const email = emailInput.value.trim();
-        const password = passwordInput.value.trim();
-
-        // Validação de e-mail
-        if (!validateEmail(email)) {
-            event.preventDefault();
-            alert("Por favor, insira um e-mail válido.");
-            emailInput.focus();
-            return;
-        }
-
-        // Validação de senha
-        if (password.length < 6) {
-            event.preventDefault();
-            alert("A senha deve ter pelo menos 6 caracteres.");
-            passwordInput.focus();
-            return;
-        }
-
-        alert("Login enviado com sucesso!");
-    });
-
-    function validateEmail(email) {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailPattern.test(email);
-    }
-});
-
-
-    document.querySelector('a[href="index.html"]').addEventListener('click', function(event) {
-        event.preventDefault(); // Evita o comportamento padrão do link (navegação para a URL)
-        window.location.href = 'index.html'; // Redireciona para a página desejada
-    });
-
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-        // Impede o envio padrão do formulário
-        event.preventDefault();
-
-        // Obtendo os valores dos campos
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-
-        // Validando os campos
-        if (validateEmail(email) && validatePassword(password)) {
-            // Simula um envio bem-sucedido
-            console.log('Login bem-sucedido!');
-            console.log('E-mail:', email);
-            console.log('Senha:', password);
-            // Aqui você pode adicionar a lógica para enviar os dados para o servidor
-        } else {
-            console.log('Por favor, preencha os campos corretamente.');
-        }
-    });
-
-    function validateEmail(email) {
-        // Regex simples para validação de e-mail
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
+    // Verificar se os campos estão preenchidos
+    if (!username || !password) {
+        alert("Por favor, preencha todos os campos.");
+        return;
     }
 
-    function validatePassword(password) {
-        // Valida se a senha possui pelo menos 6 caracteres
-        return password.length >= 6;
+    // Simulação de autenticação (substitua com uma lógica real, como consulta a um banco de dados)
+    const usuariosValidos = [
+        { username: "admin", password: "1234" },
+        { username: "usuario", password: "senha123" }
+    ];
+
+    const usuarioEncontrado = usuariosValidos.find(user => user.username === username && user.password === password);
+
+    if (usuarioEncontrado) {
+        alert(`Bem-vindo(a), ${username}!`);
+        window.location.href = "../pagina-principal/index.html"; // Redireciona para a página principal
+    } else {
+        alert("Usuário ou senha inválidos. Tente novamente.");
     }
+}

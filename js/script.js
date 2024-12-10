@@ -26,20 +26,111 @@
         }
     }
 
-    // Função para ativar/desativar o modo daltonico
-  // Seleciona o botão
+// Modo Daltonismo
 const daltonismoBtn = document.getElementById('daltonismo-btn');
 
-// Verifica a preferência salva no localStorage e aplica na inicialização
-if (localStorage.getItem('modoDaltonismo') === 'true') {
+// Verifica a preferência armazenada e aplica o modo daltonismo se ativado
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('modoDaltonismo') === 'true') {
+        ativarModoDaltonismo();
+    }
+});
+
+// Função para ativar o modo daltonismo
+function ativarModoDaltonismo() {
     document.body.classList.add('daltonismo');
+
+    // Caso precise alterar estilos específicos de elementos
+    const imagens = document.querySelectorAll('img');
+    imagens.forEach(img => img.style.filter = 'grayscale(100%)');
+
+    const textos = document.querySelectorAll('*');
+    textos.forEach(el => el.style.color = el.tagName === 'A' ? '#1a73e8' : '#333');
 }
 
-// Adiciona o evento de clique para alternar o modo
-daltonismoBtn.addEventListener('click', () => {
-    document.body.classList.toggle('daltonismo');
+// Função para desativar o modo daltonismo
+function desativarModoDaltonismo() {
+    document.body.classList.remove('daltonismo');
 
-    // Salva a preferência no localStorage
-    const modoAtivo = document.body.classList.contains('daltonismo');
+    const imagens = document.querySelectorAll('img');
+    imagens.forEach(img => img.style.filter = 'none');
+
+    const textos = document.querySelectorAll('*');
+    textos.forEach(el => el.style.color = '');
+}
+
+// Alterna o modo ao clicar no botão
+daltonismoBtn.addEventListener('click', () => {
+    const modoAtivo = document.body.classList.toggle('daltonismo');
     localStorage.setItem('modoDaltonismo', modoAtivo);
+
+    if (modoAtivo) {
+        ativarModoDaltonismo();
+    } else {
+        desativarModoDaltonismo();
+    }
 });
+
+// Menu Hambúrguer
+function toggleMenu() {
+    document.getElementById('nav').classList.toggle('active');
+}
+
+// Banco de dados de flores
+const flores = [
+    { id: 1, nome: "Rosa Vermelha", valor: 15.0 },
+    { id: 2, nome: "Girassol", valor: 12.5 },
+    { id: 3, nome: "Orquídea", valor: 25.0 }
+];
+
+// Carrinho de compras
+const carrinho = [];
+
+// Função para carregar a lista de flores na página
+function carregarFlores() {
+    const flowerListDiv = document.getElementById('flower-list');
+    flowerListDiv.innerHTML = ""; // Limpa a lista antes de carregar
+
+    flores.forEach(flor => {
+        const florDiv = document.createElement('div');
+        florDiv.className = 'flower-card';
+        florDiv.innerHTML = `
+            <strong>${flor.nome}</strong><br>
+            Preço: R$${flor.valor.toFixed(2)}<br>
+            <button onclick="adicionarAoCarrinho(${flor.id})">Adicionar ao Carrinho</button>
+        `;
+        flowerListDiv.appendChild(florDiv);
+    });
+}
+
+// Função para adicionar uma flor ao carrinho
+function adicionarAoCarrinho(id) {
+    const flor = flores.find(flor => flor.id === id);
+    if (flor) {
+        carrinho.push(flor);
+        atualizarCarrinho();
+    } else {
+        alert("Flor não encontrada!");
+    }
+}
+
+// Função para atualizar a exibição do carrinho
+function atualizarCarrinho() {
+    const cartListDiv = document.getElementById('cart-list');
+    cartListDiv.innerHTML = ""; // Limpa o carrinho antes de atualizar
+
+    if (carrinho.length === 0) {
+        cartListDiv.innerHTML = "<p>Seu carrinho está vazio.</p>";
+        return;
+    }
+
+    carrinho.forEach((flor, index) => {
+        const cartItemDiv = document.createElement('div');
+        cartItemDiv.className = 'cart-card';
+        cartItemDiv.innerHTML = `
+            ${index + 1}. <strong>${flor.nome}</strong> - R$${flor.valor.toFixed(2)}
+        `;
+        cartListDiv.appendChild(cartItemDiv);
+    });
+}
+
