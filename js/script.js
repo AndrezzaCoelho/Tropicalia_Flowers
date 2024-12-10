@@ -27,17 +27,19 @@
     }
 
     // Função para ativar/desativar o modo daltonico
-    document.getElementById('daltonismo-btn').addEventListener('click', function() {
-        // Alternar a classe 'daltonismo' no elemento body
-        document.body.classList.toggle('daltonismo');
-        
-        // Alterar o ícone ou o texto do botão, se desejado
-        if (document.body.classList.contains('daltonismo')) {
-            this.setAttribute('aria-label', 'Desativar modo para daltônicos');
-            this.innerHTML = '<i class="fas fa-eye-slash"></i>'; // Ícone de olho cortado
-        } else {
-            this.setAttribute('aria-label', 'Ativar modo para daltônicos');
-            this.innerHTML = '<i class="fas fa-eye"></i>'; // Ícone de olho
-        }
-    });
-    
+  // Seleciona o botão
+const daltonismoBtn = document.getElementById('daltonismo-btn');
+
+// Verifica a preferência salva no localStorage e aplica na inicialização
+if (localStorage.getItem('modoDaltonismo') === 'true') {
+    document.body.classList.add('daltonismo');
+}
+
+// Adiciona o evento de clique para alternar o modo
+daltonismoBtn.addEventListener('click', () => {
+    document.body.classList.toggle('daltonismo');
+
+    // Salva a preferência no localStorage
+    const modoAtivo = document.body.classList.contains('daltonismo');
+    localStorage.setItem('modoDaltonismo', modoAtivo);
+});
