@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Botão de Voltar ao pagina anterior -->
+    <button id="backToTop" title="Voltar" class="animated-button">
+        <span>Voltar</span>
+    </button>
+
+   <!-- Cabeçalho -->
+<header class="horizontal-menu">
+    <div class="header-left">
+        <a href="#">
+            <img src="c:/Users/andre/Pictures/pngtree-watercolor-flower-arrangement-for-wedding-decoration-png-image_12857847.png" alt="Logo" class="logo">
+        </a>
+        <h1>Tropicália Flowers</h1>
+    </div>
+    
+        <div class="menu-buttons">
+            <!-- Botão de Perfil -->
+            <a href="../../index.html" aria-label="Página Inicial" class="button-link">
+                <button id="home-btn">
+                    <i class="fas fa-home"></i> 
+                </button>
+            </a>
+            <!-- Botão de Modo Daltonismo -->
+            <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
+                <i class="fas fa-eye"></i> Modo Daltonismo
+            </button>
+        </div>
+    </div>
+    
+
+    </nav>
+    </header>
+
+           <!-- Conteúdo Principal -->
+    <main>
+        <div id="products">
+            <h2>Seu Carrinho</h2>
+            <div class="product">
+                <img src="produto1.jpg" alt="Produto 1">
+                <p>Produto 1 - R$ 00,00</p>
+                <button>Remover</button>
+            </div>
+            <button id="checkout">Finalizar Compra</button>
+        </div>
+    </main>
+
+    <!-- Modal de Pagamento -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal">&times;</span>
+            <h2>Selecione o Método de Pagamento</h2>
+            <div class="payment-option" data-method="Cartão de Crédito">Cartão de Crédito</div>
+            <div class="payment-option" data-method="Pix">Pix</div>
+            <div class="payment-option" data-method="Boleto">Boleto</div>
+            <p id="selected-method"></p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

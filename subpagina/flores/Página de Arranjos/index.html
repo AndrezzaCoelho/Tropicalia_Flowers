@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arranjos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<button id="backToTop" title="Voltar" class="animated-button">
+    <span>Voltar</span> 
+</button>
+
+<body>
+    <header class="horizontal-menu">
+        <h1>
+            Tropicália Flowers
+        </h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+    
+        <div class="product-list" id="productList">
+            <!-- A lista de produtos será gerada aqui -->
+        </div>
+        <ul class="menu-carrinho" id="carrinho"> 
+            <li><a href="carrinho"><i class="fas fa-shopping-cart"></i> </a></li>
+        </ul>     
+
+
+
+        </html>
+    </header>
+     <nav>
+        <!-- Menu Hambúrguer -->
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <div></div>
+          
+        </div>
+          <main>
+            <ul class="menu-opcoes" id="menu">
+                <li><a href="../../index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
+                    <i class="fas fa-eye"></i> Modo Daltônico
+            
+        </ul>
+    </nav>
+</head>
+
+
+  </main>
+</div>
+         
+<main class="products">
+  
+            <h4>NOSSOS PRODUTOS</h4>
+           
+            <div class="catalog">
+                
+
+                <div class="product-card">
+                    <a href="../../subpagina/Pasta Descrição Arranjos/Descrição Arranjo Antúrio/index.html">
+                        <img src="../../img/Arranjo Antúrio 13.jpg" alt=" Arranjo Antúrio">
+                    </a>
+
+                    <h2> Arranjo Antúrio</h2>
+                    <p>R$ 50,00</p>
+                    <button onclick="addToCart('Arranjo Antúrio', 50)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="../../subpagina/Pasta Descrição Arranjos/Descrição Arranjo Bromélia/index.html">
+                        <img src="../../img/Bromélias vaso.jpg" alt="Arranjo Bromélia">
+                    </a>
+                    <h2>Arranjo Bromélia</h2>
+                    <p>R$ 40,00</p>
+                    <button onclick="addToCart('Arranjo Bromélia', 40)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="../../subpagina/Pasta Descrição Arranjos/Descrição Arranjo Bougainvillea/index.html">
+                        <img src="../../img/Bougainvillea vaso.avif" alt="Arranjo Bougainvillea">
+                    </a>
+                    <h2>Arranjo Bougainvillea</h2>
+                    <p>R$ 90,00</p>
+                    <button onclick="addToCart('Arranjo Bougainvillea', 90)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="file:///C:/Users/andre/Flores/subpagina/Pasta%20Descri%C3%A7%C3%A3o%20Arranjos/Descri%C3%A7%C3%A3o%20Arranjo%20Bast%C3%A3o%20do%20Imperador/index.html">
+                        <img src="c:\Users\camila\Pictures\Arranjo Bastão do Imperador 1.jpg" alt="Arranjo Bastão do Imperador">
+                    </a>
+                    <h2>Arranjo Bastão do Imperador</h2>
+                    <p>R$ 100,00</p>
+                    <button onclick="addToCart('Arranjo Bastão do Imperador', 100)">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product-card">
+                    <a href="file:///C:/Users/andre/Flores/subpagina/Pasta%20Descri%C3%A7%C3%A3o%20Arranjos/Descri%C3%A7%C3%A3o%20Arranjo%20Brom%C3%A9lia/index.html">
+                        <img src="c:\Users\camila\Pictures\Buquê Bromélia e Espumante.jpg" alt=" Buquê Bromélia">
+                    </a>
+                    <h2> Buquê Bromélia e Espumante</h2>
+                    <p>R$ 130,00</p>
+                    <button onclick="addToCart('Buquê Bromélia e Espumante', 130)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="file:///C:/Users/andre/Flores/subpagina/Pasta%20Descri%C3%A7%C3%A3o%20Ocasi%C3%B5es/Descri%C3%A7%C3%A3o%20Buqu%C3%AA%20Hibisco%20e%20Vela%20Aromatica/index.html">
+                        <img src="c:\Users\camila\Pictures\Buquê Hibisco e Vela Aromatica.jpg" alt="Buquê Hibisco e Vela Aromatica">
+                    </a>
+                    <h2>Buquê Hibisco e Vela Aromatica</h2>
+                    <p>R$ 110,00</p>
+                    <button onclick="addToCart('Buquê Hibisco e Vela Aromatica', 110)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="file:///C:/Users/andre/Flores/subpagina/Pasta%20Descri%C3%A7%C3%A3o%20Ocasi%C3%B5es/Descri%C3%A7%C3%A3o%20Buqu%C3%AA%20Orqu%C3%ADdea%20e%20Cart%C3%A3o%20Mensagem/index.html">
+                        <img src="c:\Users\camila\Pictures\Buquê Orquídea com Cartão Mensagem.webp" alt="Buquê Orquídea com Cartão mensagem">
+                    </a>
+                    <h2>Buquê Orquídea com Cartão Mensagem</h2>
+                    <p>R$ 120,00</p>
+                    <button onclick="addToCart('Buquê Orquídea com Cartão Mensagem', 120)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card">
+                    <a href="file:///C:/Users/andre/Flores/subpagina/Pasta%20Descri%C3%A7%C3%A3o%20Ocasi%C3%B5es/Descri%C3%A7%C3%A3o%20Mini%20Box%20Fomatura%20Sucesso/index.html">
+                        <img src="c:\Users\camila\Pictures\Mini Box Formatura Sucesso.png" alt="Mini Box Formatura Sucesso">
+                    </a>
+                    <h2>Mini Box Formatura Sucesso</h2>
+                    <p>R$ 75,00</p>
+                    <button onclick="addToCart('Mini Box Formatura Sucesso', 75)">Adicionar ao Carrinho</button>
+                </div>
+                <footer>
+                    </ul>
+                </footer>
+            </body>
+            <div>
+            <!-- Rodapé -->
+            <script src="js/script.js"></script>
+           
+
+  
+            
+            <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+        </p>
+    </div>
+</main>
+
+</body>
+</html>
+        

@@ -1,0 +1,186 @@
+/* RESET CSS */
+/* Remove margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif; /* Fonte padrão */
+}
+
+/* Define altura mínima para a página */
+body,
+html {
+    height: 100%;
+}
+
+/* BODY E CONTAINER PRINCIPAL */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Fundo branco */
+    color: #333; /* Texto escuro */
+}
+
+.container {
+    max-width: 800px; /* Largura máxima */
+    margin: 20px auto; /* Centraliza o conteúdo */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* TÍTULOS */
+h1 {
+    color: #ff6699; /* Cor rosa */
+    font-size: 2rem; /* Tamanho do texto */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo */
+}
+
+/* FORMULÁRIOS */
+form {
+    display: flex;
+    flex-direction: column; /* Itens organizados verticalmente */
+}
+
+label {
+    margin-top: 10px; /* Espaço acima */
+    font-weight: bold; /* Texto em negrito */
+    color: #333; /* Cor do texto */
+}
+
+input, textarea, button {
+    margin-top: 5px; /* Espaço acima */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho do texto */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+button {
+    background-color: white; /* Fundo branco */
+    color: #ff6699; /* Texto rosa */
+    border: 2px solid #ff6699; /* Borda rosa */
+    cursor: pointer; /* Cursor de clique */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+button:hover {
+    background-color: #ffd6e3; /* Fundo rosa claro */
+    color: white; /* Texto branco */
+}
+
+/* INFORMAÇÕES DE CONTATO */
+.contact-info {
+    margin-top: 20px; /* Espaçamento superior */
+    font-size: 16px; /* Tamanho do texto */
+    color: #555; /* Texto em cinza escuro */
+}
+
+/* LINKS DE REDES SOCIAIS */
+.social-media a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #ff6699; /* Texto rosa */
+    transition: color 0.3s ease; /* Transição suave */
+}
+
+.social-media a:hover {
+    text-decoration: underline; /* Sublinha no hover */
+    color: #d94f8c; /* Rosa mais escuro */
+}
+
+/* BARRA SUPERIOR */
+.top-bar {
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaça itens uniformemente */
+    align-items: center; /* Alinha itens verticalmente */
+    height: 60px; /* Altura da barra */
+    padding: 0 20px; /* Espaçamento interno */
+    background-color: #ff6699; /* Fundo rosa */
+    color: white; /* Texto branco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav {
+    background-color: #ff6699; /* Fundo rosa */
+    display: flex; /* Flexbox para alinhamento */
+    justify-content: space-between; /* Espaça itens uniformemente */
+    align-items: center; /* Alinha itens verticalmente */
+    padding: 10px 20px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+/* MENU HORIZONTAL FIXO */
+.horizontal-menu {
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaça itens uniformemente */
+    align-items: center; /* Alinha itens verticalmente */
+    padding: 1rem; /* Espaçamento interno */
+    background-color: #ff6699; /* Fundo rosa */
+    color: #fff; /* Texto branco */
+}
+
+/* LISTA NO MENU HORIZONTAL */
+.horizontal-menu ul {
+    list-style: none; /* Remove marcadores */
+    display: flex; /* Itens em linha */
+    gap: 1rem; /* Espaçamento entre itens */
+    margin: 0;
+    padding: 0;
+}
+
+/* BOTÃO VOLTAR AO TOPO */
+#backToTop {
+    position: fixed; /* Fixa na tela */
+    bottom: 20px; /* Distância da borda inferior */
+    right: 20px; /* Distância da borda direita */
+    background-color: #ff6699; /* Fundo rosa */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 15px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de clique */
+    z-index: 1000; /* Acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+#backToTop:hover {
+    background-color: #ffd6e3; /* Fundo rosa claro no hover */
+}
+
+/* RESPONSIVIDADE */
+/* Estilos para dispositivos menores */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column; /* Alinha itens verticalmente */
+        height: auto; /* Altura ajustável */
+        padding: 10px; /* Reduz o espaçamento interno */
+    }
+
+    nav {
+        flex-direction: column; /* Alinha itens verticalmente */
+        gap: 10px; /* Espaço entre itens */
+    }
+
+    .horizontal-menu {
+        flex-direction: column; /* Alinha itens verticalmente */
+        gap: 10px; /* Espaço entre itens */
+    }
+
+    .horizontal-menu ul {
+        flex-direction: column; /* Lista em formato vertical */
+        gap: 0.5rem; /* Espaçamento menor */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Reduz tamanho do título */
+    }
+
+    button {
+        font-size: 14px; /* Texto menor no botão */
+        padding: 8px 10px; /* Reduz tamanho do botão */
+    }
+}
