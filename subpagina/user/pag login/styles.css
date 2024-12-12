@@ -1,0 +1,238 @@
+/* RESET E ESTILOS GERAIS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ebd5dc; /* Fundo claro */
+}
+
+/* CABEÇALHO */
+header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ff6699; /* Fundo rosa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+a {
+    display: block; /* Torna o link um elemento de bloco */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #ddd; /* Cor do texto */
+    background-color: #ff6699; /* Cor de fundo */
+    padding: 15px 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    margin: 20px auto; /* Margem para centralizar */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: all 0.3s ease; /* Animação de transição suave */
+    max-width: 500px; /* Limita a largura */
+}
+
+h3 {
+    font-family: 'Georgia', serif; /* Fonte elegante */
+    font-size: 28px; /* Tamanho da fonte */
+    color: #2c3e50; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Espaçamento acima e abaixo */
+    letter-spacing: 1.5px; /* Espaçamento entre letras */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    background: linear-gradient(90deg,  #ff6699,  #d889a4); /* Gradiente de fundo */
+    -webkit-background-clip: text; /* Clip do gradiente no texto (para navegadores baseados em Webkit) */
+    -webkit-text-fill-color: transparent; /* Deixa o fundo visível no texto */
+}
+
+/* Efeito de animação ao passar o mouse */
+h3:hover {
+    letter-spacing: 2px; /* Aumenta o espaçamento entre letras */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+
+
+/* LINKS E LOGO */
+a {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    text-decoration: none;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Efeito suave no hover */
+}
+
+a:hover .logo {
+    transform: scale(1.05); /* Aumenta levemente no hover */
+}
+
+/* CONTAINER DE LOGIN */
+.login-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* TÍTULO */
+h2 {
+    color: #ff6699;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* FORMULÁRIO */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* GRUPOS DE FORMULÁRIO */
+.form-group {
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* CAMPOS DE ENTRADA */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Transição suave */
+}
+
+input:focus {
+    border-color: #ff6699; /* Borda rosa ao focar */
+    outline: none; /* Remove o outline padrão */
+}
+
+/* BOTÃO DE ENVIO */
+button[type="submit"] {
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e55c8a;
+}
+
+/* LINK DE CADASTRO */
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-link a {
+    color:  #ebd5dc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    color: #e55c8a;
+}
+
+
+
+.login-button:hover {
+    background-color: #ebd5dc;
+}
+
+/* RODAPÉ */
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #ff6699;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve no topo do rodapé */
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+    }
+
+    .signup-link {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .signup-link {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Tropicália Flowers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+</h1>
+<button class="btn-voltar" onclick="window.history.back();">Voltar</button>
+</header>
+    <header class="header">
+        <h1>
+                Tropicália Flowers
+            </a>
+        </h1>
+        
+    </header>
+
+    <main class="main-content">
+        <h2>Cadastro</h2>
+        <form id="registrationForm" action="/submit_registration" method="POST">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <label for="firstName">Primeiro Nome:</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="Digite seu primeiro nome"><br>
+        
+                <label for="lastName">Sobrenome:</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Digite seu sobrenome"><br>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com"><br>
+        
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(99) 99999-9999"><br>
+        
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required placeholder="Digite uma senha"><br>
+        
+                <label for="confirmPassword">Confirmar Senha:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirme sua senha"><br>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Endereço de Entrega</legend>
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" required placeholder="Rua, Número"><br>
+        
+                <label for="complement">Complemento:</label>
+                <input type="text" id="complement" name="complement" placeholder="Apto, Bloco, etc."><br>
+        
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="city" required placeholder="Digite sua cidade"><br>
+        
+                <label for="state">Estado:</label>
+                <select id="state" name="state" required>
+                    <option value="" disabled selected>Escolha seu estado</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <!-- Adicione outros estados conforme necessário -->
+                </select><br>
+            </fieldset>
+        
+            <button type="submit">Cadastrar</button> <!-- Botão de cadastrar -->
+        </form>
+        </footer> 
+    
+</body>
+</html>

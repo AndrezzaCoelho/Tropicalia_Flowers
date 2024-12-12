@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arranjos - Tropicália Flowers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Botão Voltar ao topo -->
+    <button id="backToTop" title="Voltar" class="animated-button">
+        <span>Voltar</span>
+    </button>
+
+    <!-- Cabeçalho -->
+    <header class="horizontal-menu">
+        <h1>Tropicália Flowers</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="product-list" id="productList">
+            <!-- Lista de produtos será gerada aqui -->
+        </div>
+
+        <ul class="menu-carrinho" id="carrinho">
+            <li><a href="carrinho"><i class="fas fa-shopping-cart" id="cart-count"></i></a></li>
+        </ul>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <div></div>
+        </div>
+        <ul class="menu-opcoes" id="menu">
+            <li><a href="../../../index.html"><i class="fas fa-home"></i> Início</a></li>
+            <li><button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
+                <i class="fas fa-eye"></i> Modo Daltônico
+            </button></li>
+        </ul>
+    </nav>
+
+    <!-- Seção de Produtos -->
+    <main>
+        <h4>NOSSOS PRODUTOS</h4>
+
+        <div class="catalog">
+            <div class="product-card">
+                <a href="Pasta Descrição Ocasiões/index.html?id=10">
+                    <img src="img/Arranjo Antúrio e Pelúcia.jpg" alt="Arranjo Antúrio e Pelúcia">
+                </a>
+                <h2>Arranjo Antúrio e Pelúcia</h2>
+                <p>R$ 160,00</p>
+                <button onclick="adicionarAoCarrinho(10)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product-card">
+                <a href="Pasta Descrição Ocasiões/index.html?id=11">
+                    <img src="img/Bougainvillea e Chocolates.jpg" alt="Bougainvillea e Chocolates">
+                </a>
+                <h2>Bougainvillea e Chocolates</h2>
+                <p>R$ 85,00</p>
+                <button onclick="adicionarAoCarrinho(11)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product-card">
+                <a href="Pasta Descrição Ocasiões/index.html?id=12">
+                    <img src="img/Arranjo Hibisco.jpg" alt="Arranjo Hibisco">
+                </a>
+                <h2>Arranjo Hibisco</h2>
+                <p>R$ 90,00</p>
+                <button onclick="adicionarAoCarrinho(12)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product-card">
+                <a href="Pasta Descrição Ocasiões/index.html?id=13">
+                    <img src="img/Arranjo Bastão do Imperador.jpg" alt="Arranjo Bastão do Imperador">
+                </a>
+                <h2>Arranjo Bastão do Imperador</h2>
+                <p>R$ 100,00</p>
+                <button onclick="adicionarAoCarrinho(13)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product-card">
+                <a href="Pasta Descrição Ocasiões/index.html?id=14">
+                    <img src="img/Arranjo Alpinia Exuberante.jpg" alt="Arranjo Alpinia exuberante">
+                </a>
+                <h2>Arranjo Alpinia Exuberante</h2>
+                <p>R$ 90,00</p>
+                <button onclick="adicionarAoCarrinho(14)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product-card">
+                <a href="Pasta Descrição Ocasiões/index.html?id=15">
+                    <img src="img/Orquídea Branca e Kit Natura Cereja e Avelã.jpg" alt="Orquídea Branca e Kit Natura Cereja e Avelã">
+                </a>
+                <h2>Orquídea Branca e Kit Natura Cereja e Avelã</h2>
+                <p>R$ 150,00</p>
+                <button onclick="adicionarAoCarrinho(15)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product-card">
+                <a href="Pasta Descrição Ocasiões/index.html?id=16">
+                    <img src="img/Buquê Orquídea com Cartão Mensagem.jpg" alt="Buquê Orquídea com Cartão Mensagem">
+                </a>
+                <h2>Buquê Orquídea com Cartão Mensagem</h2>
+                <p>R$ 120,00</p>
+                <button onclick="adicionarAoCarrinho(16)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product-card">
+                <a href="Pasta Descrição Ocasiões/index.html?id=17">
+                    <img src="img/Mini Box Formatura Sucesso.jpg" alt="Mini Box Formatura Sucesso">
+                </a>
+                <h2>Mini Box Formatura Sucesso</h2>
+                <p>R$ 75,00</p>
+                <button onclick="adicionarAoCarrinho(17)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+        <p><a href="../../informacoes/privacy-policy/index.html">Política de Privacidade</a> | <a href="../../informacoes/terms-of-use/index.html">Termos de Uso</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

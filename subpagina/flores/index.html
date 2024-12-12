@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Flor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Botão de voltar -->
+    <div class="voltar">
+        <button id="continue-shopping" onclick="continuarComprando()">Voltar</button>
+    </div>
+
+    <header class="horizontal-menu">
+        <h1>Tropicália Flowers</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar produto">
+            <button id="searchButton">🔍</button>
+        </div>
+        <ul class="menu-carrinho" id="carrinho">
+            <li><a href="../compra/pag carrinho/index.html"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+        </ul>
+        <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
+            <i class="fas fa-eye"></i> Modo Daltônico
+        </button>
+    </header>
+
+    <nav>
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="menu-opcoes" id="menu">
+            <li><a href="../../index.html"><i class="fas fa-home"></i> Início</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="product-details" id="product-details">
+            <h1 id="flower-title">Carregando...</h1> <!-- Título será carregado aqui -->
+            <img id="flower-image" src="" alt="Imagem da flor" class="product-image"> <!-- Imagem será carregada aqui -->
+            
+            <div id="flower-details">
+                <p id="flower-description" class="description">Descrição da flor será carregada aqui.</p>
+            </div>
+        
+            <!-- Controle de quantidade -->
+            <section class="quantity">
+                <label for="item-quantity">Quantidade:</label>
+                <button id="remove-item">-</button>
+                <input type="number" id="item-quantity" value="1" min="1">
+                <button id="add-item">+</button>
+            </section>
+        
+            <div class="button-container" id="button-container">
+                <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                <button id="continuar-comprando" onclick="continuarComprando()">Continuar comprando</button>
+            </div>
+        
+            <div class="color-selection">
+                <label for="flower-color">Escolha a cor da flor:</label>
+                <select id="flower-color" aria-label="Escolher a cor da flor">
+                    <option value="rosa">Rosa</option>
+                    <option value="roxa">Roxa</option>
+                    <option value="vermelha">Vermelha</option>
+                    <option value="branca">Branca</option>
+                    <option value="laranja">Laranja</option>
+                </select>
+            </div>
+        
+            <!-- Cálculo de Frete -->
+            <section class="freight-calculator">
+                <label for="cep">Calcule o frete:</label>
+                <input type="text" id="cep" placeholder="Digite o CEP">
+                <button id="calculate-freight">Calcular</button>
+            </section>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
