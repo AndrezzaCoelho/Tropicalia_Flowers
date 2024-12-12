@@ -48,7 +48,7 @@ function carregarDetalhesFlor() {
         imagem = document.createElement('img');
         detalhesFlor.appendChild(imagem);
     }
-    imagem.src = `../../../img/${flor.nome}.jpg`; // A imagem é associada ao ID da flor
+    imagem.src = `../../img/${flor.nome}.jpg`; // A imagem é associada ao ID da flor
     imagem.alt = flor.nome; // Descrição alternativa da imagem
 
     // Atualizando ou criando o título (h1)
