@@ -61,6 +61,7 @@ function carregarCarrinho() {
                     <div class="item-price">
                         <p>R$ ${flor.valor.toFixed(2)}</p>
                     </div>
+                    <hr>
                 `;
             } else {
                 itemDiv.innerHTML = `
@@ -72,6 +73,7 @@ function carregarCarrinho() {
                     <div class="item-price">
                         <p>R$ ${flor.valor.toFixed(2)}</p>
                     </div>
+                    <hr>
                 `;
             }
             cartItemsContainer.appendChild(itemDiv);
