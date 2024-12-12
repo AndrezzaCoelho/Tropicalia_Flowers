@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orquídea Miltonia</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Detalhes da Flor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -16,11 +17,11 @@
     <header class="horizontal-menu">
         <h1>Tropicália Flowers</h1>
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Pesquisar...">
-            <button id="searchButton"><i class="fas fa-search"></i></button>
+            <input type="text" id="searchInput" placeholder="Buscar produto">
+            <button id="searchButton">🔍</button>
         </div>
         <ul class="menu-carrinho" id="carrinho">
-            <li><a href="carrinho.html"><i class="fas fa-shopping-cart"></i> <span id="item-count">0</span></a></li>
+            <li><a href="carrinho.html"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
         </ul>
         <button id="daltonismo-btn" aria-label="Ativar modo para daltônicos">
             <i class="fas fa-eye"></i> Modo Daltônico
@@ -39,25 +40,27 @@
     </nav>
 
     <div class="container">
-        <h1>Orquídea Miltonia</h1>
-        <div class="product-details">
-            <img src="../../img/Orquídea Miltonia123.webp" alt="Orquídea Miltonia" class="product-image">
-            <div class="info">
-                <p class="description">A Orquídea Miltonia é conhecida por suas flores vibrantes...</p>
-                <p class="price">Preço: R$69,99</p>
+        <div class="product-details" id="product-details">
+            <h1 id="flower-title">Carregando...</h1> <!-- Título será carregado aqui -->
+            <img id="flower-image" src="" alt="Imagem da flor" class="product-image"> <!-- Imagem será carregada aqui -->
+            
+            <div id="flower-details">
+                <p id="flower-description" class="description">Descrição da flor será carregada aqui.</p>
             </div>
-
-            <div class="quantity">
-                <button id="remove-item" aria-label="Remover item">-</button>
-                <input type="number" id="item-quantity" value="1" min="1" aria-label="Quantidade do item">
-                <button id="add-item" aria-label="Adicionar item">+</button>
-            </div>
-
-            <div class="button-container">
-                <button id="add-to-cart">Adicionar ao carrinho</button>
+        
+            <!-- Controle de quantidade -->
+            <section class="quantity">
+                <label for="item-quantity">Quantidade:</label>
+                <button id="remove-item">-</button>
+                <input type="number" id="item-quantity" value="1" min="1">
+                <button id="add-item">+</button>
+            </section>
+        
+            <div class="button-container" id="button-container">
+                <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                 <button id="continuar-comprando" onclick="continuarComprando()">Continuar comprando</button>
             </div>
-
+        
             <div class="color-selection">
                 <label for="flower-color">Escolha a cor da flor:</label>
                 <select id="flower-color" aria-label="Escolher a cor da flor">
@@ -68,11 +71,13 @@
                     <option value="laranja">Laranja</option>
                 </select>
             </div>
-
-            <div class="freight-container">
-                <input type="text" id="cep" placeholder="Digite seu CEP" aria-label="Campo para digitar o CEP">
-                <button id="calculate-freight">Calcular Frete</button>
-            </div>
+        
+            <!-- Cálculo de Frete -->
+            <section class="freight-calculator">
+                <label for="cep">Calcule o frete:</label>
+                <input type="text" id="cep" placeholder="Digite o CEP">
+                <button id="calculate-freight">Calcular</button>
+            </section>
         </div>
     </div>
 
@@ -80,6 +85,6 @@
     <footer>
         <p>&copy; 2024 Tropicália Flowers. Todos os direitos reservados.</p>
     </footer>
-    <script src="scripy.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

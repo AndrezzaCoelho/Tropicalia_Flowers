@@ -6,22 +6,21 @@
     font-family: 'Fira Sans', sans-serif;
   }
   
-  /* Estilização para o botão */
-  #continue-shopping, #add-to-cart {
-    background-color: #ff6699; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none; /* Remove borda padrão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    text-align: center; /* Centraliza o texto no botão */
-    text-decoration: none; /* Remove sublinhado */
-    display: inline-block; /* Permite definir largura e altura */
-    font-size: 10px; /* Tamanho da fonte */
-    margin: 2px 1px; /* Margens ao redor do botão */
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
-    border-radius: 3px; /* Cantos arredondados */
-    transition: background-color 0.3s; /* Efeito de transição para a cor de fundo */
+  #flower-details {
+    text-align: center;
   }
-  
+
+  .quantity {
+      margin: 20px 0;
+      text-align: center;
+  }
+
+  .freight-calculator {
+      margin: 20px 0;
+      text-align: center;
+  }
+
+  /* Estilização para o botão */
   button {
     padding: 10px 15px;
     font-size: 16px;
