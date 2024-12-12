@@ -13,7 +13,7 @@ const flores = [
 function continuarComprando() {
     ("");
     // Caminho para a página desejada (substitua pelo caminho correto)
-    window.location.href = "../../../index.html"; // Altere "produtos.html" para o URL desejado
+    window.location.href = "../../index.html"; // Altere "produtos.html" para o URL desejado
 
 }
 
