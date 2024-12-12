@@ -3,7 +3,7 @@ const flores = [
     { id: 10, nome: "Arranjo Antúrio e Pelúcia", valor: 160.00, descricao: "O antúrio é uma planta tropical com folhas brilhantes e flores em forma de coração, disponível em várias cores. Ideal para a decoração de interiores, melhora a qualidade do ar e se adapta bem a ambientes com iluminação indireta e solo drenado." },
     { id: 11, nome: "Bougainvillea e Chocolates", valor: 85.00, descricao: "A planta bastão do imperador possui longas folhas verde-escuras com faixas amarelas e um caule ereto. Adaptada a ambientes internos, prefere luz indireta e requer rega moderada. Além de ser resistente a pragas, é conhecida por suas propriedades de purificação do ar." },
     { id: 12, nome: "Arranjo Hibisco", valor: 90.00, descricao: "As bromélias são plantas que pertencem à família Bromeliaceae, caracterizadas por suas folhas em roseta, que formam uma estrutura central que retém água. Elas possuem flores vibrantes e são adaptadas a diversos ambientes, desde florestas tropicais até regiões áridas." },
-    { id:13, nome: "Arranjo Bastão do Imperador", valor: 100.00, descricao: "A Bougainvillea é uma planta trepadeira com brácteas coloridas que imitam flores e folhas verdes brilhantes. É resistente à seca, tornando-se ideal para jardins em climas tropicais e subtropicais." },
+    { id: 13, nome: "Arranjo Bastão do Imperador", valor: 100.00, descricao: "A Bougainvillea é uma planta trepadeira com brácteas coloridas que imitam flores e folhas verdes brilhantes. É resistente à seca, tornando-se ideal para jardins em climas tropicais e subtropicais." },
     { id: 14, nome: "Arranjo Alpinia Exuberante", valor: 90.00, descricao: "A Orquídea Oncidium é conhecida por suas flores pequenas e várias, que normalmente possuem cores vibrantes como amarelo e marrom, além de um perfume doce. É uma planta epífita que se adapta bem a ambientes úmidos e pode florescer várias vezes ao ano." },
     { id: 15, nome: "Orquídea Branca e Kit Natura Cereja e Avelã", valor: 150.00, descricao: "A Orquídea Cattleya é famosa por suas grandes flores vibrantes e variadas em cores e formas. Além de sua beleza estética, é apreciada pelo aroma marcante e se adapta bem a diferentes ambientes." },
     { id: 16, nome: "Buquê Orquídea com Cartão Mensagem", valor: 120.00, descricao: "A orquídea Cymbidium é conhecida por suas grandes e vibrantes flores em diversas cores, sendo de fácil cultivo e adaptando-se bem a ambientes internos e externos, preferindo temperaturas amenas e boa luminosidade." },
@@ -13,7 +13,7 @@ const flores = [
 function continuarComprando() {
     ("");
     // Caminho para a página desejada (substitua pelo caminho correto)
-    window.location.href = "../../../index.html"; // Altere "produtos.html" para o URL desejado
+    window.location.href = "../index.html"; // Altere "produtos.html" para o URL desejado
 
 }
 
@@ -48,7 +48,7 @@ function carregarDetalhesFlor() {
         imagem = document.createElement('img');
         detalhesFlor.appendChild(imagem);
     }
-    imagem.src = `../../../img/${flor.nome}.jpg`; // A imagem é associada ao ID da flor
+    imagem.src = `../img/${flor.nome}.jpg`; // A imagem é associada ao ID da flor
     imagem.alt = flor.nome; // Descrição alternativa da imagem
 
     // Atualizando ou criando o título (h1)

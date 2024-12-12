@@ -53,57 +53,19 @@ hamburger.addEventListener('click', () => {
 
 
 
-// Array para armazenar os itens do carrinho
-let cart = [];
-
-// Função para adicionar itens ao carrinho
-function addToCart(productName, productPrice) {
-  // Adiciona o produto ao carrinho
-  cart.push({ name: productName, price: productPrice });
-  alert(`${productName} foi adicionado ao carrinho!`); // Corrigido aqui
-  updateCartCounter();
+function atualizarContadorCarrinho() {
+  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  document.getElementById('cart-count').textContent = carrinho.length;
 }
 
-// Atualiza a contagem de itens no carrinho
-function updateCartCounter() {
-    const carrinho = document.getElementById('carrinho');
-    const itemCount = cart.length;
-    
-    // Atualiza o conteúdo do carrinho (pode ser mudado com um badge, etc.)
-    carrinho.innerHTML = <li><a href="carrinho"><i class="fas fa-shopping-cart"></i> (${itemCount})</a></li>;
+// Função para adicionar ao carrinho
+function adicionarAoCarrinho(florId) {
+  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  carrinho.push(florId);
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  alert(`A flor foi adicionada ao carrinho!`);
+  atualizarContadorCarrinho(); // Atualiza o contador do carrinho
 }
-
-// Funcionalidade do menu hambúrguer
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('active'); // Alterna a classe 'active'
-
-    // Adiciona uma animação quando o menu é aberto/fechado
-    if (menu.classList.contains('active')) {
-        menu.style.display = 'block'; // Mostra o menu
-    } else {
-        menu.style.display = 'none'; // Esconde o menu
-    }
-}
-
-// Função para voltar ao topo da página
-const backToTopBtn = document.getElementById("backToTop");
-
-window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopBtn.style.display = "block";
-    } else {
-        backToTopBtn.style.display = "none";
-    }
-};
-
-backToTopBtn.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
-const toggleButton = document.getElementById("language-toggle");
-const languageLabel = document.getElementById("language-label");
-
 
 
 
