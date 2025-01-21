@@ -76,6 +76,13 @@ function toggleMenu() {
     document.getElementById('nav').classList.toggle('active');
 }
 
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 // Banco de dados de flores
 const flores = [
     { id: 1, nome: "Rosa Vermelha", valor: 15.0 },
