@@ -111,41 +111,15 @@ header {
     cursor: pointer; /* Muda o cursor ao passar o mouse */
 }
 
-/* Ícone do Menu Hambúrguer */
-.menu-hamburger {
-    cursor: pointer; /* Muda o cursor para pointer */
-    width: 30px; /* Largura do ícone */
-    height: 25px; /* Altura do ícone */
-    display: flex; /* Utiliza flexbox para layout */
-    flex-direction: column; /* Coloca as linhas em coluna */
-    justify-content: space-between; /* Espaça as linhas */
-    margin: 10px; /* Espaçamento em torno do ícone */
-    position: absolute; /* Posição absoluta em relação ao elemento pai */
-    top: 50px; /* Distância do topo */
-    left: 10px; /* Distância da esquerda */
-    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
-}
 
-.menu-hamburger .line {
-    width: 100%; /* Largura total da linha */
-    height: 3px; /* Altura da linha */
-    background-color: #edd0da; /* Cor da linha */
-    transition: all 0.3s ease-in-out; /* Transição suave para alterações */
-}
+
+
+/* Ícone do Menu Hambúrguer */
+
+
 
 /* Menu Flutuante */
-.nav {
-    display: none; /* Oculto inicialmente */
-    position: absolute; /* Posição absoluta em relação ao elemento pai */
-    top: 50px; /* Distância do topo */
-    left: 10px; /* Distância da esquerda */
-    background-color: #ff6699; /* Cor de fundo do menu */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-    padding: 15px; /* Espaçamento interno */
-    z-index: 999; /* Garante que o menu fique acima de outros elementos */
-    width: 200px; /* Largura fixa */
-}
+
 
 .nav.active {
     display: block; /* Exibe o menu quando ativo */
@@ -206,11 +180,39 @@ h4 {
     font-weight: bold; /* Texto em negrito */
     text-align: center; /* Centraliza o texto */
     color: #ff6699; /* Cor vibrante */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    text-shadow: 2px 2px 4px white; /* Sombra sutil */
     margin-bottom: 20px; /* Espaçamento inferior */
     text-transform: uppercase; /* Letras maiúsculas */
     letter-spacing: 2px; /* Espaçamento entre letras */
 }
+
+header {
+    background-color: #ff6699;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    background-color: #ddd;
+  }
+
 
 /* Produtos */
 .products {
