@@ -117,42 +117,62 @@ header {
 /* Ícone do Menu Hambúrguer */
 
 
-
-/* Menu Flutuante */
-
-
-.nav.active {
-    display: block; /* Exibe o menu quando ativo */
-}
-
-.nav ul {
-    list-style: none; /* Remove marcadores da lista */
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove espaçamentos padrão */
-    text-align: center; /* Centraliza o texto */
-}
-
-.nav ul li {
-    margin-bottom: 10px; /* Espaçamento inferior entre itens */
-}
-
-.nav ul li:last-child {
-    margin-bottom: 0; /* Remove margem do último item */
-}
-
-.nav ul li a {
-    text-decoration: none; /* Remove sublinhado */
-    color: white; /* Cor do texto */
-    font-weight: bold; /* Texto em negrito */
-    padding: 10px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease; /* Transição suave para cor de fundo */
-    display: block; /* Exibe como bloco */
-}
-
-.nav ul li a:hover {
-    background-color: #ff3385; /* Fundo mais escuro ao passar o mouse */
-}
+.nav {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .menu-toggle {
+    display: none; /* Esconder o menu hambúrguer em telas maiores */
+  }
+  
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Estilos para telas menores */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+  
+    .nav-links.active {
+      display: block;
+    }
+  }
 
 /* Banner */
 .banner {
