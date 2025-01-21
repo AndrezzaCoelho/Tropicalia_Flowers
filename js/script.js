@@ -73,15 +73,13 @@ daltonismoBtn.addEventListener('click', () => {
 
 // Menu Hambúrguer
 function toggleMenu() {
-    document.getElementById('nav').classList.toggle('active');
-}
-
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active');
+  }
+  
+  const menuToggle = document.querySelector('.menu-toggle');
+  
+  menuToggle.addEventListener('click', toggleMenu);
 
 // Banco de dados de flores
 const flores = [
