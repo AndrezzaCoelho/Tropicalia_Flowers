@@ -133,10 +133,3 @@ function atualizarCarrinho() {
         cartListDiv.appendChild(cartItemDiv);
     });
 }
-
-let num = mostraNumeroAleatorio();
-alert(`O número escolhido foi ${num}`)
-
-function mostraNumeroAleatorio(){
-    return Math.floor(Math.random() * 10 + 1);
-}
