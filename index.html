@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,26 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="js/script.js" defer></script>
-    
+
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header class="horizontal-menu">
         <div class="header-content">
-            <img src="img/pngtree-watercolor-flower-arrangement-for-wedding-decoration-png-image_12857847.png" alt="Logo" class="logo">
-            <h1 class="slogan">Tropicália Flowers</h1>
+            <!-- Logo e Nome da Loja -->
+            <div class="logo-transformation">
+                <img src="img/pngtree-watercolor-flower-arrangement-for-wedding-decoration-png-image_12857847.png"
+                    alt="Logo" class="logo">
+                <h1 class="slogan">Tropicália Flowers</h1>
+            </div>
+
+            <!-- Barra de Pesquisa Aprimorada -->
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Pesquisar...">
-                <button id="searchButton"><i class="fas fa-search"></i></button>
+                <input type="text" id="searchInput" placeholder="O que você procura hoje?" aria-label="Campo de busca">
+                <button id="searchButton" aria-label="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
             <ul class="menu-carrinho">
                 <li>
@@ -31,31 +41,25 @@
                         <i class="fas fa-eye"></i>
                     </button>
                 </li>
-
-                
             </ul>
-            
+        </div>
     </header>
 
-    <!-- testando... menu hamburguer-->
-    <body>
-        <header>
-          <nav>
-            <div class="menu-toggle">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </div>
-            <ul class="nav-links">
-              <li><a href="subpagina/user/pag login/index.html">Login</a></li>
-              <li><a href="subpagina/compra/pag de cadastro e pagamento/index.html">Cadastro</a></li>
-              <li><a href="subpagina/flores/Página de Arranjos/index.html">Mais Produtos</a></li>
-              <li><a href="subpagina/informacoes/pag quem somos/index.html">Quem Somos</a></li>
-              <li><a href="subpagina/informacoes/pg de contato/index.html">Contate-nos</a></li>
-            </ul>
-          </nav>
-        </header>
-      </body>
+    <!-- Menu Hamburguer -->
+    <nav class="nav-container">
+        <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="subpagina/user/pag login/index.html" class="nav-item">Login</a></li>
+            <li><a href="subpagina/compra/pag de cadastro e pagamento/index.html" class="nav-item">Cadastro</a></li>
+            <li><a href="subpagina/flores/Página de Arranjos/index.html" class="nav-item">Mais Produtos</a></li>
+            <li><a href="subpagina/informacoes/pag quem somos/index.html" class="nav-item">Quem Somos</a></li>
+            <li><a href="subpagina/informacoes/pg de contato/index.html" class="nav-item">Contate-nos</a></li>
+        </ul>
+    </nav>
 
     <!-- Conteúdo Principal -->
     <main>
@@ -159,4 +163,5 @@
         </ul>
     </footer>
 </body>
+
 </html>
