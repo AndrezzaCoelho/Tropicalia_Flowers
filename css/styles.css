@@ -123,13 +123,13 @@ header {
   }
   
   .menu-toggle {
-    display: none; /* Esconder o menu hambúrguer em telas maiores */
+    display: none; /* Esconde o botão em telas maiores */
   }
   
   .menu-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: #fff;
     margin: 5px auto;
   }
   
@@ -151,18 +151,19 @@ header {
   }
   
   /* Estilos para telas menores */
-  @media (max-width: 768px) {
+ 
+@media (max-width: 768px) {
     .menu-toggle {
       display: block;
     }
   
     .nav-links {
-      display: none;
+      display: none; /* Inicialmente, os links estão ocultos */
       flex-direction: column;
       position: absolute;
-      top: 60px;
+      top: 600px;
       left: 0;
-      background-color: #fff;
+      background-color: #ff6699;
       width: 100%;
       text-align: center;
       padding: 15px;
@@ -170,7 +171,7 @@ header {
     }
   
     .nav-links.active {
-      display: block;
+      display: block; /* Mostra os links quando a classe 'active' é adicionada */
     }
   }
 

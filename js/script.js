@@ -1,6 +1,11 @@
+    
+    
+    
     // Variáveis para armazenar o carrinho e a quantidade de produtos
     let cart = [];
     let cartCount = 0;
+
+    
 
     // Função para adicionar produtos ao carrinho
     function addToCart(productName, productPrice) {
@@ -72,14 +77,12 @@ daltonismoBtn.addEventListener('click', () => {
 });
 
 // Menu Hambúrguer
-function toggleMenu() {
-    const nav = document.getElementById('nav');
-    nav.classList.toggle('active');
-  }
-  
-  const menuToggle = document.querySelector('.menu-toggle');
-  
-  menuToggle.addEventListener('click', toggleMenu);
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
 
 // Banco de dados de flores
 const flores = [
